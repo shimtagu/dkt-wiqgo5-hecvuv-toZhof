@@ -8,7 +8,7 @@
 
 <meta name="description" content="2026年度　後期 時間： 月曜日 2 時限（11:15-13:00） 教室： C 館 1階 PC2 教室">
 
-<title>7&nbsp; タイトル – データ課題探求</title>
+<title>7&nbsp; 変化を見る：時系列データ – データ課題探求</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,6 +73,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <meta name="robots" content="noindex, nofollow">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -85,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lec07.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">タイトル</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lec07.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">変化を見る：時系列データ</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -131,67 +160,67 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec03.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">「平均」のワナ：代表値</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec04.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">ばらつきと分布</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec05.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">グラフで伝える・グラフにだまされない</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec06.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">比べる：比率とクロス集計</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec07.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">変化を見る：時系列データ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec08.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">関係を見る：散布図と相関</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec09.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">相関と因果：データから言えること・言えないこと</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">調査データを読む：サンプルと世論調査</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">総合演習2：問いを立て、データを探す</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec12.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">総合演習2：分析と可視化</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec13.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">総合演習2：発表会と振り返り</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -205,15 +234,42 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#導入まずは予想してみよう" id="toc-導入まずは予想してみよう" class="nav-link active" data-scroll-target="#導入まずは予想してみよう"><span class="header-section-number">7.1</span> 導入：まずは予想してみよう</a></li>
+  <li><a href="#時系列データとは" id="toc-時系列データとは" class="nav-link" data-scroll-target="#時系列データとは"><span class="header-section-number">7.2</span> 時系列データとは</a></li>
+  <li><a href="#増加率と指数" id="toc-増加率と指数" class="nav-link" data-scroll-target="#増加率と指数"><span class="header-section-number">7.3</span> 増加率と指数</a>
+  <ul class="collapse">
+  <li><a href="#増加率" id="toc-増加率" class="nav-link" data-scroll-target="#増加率"><span class="header-section-number">7.3.1</span> 増加率</a></li>
+  <li><a href="#指数基準年を100にする" id="toc-指数基準年を100にする" class="nav-link" data-scroll-target="#指数基準年を100にする"><span class="header-section-number">7.3.2</span> 指数（基準年を100にする）</a></li>
+  </ul></li>
+  <li><a href="#excelでの操作" id="toc-excelでの操作" class="nav-link" data-scroll-target="#excelでの操作"><span class="header-section-number">7.4</span> Excelでの操作</a>
+  <ul class="collapse">
+  <li><a href="#折れ線グラフを描く" id="toc-折れ線グラフを描く" class="nav-link" data-scroll-target="#折れ線グラフを描く"><span class="header-section-number">7.4.1</span> 折れ線グラフを描く</a></li>
+  <li><a href="#前の年からの増加率前年比を計算する" id="toc-前の年からの増加率前年比を計算する" class="nav-link" data-scroll-target="#前の年からの増加率前年比を計算する"><span class="header-section-number">7.4.2</span> 前の年からの増加率（前年比）を計算する</a></li>
+  <li><a href="#指数にそろえる絶対参照" id="toc-指数にそろえる絶対参照" class="nav-link" data-scroll-target="#指数にそろえる絶対参照"><span class="header-section-number">7.4.3</span> 指数にそろえる（絶対参照）</a></li>
+  </ul></li>
+  <li><a href="#課題_7に取り組もう" id="toc-課題_7に取り組もう" class="nav-link" data-scroll-target="#課題_7に取り組もう"><span class="header-section-number">7.5</span> 課題_7に取り組もう</a></li>
+  <li><a href="#共有私たちの暮らしは良くなった" id="toc-共有私たちの暮らしは良くなった" class="nav-link" data-scroll-target="#共有私たちの暮らしは良くなった"><span class="header-section-number">7.6</span> 共有：私たちの暮らしは良くなった？</a></li>
+  <li><a href="#総合演習1ミニデータ分析レポート" id="toc-総合演習1ミニデータ分析レポート" class="nav-link" data-scroll-target="#総合演習1ミニデータ分析レポート"><span class="header-section-number">7.7</span> 総合演習1：ミニ・データ分析レポート</a>
+  <ul class="collapse">
+  <li><a href="#テーマ1つを選ぶ" id="toc-テーマ1つを選ぶ" class="nav-link" data-scroll-target="#テーマ1つを選ぶ"><span class="header-section-number">7.7.1</span> テーマ（1つを選ぶ）</a></li>
+  <li><a href="#レポートに必ず入れること" id="toc-レポートに必ず入れること" class="nav-link" data-scroll-target="#レポートに必ず入れること"><span class="header-section-number">7.7.2</span> レポートに必ず入れること</a></li>
+  </ul></li>
+  <li><a href="#振り返り" id="toc-振り返り" class="nav-link" data-scroll-target="#振り返り"><span class="header-section-number">7.8</span> 振り返り</a></li>
+  <li><a href="#今週の課題" id="toc-今週の課題" class="nav-link" data-scroll-target="#今週の課題"><span class="header-section-number">7.9</span> 今週の課題</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">タイトル</span></h1>
+<h1 class="title"><span id="sec-lec07" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">変化を見る：時系列データ</span></span></h1>
 </div>
 
 
@@ -230,8 +286,418 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div style="margin-top: 2.0em;">
+
+</div>
+<div class="my-note callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>今日の問い
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>日本の物価や賃金は、この30年でどう変わったのでしょうか？</strong></p>
+</div>
+</div>
+<!--
+教員用：今日の流れ（105分）
+| 時間 | 内容 |
+|:---:|:---|
+| 10分 | 導入：今日の問いと予想（課題_7の「1_予想」に記入） |
+| 20分 | 解説：時系列データ・増加率・指数、折れ線グラフと前年比の操作 |
+| 45分 | 演習：課題_7 |
+| 15分 | 共有：物価と賃金、私たちの暮らしは良くなった？ |
+| 15分 | 総合演習1の説明（課題_7の「6_総合演習1の計画」）・振り返り |
+-->
+<section id="導入まずは予想してみよう" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="導入まずは予想してみよう"><span class="header-section-number">7.1</span> 導入：まずは予想してみよう</h2>
+<p>「最近、何でも値上がりしている」と感じている人は多いと思います。では、もっと長い期間で見ると、物価や賃金はどう動いてきたのでしょうか？</p>
+<div class="mondai callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>演習
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>直感で答えてください。予想は「課題_7」のシート「1_予想」に記入します。</p>
+<ol type="1">
+<li>この30年間で、日本の物価（消費者物価指数）はどう動いたと思いますか？ 手元の紙に<strong>ざっくりとした折れ線</strong>も描いてみてください。</li>
+<li>同じ30年間で、日本の賃金はどう動いたと思いますか？ 同じ紙に、別の色で描き加えてください。</li>
+<li>身近なもの（例：コンビニのおにぎり、電車の運賃、ラーメン）で、「昔より高くなった」と感じるものを1つ挙げてください。</li>
+</ol>
+</div>
+</div>
+<p>描いた折れ線は、後で実際のデータと比べます。消さずにとっておきましょう。</p>
+</section>
+<section id="時系列データとは" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="時系列データとは"><span class="header-section-number">7.2</span> 時系列データとは</h2>
+<p><strong>時系列データ</strong>とは、同じものを<strong>時間の順番</strong>に記録したデータです。たとえば、毎年の物価、毎月の失業率、毎日の気温などです。時系列データを見るときは、次の3つを意識しましょう。</p>
+<ul>
+<li><strong>トレンド（長期的な傾向）</strong>：全体として上がっているか、下がっているか。</li>
+<li><strong>変動（短期的な上下）</strong>：季節や景気によって、上がったり下がったりしていないか。</li>
+<li><strong>転換点</strong>：どこかで動き方が変わった時点はないか。そのとき、何が起きたか。</li>
+</ul>
+<p>時系列データは、<span class="marker">横軸に時間をとった<strong>折れ線グラフ</strong>で描く</span>のが基本です。第5回で学んだように、縦軸の目盛りの取り方（0から始めるかどうか）によって印象が大きく変わることにも注意しましょう。</p>
+</section>
+<section id="増加率と指数" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="増加率と指数"><span class="header-section-number">7.3</span> 増加率と指数</h2>
+<section id="増加率" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="増加率"><span class="header-section-number">7.3.1</span> 増加率</h3>
+<p>「どれくらい増えたか」を比べるときは、<strong>増えた量</strong>より<strong>増加率（変化率）</strong>のほうが便利です。</p>
+<p><span class="math display">\[
+\text{増加率} = \frac{\text{後の値} - \text{前の値}}{\text{前の値}} \times 100\ (\%)
+\]</span></p>
+<p><strong>架空の例</strong>：ある商品の価格が、2020年に200円、2025年に250円だったとします。</p>
+<ul>
+<li>増えた量：250 − 200 = 50円</li>
+<li>増加率：(250 − 200) ÷ 200 × 100 = <strong>25%</strong></li>
+</ul>
+<p>同じ「50円の値上がり」でも、100円の商品なら50%、1,000円の商品なら5%です。<strong>元の大きさが違うものを比べるときは、増加率で比べる</strong>ようにしましょう。</p>
+</section>
+<section id="指数基準年を100にする" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="指数基準年を100にする"><span class="header-section-number">7.3.2</span> 指数（基準年を100にする）</h3>
+<p>物価と賃金のように、<strong>単位が違うもの</strong>（円と、すでに指数になっているものなど）を1つのグラフで比べたいときは、<strong>指数</strong>を使います。ある年（<strong>基準年</strong>）の値を100として、他の年を次のように計算します。</p>
+<p><span class="math display">\[
+\text{指数} = \frac{\text{その年の値}}{\text{基準年の値}} \times 100
+\]</span></p>
+<p><strong>架空の例</strong>：基準年の値が200、ある年の値が250なら、指数は 250 ÷ 200 × 100 = <strong>125</strong>です。「基準年より25%高い」という意味になります。</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>名目と実質
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>名目</strong>：実際に受け取った金額そのもの（例：給料の額面）。</li>
+<li><strong>実質</strong>：物価の変化を取り除いた値。「そのお金で<strong>どれだけのモノが買えるか</strong>」を表します。</li>
+</ul>
+<p><strong>架空の例</strong>：給料が10%増えても、物価が15%上がっていたら、買えるモノの量はむしろ減っています。実質でみると、1.10 ÷ 1.15 − 1 ≒ <strong>−4.3%</strong> です。<span class="marker">「給料が増えた」かどうかは、名目と実質の両方で確かめる</span>必要があります。</p>
+</div>
+</div>
+</section>
+</section>
+<section id="excelでの操作" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="excelでの操作"><span class="header-section-number">7.4</span> Excelでの操作</h2>
+<!-- 教員メモ：課題_7のシート「データ_物価賃金」は見出しと年（1995〜2025年、2〜32行目）だけが入った状態です。配布前に次の数値を貼り付け、F列の出典欄の「取得日：（記入）」を書き換えてください（数値は必ず元の統計表から転記すること）。
+・B列：消費者物価指数（2020年基準、全国、総合、年平均）。総務省統計局「消費者物価指数」の長期時系列データ（e-Stat「消費者物価指数 2020年基準 長期時系列データ 年平均」）。
+・C列：名目賃金指数（現金給与総額、2020年＝100）、D列：実質賃金指数（現金給与総額、2020年＝100）。厚生労働省「毎月勤労統計調査」全国調査 長期時系列表（事業所規模5人以上、調査産業計、年平均）。e-Stat の「毎月勤労統計調査 全国調査 長期時系列表 実数・指数累積データ」等。
+・事業所規模5人以上の系列は1990年以降なので1995年からそろいます。系列の断層・遡及改訂がある年は、F4セルの注記欄に書いてください。
+・年の範囲を変える場合は tools/k7.py の Y0, Y1 を変えて再生成してください（各シートの参照行も自動で変わります）。 -->
+<p>課題では、シート「データ_物価賃金」（1行＝1年）を使います。必ず<strong>出典</strong>も確認しましょう。</p>
+<section id="折れ線グラフを描く" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="折れ線グラフを描く"><span class="header-section-number">7.4.1</span> 折れ線グラフを描く</h3>
+<ol type="1">
+<li>描きたい列（例：B列の消費者物価指数）を、見出しを含めて最後の年まで選択します。</li>
+<li>「挿入」タブ →「グラフ」グループの <strong>折れ線</strong> アイコン →「折れ線」を選びます。</li>
+<li>横軸が「1, 2, 3, …」になっている場合は、グラフを右クリック →「データの選択」→ 右側の「横（項目）軸ラベル」の「編集」を押し、A列の年を選択します。</li>
+<li>グラフタイトルを「消費者物価指数の推移（2020年＝100）」のように、<strong>何のグラフか分かる名前</strong>に変えます。</li>
+<li>出典を、グラフの下のセルかテキストボックスに書き込みます（例：「出典：総務省統計局『消費者物価指数』」）。</li>
+</ol>
+</section>
+<section id="前の年からの増加率前年比を計算する" class="level3" data-number="7.4.2">
+<h3 data-number="7.4.2" class="anchored" data-anchor-id="前の年からの増加率前年比を計算する"><span class="header-section-number">7.4.2</span> 前の年からの増加率（前年比）を計算する</h3>
+<p>前の年がB5、その年がB6にあるとき、前年比は次の式で計算できます。</p>
+<p><code>=(B6-B5)/B5</code></p>
+<ol type="1">
+<li>式を入力したセルをクリックし、右下の■を<strong>ダブルクリック</strong>すると、最後の行まで式がコピーされます。</li>
+<li>列を選び、「ホーム」タブの <strong>%</strong> ボタンを押し、「小数点以下の表示桁数を増やす」ボタンで小数第1位まで表示します。</li>
+</ol>
+<p>30年間の増加率も、同じ形の式（最初の年と最後の年を使う）で計算できます。</p>
+</section>
+<section id="指数にそろえる絶対参照" class="level3" data-number="7.4.3">
+<h3 data-number="7.4.3" class="anchored" data-anchor-id="指数にそろえる絶対参照"><span class="header-section-number">7.4.3</span> 指数にそろえる（絶対参照）</h3>
+<p>最初の年（例：B6）を100とする指数は、<code>=B6/$B$6*100</code> と入力して下にコピーします。<span class="marker"><code>$B$6</code> のように <code>$</code> を付けると、コピーしても基準年のセルが動きません</span>（<strong>絶対参照</strong>）。基準年の行が100になっていることを確認しましょう。</p>
+</section>
+</section>
+<section id="課題_7に取り組もう" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="課題_7に取り組もう"><span class="header-section-number">7.5</span> 課題_7に取り組もう</h2>
+<p>授業の後半は、Excelファイル「課題_7」を使って作業します。<span class="marker">作業したファイルが、そのまま今日の課題の提出物になります。</span></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>課題_7の進め方
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Blackboardから <strong>課題_7.xlsx</strong> をダウンロードして開きます。</li>
+<li>最初のシート「はじめに」に、学籍番号と氏名を入力します。</li>
+<li>シートを順番に進めます。<span class="marker">黄色のセル</span>が、皆さんが入力する場所です。</li>
+<li>最後に、ファイル名を <strong>課題_7_氏名.xlsx</strong> に変えて保存し、Blackboardに提出します。</li>
+</ol>
+</div>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">シート</th>
+<th style="text-align: left;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">はじめに</td>
+<td style="text-align: left;">学籍番号・氏名の入力、進め方の説明</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">データ_物価賃金</td>
+<td style="text-align: left;">消費者物価指数と賃金指数（1行＝1年）と出典</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1_予想</td>
+<td style="text-align: left;">導入の予想と、実際のデータとの比較</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2_増加率の練習</td>
+<td style="text-align: left;">架空の例で、増加率・指数・名目と実質を計算する</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3_折れ線グラフ</td>
+<td style="text-align: left;">消費者物価指数の折れ線グラフを描き、読み取る</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4_前年比</td>
+<td style="text-align: left;">前の年からの増加率を計算する</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5_30年の変化</td>
+<td style="text-align: left;">物価・名目賃金・実質賃金の30年間の増加率を比べる</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6_総合演習1の計画</td>
+<td style="text-align: left;">総合演習1のテーマ・問い・使うデータを決める</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7_チャレンジ</td>
+<td style="text-align: left;">指数化して重ねたグラフ、基準年の影響、名目と実質（Excelに慣れている人向け）</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8_振り返り</td>
+<td style="text-align: left;">暮らしは良くなった？「言えること」と「言えないこと」</td>
+</tr>
+</tbody>
+</table>
+<p><strong>基本課題</strong>は「1_予想」〜「6_総合演習1の計画」と「8_振り返り」です。<strong>チャレンジ課題</strong>（「7_チャレンジ」）は、Excelに慣れている人や、基本課題が終わった人が取り組んでください。</p>
+<div class="kotae callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>解答
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>2_増加率の練習</strong></p>
+<ul>
+<li>3つの商品はどれも50円の値上がりですが、増加率は商品A <strong>25%</strong>、商品B <strong>50%</strong>、商品C <strong>5%</strong> です（指数は125、150、105）。元の大きさに比べていちばん大きく値上がりしたのは<strong>商品B</strong>です。</li>
+<li>名目と実質：<code>=B21/B22-1</code> で <strong>−4.3%</strong> です。給料が増えても、買えるモノの量は減っています。</li>
+</ul>
+<p><strong>5_30年の変化</strong></p>
+<ul>
+<li>式は「(後の値 − 前の値) ÷ 前の値」です。</li>
+<li>物価の増加率のほうが名目賃金の増加率より大きければ、<strong>名目では給料が増えていても、買えるモノの量（実質）は減っている</strong>可能性があります。逆なら、実質でも増えていると考えられます。</li>
+<li>30年間の増加率は、<strong>どの年を始まりと終わりに選ぶか</strong>で大きく変わります。始点・終点の選び方も、結論に影響することに注意しましょう。</li>
+</ul>
+<p><strong>7_チャレンジ</strong></p>
+<ul>
+<li>指数は「その年の値 ÷ 基準年の値 × 100」です。単位の違う物価と賃金を、同じ「スタート地点」からの伸びで比べられます。</li>
+<li>基準年を「値が特に低かった年」にすると、その後の伸びが大きく見えます。「特に高かった年」にすると、伸びは小さく（または減少に）見えます。<strong>グラフを見るときは、基準年がいつかを必ず確認しましょう。</strong></li>
+<li>名目賃金が増えていても、物価の上がり方がそれより大きい時期には、実質賃金は下がります。</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- 教員メモ：実際のデータで計算した答え（前年比がマイナスの年の数・最大の年、物価・名目賃金・実質賃金の30年間の増加率）を授業前に確認し、口頭またはスライドで答え合わせしてください。 -->
+</section>
+<section id="共有私たちの暮らしは良くなった" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="共有私たちの暮らしは良くなった"><span class="header-section-number">7.6</span> 共有：私たちの暮らしは良くなった？</h2>
+<div class="mondai callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>演習
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>グループ（3〜4人）で話し合ってください。</p>
+<ol type="1">
+<li>導入で描いた自分の予想と、実際のデータは、どこが一番違いましたか？</li>
+<li>「この30年で日本人の暮らしは良くなった」と言えるでしょうか？ 物価と賃金のデータから言えること、言えないことを分けて考えましょう。</li>
+<li>賃金の「平均」だけでは分からないことは何でしょうか？（ヒント：第3回「平均」のワナ、第6回の「分けて見る」）</li>
+</ol>
+</div>
+</div>
+<!-- 教員メモ：3.では、平均賃金は働き方の構成（パート比率の変化など）の影響を受けること、年齢・雇用形態別に分けて見ると違う姿が見える可能性があることに触れるとよいです。具体的な数値を示す場合は、毎月勤労統計調査・賃金構造基本統計調査で確認してください。 -->
+</section>
+<section id="総合演習1ミニデータ分析レポート" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="総合演習1ミニデータ分析レポート"><span class="header-section-number">7.7</span> 総合演習1：ミニ・データ分析レポート</h2>
+<p>ここまでの第1〜7回で学んだ方法を使って、<strong>自分で問いを立て、データで確かめる</strong>ミニレポートを書きます。</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>総合演習1の概要
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>内容</strong>：下のテーマから1つを選び、自分で問いを立てて、公開データ（またはクラスアンケート）を使って分析する。</li>
+<li><strong>使う方法</strong>：第1〜7回で学んだもの（表の整理、平均・中央値、ばらつき、グラフ、比率・クロス集計、時系列・増加率・指数）。<strong>高度な分析は必要ありません。</strong></li>
+<li><strong>分量</strong>：A4用紙で2〜3ページ程度（本文1,200〜2,000字程度＋グラフ・表）。</li>
+<li><strong>形式</strong>：WordまたはPDFで、Blackboardに提出。分析に使ったExcelファイルも一緒に提出。</li>
+<li><strong>提出期限</strong>：<span class="marker">（授業で案内します）</span></li>
+</ul>
+</div>
+</div>
+<!-- 教員メモ：提出期限を設定し、上の「（授業で案内します）」を書き換えてください（例：第9回授業日の前日など）。個人課題かペア可かも決めて明記してください。総合演習の配分（全体75%のうち総合演習1が何%か）も決まったら記載してください。 -->
+<section id="テーマ1つを選ぶ" class="level3" data-number="7.7.1">
+<h3 data-number="7.7.1" class="anchored" data-anchor-id="テーマ1つを選ぶ"><span class="header-section-number">7.7.1</span> テーマ（1つを選ぶ）</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">テーマ</th>
+<th style="text-align: left;">問いの例</th>
+<th style="text-align: left;">使えるデータの例</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1. 若者と政治</td>
+<td style="text-align: left;">若者の投票率は、昔から低かったのか？</td>
+<td style="text-align: left;">総務省「国政選挙における年代別投票率について」</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2. 物価と賃金</td>
+<td style="text-align: left;">私たちの給料は、物価の上昇に追いついているか？</td>
+<td style="text-align: left;">総務省「消費者物価指数」、厚生労働省「毎月勤労統計調査」</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3. 身近なモノの値段</td>
+<td style="text-align: left;">値上がりが大きいのは、どんな品目か？</td>
+<td style="text-align: left;">総務省「小売物価統計調査」</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4. 地域の差</td>
+<td style="text-align: left;">都道府県によって、〇〇の差はどれくらい大きいか？</td>
+<td style="text-align: left;">e-Stat「都道府県・市区町村のすがた（社会・人口統計体系）」、統計センター「SSDSE（教育用標準データセット）」</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5. このクラス</td>
+<td style="text-align: left;">このクラスの学生の生活は、学年によって違うか？</td>
+<td style="text-align: left;">受講生アンケート（第1回）</td>
+</tr>
+</tbody>
+</table>
+<p>テーマの範囲内であれば、問いは自由に立ててかまいません。上の「問いの例」をそのまま使うのではなく、<strong>自分なりの問い</strong>にしてみましょう。</p>
+<p>今日の時点で考えたテーマ・問い・使いたいデータを、「課題_7」のシート「6_総合演習1の計画」に書いておきましょう。今の時点の考えでかまいません。</p>
+</section>
+<section id="レポートに必ず入れること" class="level3" data-number="7.7.2">
+<h3 data-number="7.7.2" class="anchored" data-anchor-id="レポートに必ず入れること"><span class="header-section-number">7.7.2</span> レポートに必ず入れること</h3>
+<ol type="1">
+<li><strong>問い</strong>：何を確かめたいのか。なぜその問いが気になったのか。予想（仮説）も書く。</li>
+<li><strong>データと出典</strong>：どのデータを使ったか。統計名、作成機関、年（時点）、URL、取得日を明記する。</li>
+<li><strong>グラフ（または表）</strong>：問いに答えるためのグラフを<strong>1つ以上</strong>。タイトル、軸ラベル、単位、出典を必ず付ける。</li>
+<li><strong>考察</strong>：データから<strong>何が言えるか</strong>、そして<strong>何が言えないか（限界）</strong>。予想と比べてどうだったか。次に確かめたいこと。</li>
+</ol>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>評価のポイント
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="marker">Excel操作の高度さではなく、<strong>問いの立て方</strong>と<strong>データに基づく考察</strong>を重視して評価します。</span>シンプルなグラフ1枚でも、問いがはっきりしていて、データから丁寧に考えていれば高く評価します。</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>生成AIの利用について
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Excelの操作方法やデータの探し方をAIに聞くのはかまいません。ただし、<strong>問い・考察・文章は自分で考えて書いてください</strong>。AIが示した数値は必ず元の統計で確認しましょう（<a href="./index.html">はじめに</a>を参照）。</p>
+</div>
+</div>
+</section>
+</section>
+<section id="振り返り" class="level2" data-number="7.8">
+<h2 data-number="7.8" class="anchored" data-anchor-id="振り返り"><span class="header-section-number">7.8</span> 振り返り</h2>
+<div class="my-note callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>今日のまとめ
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>時系列データは、横軸に時間をとった<strong>折れ線グラフ</strong>で描き、トレンド・変動・転換点を読む。</li>
+<li>元の大きさが違うものは<strong>増加率</strong>で、単位が違うものは<strong>指数（基準年＝100）</strong>にそろえて比べる。</li>
+<li>名目と実質は違う。「給料が増えた」かどうかは、<strong>物価の変化も合わせて</strong>考える。</li>
+<li>基準年や始点・終点の選び方で、グラフの印象は変わる。</li>
+</ul>
+</div>
+</div>
+<p><strong>次回の問い：</strong>「豊かな国ほど長生き？」</p>
+<p>2つのデータの関係を、<strong>散布図</strong>と<strong>相関</strong>で見ていきます。</p>
+</section>
+<section id="今週の課題" class="level2" data-number="7.9">
+<h2 data-number="7.9" class="anchored" data-anchor-id="今週の課題"><span class="header-section-number">7.9</span> 今週の課題</h2>
+<div class="mondai callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>演習
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>課題_7_氏名.xlsx</strong> をBlackboardに提出してください（<strong>金曜日24時まで</strong>）。</p>
+<p>授業中に終わらなかったシートは、提出までに仕上げてください。</p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -682,13 +1148,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./lec06.html" class="pagination-link" aria-label="タイトル">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">タイトル</span></span>
+      <a href="./lec06.html" class="pagination-link" aria-label="比べる：比率とクロス集計">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">比べる：比率とクロス集計</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./lec08.html" class="pagination-link" aria-label="タイトル">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">タイトル</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./lec08.html" class="pagination-link" aria-label="関係を見る：散布図と相関">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">関係を見る：散布図と相関</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

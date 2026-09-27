@@ -8,7 +8,7 @@
 
 <meta name="description" content="2026年度　後期 時間： 月曜日 2 時限（11:15-13:00） 教室： C 館 1階 PC2 教室">
 
-<title>8&nbsp; タイトル – データ課題探求</title>
+<title>8&nbsp; 関係を見る：散布図と相関 – データ課題探求</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,6 +73,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <meta name="robots" content="noindex, nofollow">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -85,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lec08.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">タイトル</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lec08.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">関係を見る：散布図と相関</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -131,67 +160,67 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec03.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">「平均」のワナ：代表値</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec04.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">ばらつきと分布</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec05.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">グラフで伝える・グラフにだまされない</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec06.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">比べる：比率とクロス集計</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec07.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">変化を見る：時系列データ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec08.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">関係を見る：散布図と相関</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec09.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">相関と因果：データから言えること・言えないこと</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">調査データを読む：サンプルと世論調査</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">総合演習2：問いを立て、データを探す</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec12.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">総合演習2：分析と可視化</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec13.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">総合演習2：発表会と振り返り</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -205,15 +234,32 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#導入まずは予想してみよう" id="toc-導入まずは予想してみよう" class="nav-link active" data-scroll-target="#導入まずは予想してみよう"><span class="header-section-number">8.1</span> 導入：まずは予想してみよう</a></li>
+  <li><a href="#散布図の読み方" id="toc-散布図の読み方" class="nav-link" data-scroll-target="#散布図の読み方"><span class="header-section-number">8.2</span> 散布図の読み方</a></li>
+  <li><a href="#相関係数" id="toc-相関係数" class="nav-link" data-scroll-target="#相関係数"><span class="header-section-number">8.3</span> 相関係数</a></li>
+  <li><a href="#excelでの操作" id="toc-excelでの操作" class="nav-link" data-scroll-target="#excelでの操作"><span class="header-section-number">8.4</span> Excelでの操作</a>
+  <ul class="collapse">
+  <li><a href="#散布図を描く" id="toc-散布図を描く" class="nav-link" data-scroll-target="#散布図を描く"><span class="header-section-number">8.4.1</span> 散布図を描く</a></li>
+  <li><a href="#相関係数を計算する" id="toc-相関係数を計算する" class="nav-link" data-scroll-target="#相関係数を計算する"><span class="header-section-number">8.4.2</span> 相関係数を計算する</a></li>
+  </ul></li>
+  <li><a href="#課題_8に取り組もう" id="toc-課題_8に取り組もう" class="nav-link" data-scroll-target="#課題_8に取り組もう"><span class="header-section-number">8.5</span> 課題_8に取り組もう</a></li>
+  <li><a href="#共有散布図から何が言える" id="toc-共有散布図から何が言える" class="nav-link" data-scroll-target="#共有散布図から何が言える"><span class="header-section-number">8.6</span> 共有：散布図から何が言える？</a></li>
+  <li><a href="#振り返り" id="toc-振り返り" class="nav-link" data-scroll-target="#振り返り"><span class="header-section-number">8.7</span> 振り返り</a></li>
+  <li><a href="#今週の課題" id="toc-今週の課題" class="nav-link" data-scroll-target="#今週の課題"><span class="header-section-number">8.8</span> 今週の課題</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">タイトル</span></h1>
+<h1 class="title"><span id="sec-lec08" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">関係を見る：散布図と相関</span></span></h1>
 </div>
 
 
@@ -230,8 +276,349 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div style="margin-top: 2.0em;">
+
+</div>
+<div class="my-note callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>今日の問い
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>豊かな国ほど、人々は長生きなのでしょうか？</strong></p>
+</div>
+</div>
+<!--
+教員用：今日の流れ（105分）
+| 時間 | 内容 |
+|:---:|:---|
+| 10分 | 導入：今日の問いと予想（課題_8の「1_予想」に記入） |
+| 20分 | 解説：散布図の読み方・相関と相関係数、散布図とCORRELの操作 |
+| 45分 | 演習：課題_8 |
+| 20分 | 共有：散布図から何が言える？ |
+| 10分 | 振り返り・次回の予告 |
+-->
+<!-- 教員メモ：11月23日（勤労感謝の日）は祝日授業日です。Blackboard等で授業実施を事前に周知してください。 -->
+<section id="導入まずは予想してみよう" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="導入まずは予想してみよう"><span class="header-section-number">8.1</span> 導入：まずは予想してみよう</h2>
+<div class="mondai callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>演習
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>直感で答えてください。予想は「課題_8」のシート「1_予想」に記入します。</p>
+<ol type="1">
+<li>世界の国々について、「1人あたりの豊かさ（1人あたりGDP）」と「平均寿命」の間には、どんな関係があると思いますか？<br>
+
+<ol type="a">
+<li>豊かな国ほど長生き　(b) 関係はない　(c) 豊かな国ほど短命</li>
+</ol></li>
+<li>1で (a) を選んだ人へ：豊かになればなるほど、平均寿命は<strong>どこまでも</strong>同じペースで延びていくと思いますか？</li>
+<li>このクラスで、「1日のスマホ利用時間が長い人ほど、睡眠時間は短い」と思いますか？</li>
+</ol>
+</div>
+</div>
+<p>これまでの回では、1つの変数（年収、通学時間など）の分布や、グループごとの違いを見てきました。今日は、<strong>2つの量的な変数の関係</strong>を見る方法を学びます。</p>
+</section>
+<section id="散布図の読み方" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="散布図の読み方"><span class="header-section-number">8.2</span> 散布図の読み方</h2>
+<p><strong>散布図</strong>は、2つの変数を横軸と縦軸にとり、1つの観測単位（1つの国、1人の学生など）を1つの点で表したグラフです。</p>
+<p>散布図を見るときは、次の順に確認しましょう。</p>
+<ol type="1">
+<li><strong>1つの点は何を表しているか？</strong>（1か国？ 1人？ 1つの都道府県？）</li>
+<li><strong>横軸・縦軸は何か？ 単位は？</strong></li>
+<li><strong>全体の傾向</strong>：右上がり？ 右下がり？ はっきりした傾向はない？</li>
+<li><strong>形</strong>：まっすぐ（直線的）？ 曲がっている？</li>
+<li><strong>外れ値</strong>：全体の傾向から大きく離れた点はないか？ それはどこ（誰）か？</li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">散布図の形</th>
+<th style="text-align: center;">呼び方</th>
+<th style="text-align: left;">意味</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">右上がり</td>
+<td style="text-align: center;">正の相関</td>
+<td style="text-align: left;">一方が大きいほど、もう一方も大きい傾向</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">右下がり</td>
+<td style="text-align: center;">負の相関</td>
+<td style="text-align: left;">一方が大きいほど、もう一方は小さい傾向</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">はっきりしない</td>
+<td style="text-align: center;">相関がない（弱い）</td>
+<td style="text-align: left;">一方の大きさと、もう一方の大きさに、はっきりした関係が見えない</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="相関係数" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="相関係数"><span class="header-section-number">8.3</span> 相関係数</h2>
+<p>2つの変数の<strong>直線的な関係の強さ</strong>を、1つの数字で表したものが<strong>相関係数</strong>です（記号 <span class="math inline">\(r\)</span> で表します）。</p>
+<ul>
+<li>相関係数は <strong>−1から1</strong>の間の値をとります。</li>
+<li><strong>1に近い</strong>ほど強い正の相関、<strong>−1に近い</strong>ほど強い負の相関、<strong>0に近い</strong>ほど直線的な関係が弱いことを表します。</li>
+<li>Excelでは、<code>=CORREL(範囲1,範囲2)</code> で計算できます。</li>
+</ul>
+<table class="caption-top table">
+<caption>一般によく使われる目安（分野によって異なります）</caption>
+<colgroup>
+<col style="width: 40%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">相関係数の大きさ（絶対値）</th>
+<th style="text-align: left;">目安</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0.7以上</td>
+<td style="text-align: left;">強い相関</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.4〜0.7</td>
+<td style="text-align: left;">中程度の相関</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.2〜0.4</td>
+<td style="text-align: left;">弱い相関</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.2未満</td>
+<td style="text-align: left;">ほとんど相関がない</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>相関係数だけを見てはいけない
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>相関係数は便利ですが、<strong>必ず散布図と一緒に見る</strong>ことが大切です。</p>
+<ul>
+<li>相関係数は<strong>直線的な</strong>関係しか測れません。曲がった関係（例：U字型）があっても、相関係数が0に近くなることがあります。</li>
+<li><strong>外れ値</strong>が1つあるだけで、相関係数は大きく変わることがあります。</li>
+<li>相関があっても、<strong>一方が原因でもう一方が結果</strong>とは限りません（次回のテーマです）。</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="excelでの操作" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="excelでの操作"><span class="header-section-number">8.4</span> Excelでの操作</h2>
+<!-- 教員メモ：課題_8の2つのデータシートは見出しだけの状態です。配布前に次を貼り付けてください。
+(1) シート「データ_国別」（1行＝1か国、2行目から）：A列 国名、B列 地域、C列 1人あたりGDP（購買力平価、2021年国際ドル）、D列 平均寿命（歳）、E列 人口。出典：世界銀行 World Development Indicators（https://data.worldbank.org/）の指標 NY.GDP.PCAP.PP.KD、SP.DYN.LE00.IN、SP.POP.TOTL。全指標がそろう同じ年（例：2022年）にそろえ、地域集計（World、High income など）の行と欠測のある国は除いてください。G列の「年：（記入）　取得日：（記入）」を書き換えます。国数は最大249か国（2〜250行目）まで想定しています。Gapminder のデータでも可（その場合はG列の出典を書き換え）。
+(2) シート「データ」：課題_2と同じ受講生アンケートのデータ（回答番号〜クイズ正解数、A〜J列）。散布図・CORRELはD列（スマホ時間）とE列（睡眠時間）、2〜101行目を使います。 -->
+<p>課題では、シート「データ_国別」（1行＝1か国）と、シート「データ」（クラスのアンケート、1行＝1人）を使います。</p>
+<section id="散布図を描く" class="level3" data-number="8.4.1">
+<h3 data-number="8.4.1" class="anchored" data-anchor-id="散布図を描く"><span class="header-section-number">8.4.1</span> 散布図を描く</h3>
+<ol type="1">
+<li>横軸にしたい列と縦軸にしたい列を、見出しを含めて選択します（例：C列とD列。離れた列は <strong>Ctrlキーを押しながら</strong>選びます）。</li>
+<li>「挿入」タブ →「グラフ」グループの <strong>散布図（X, Y）</strong> アイコン →「散布図」（点だけのもの）を選びます。</li>
+<li>横軸と縦軸が逆になっている場合は、グラフを右クリック →「データの選択」→ 系列を「編集」で、「系列Xの値」と「系列Yの値」を選び直します。</li>
+<li>グラフの右上の <strong>＋（グラフ要素）</strong> ボタン →「軸ラベル」にチェックを入れ、軸の名前と単位（例：「平均寿命（歳）」）を入力します。</li>
+<li>グラフタイトルと出典を書き込みます。</li>
+</ol>
+</section>
+<section id="相関係数を計算する" class="level3" data-number="8.4.2">
+<h3 data-number="8.4.2" class="anchored" data-anchor-id="相関係数を計算する"><span class="header-section-number">8.4.2</span> 相関係数を計算する</h3>
+<p>2つの範囲を指定して、<code>=CORREL(範囲1,範囲2)</code> と入力します。例えば、シート「データ」のスマホ時間（D列）と睡眠時間（E列）なら、次のようになります。</p>
+<p><code>=CORREL(データ!D2:D101,データ!E2:E101)</code></p>
+<ul>
+<li>2つの範囲は、<strong>同じ行数</strong>にそろえます。空欄（無回答）のセルは自動的に計算から除かれます。</li>
+<li>同じ点が重なっている（同じ回答の人が複数いる）と、散布図では1つの点に見えることに注意しましょう。</li>
+</ul>
+</section>
+</section>
+<section id="課題_8に取り組もう" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="課題_8に取り組もう"><span class="header-section-number">8.5</span> 課題_8に取り組もう</h2>
+<p>授業の後半は、Excelファイル「課題_8」を使って作業します。<span class="marker">作業したファイルが、そのまま今日の課題の提出物になります。</span></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>課題_8の進め方
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Blackboardから <strong>課題_8.xlsx</strong> をダウンロードして開きます。</li>
+<li>最初のシート「はじめに」に、学籍番号と氏名を入力します。</li>
+<li>シートを順番に進めます。<span class="marker">黄色のセル</span>が、皆さんが入力する場所です。</li>
+<li>最後に、ファイル名を <strong>課題_8_氏名.xlsx</strong> に変えて保存し、Blackboardに提出します。</li>
+</ol>
+</div>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">シート</th>
+<th style="text-align: left;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">はじめに</td>
+<td style="text-align: left;">学籍番号・氏名の入力、進め方の説明</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">データ_国別</td>
+<td style="text-align: left;">世界の国々の1人あたりGDP・平均寿命・人口（1行＝1か国）と出典</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">データ</td>
+<td style="text-align: left;">クラスのアンケート結果（1行＝1人）</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1_予想</td>
+<td style="text-align: left;">導入の3問の予想と結果</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2_国別の散布図</td>
+<td style="text-align: left;">1人あたりGDPと平均寿命の散布図を描き、5つのチェックで読み取る</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3_スマホと睡眠</td>
+<td style="text-align: left;">クラスのスマホ時間と睡眠時間の散布図と相関係数</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4_チャレンジ</td>
+<td style="text-align: left;">外れ値の影響、曲がった関係、対数目盛、都道府県データ（Excelに慣れている人向け）</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">5_振り返り</td>
+<td style="text-align: left;">散布図から言えること・言えないこと</td>
+</tr>
+</tbody>
+</table>
+<p><strong>基本課題</strong>は「1_予想」〜「3_スマホと睡眠」と「5_振り返り」です。<strong>チャレンジ課題</strong>（「4_チャレンジ」）は、Excelに慣れている人や、基本課題が終わった人が取り組んでください。</p>
+<div class="kotae callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>解答
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>2_国別の散布図</strong></p>
+<ul>
+<li>1つの点は<strong>1か国</strong>です。一般に、1人あたりGDPが高い国ほど平均寿命が長い、<strong>正の相関</strong>が見られます。</li>
+<li>ただし、点はまっすぐではなく、<strong>GDPが低いところでは急に上がり、高いところでは頭打ちになる</strong>曲がった形になりやすいです。貧しい国が少し豊かになると寿命は大きく延びますが、すでに豊かな国がさらに豊かになっても、寿命はそれほど延びません。導入の問2は、この「頭打ち」に気づけるかどうかを問うものでした。</li>
+</ul>
+<p><strong>3_スマホと睡眠</strong></p>
+<ul>
+<li>相関係数が負の値なら「スマホ時間が長い人ほど睡眠時間が短い傾向」、0に近ければ「はっきりした直線的な関係は見られない」と読みます。数値はクラスのデータによって決まります。</li>
+</ul>
+<p><strong>4_チャレンジ</strong></p>
+<ul>
+<li>課題A：No.1〜8では相関係数は<strong>約0.96</strong>（強い正の相関）です。(20, 0) を1つ加えるだけで、<strong>約−0.30</strong>になり、符号まで逆になります。外れ値1つで結論が大きく変わる例です。</li>
+<li>課題B：相関係数は<strong>0</strong>になります。しかし、xとyには y = x × x という<strong>はっきりした関係</strong>があります。相関係数は直線的な関係しか測れないので、<strong>0だから「関係がない」とは言えません</strong>。</li>
+<li>課題C：横軸を対数目盛にすると、「頭打ち」の曲線が<strong>まっすぐに近い</strong>並びになり、相関係数も大きくなりやすいです。対数目盛では、目盛り1つ分が「10倍」を表します。「GDPが1,000ドル増える」ことの意味は、貧しい国と豊かな国とでまったく違う、ということを表現できます。</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- 教員メモ：実際に配布したデータで散布図の形（頭打ちになっているか）、目立つ外れ値の国、GDPとlog GDPの相関係数を授業前に確認し、解答の記述と食い違いがないか確認してください。 -->
+</section>
+<section id="共有散布図から何が言える" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="共有散布図から何が言える"><span class="header-section-number">8.6</span> 共有：散布図から何が言える？</h2>
+<div class="mondai callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>演習
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>グループ（3〜4人）で話し合ってください。</p>
+<ol type="1">
+<li>国別の散布図から、「豊かになれば長生きできる」と言ってよいでしょうか？ 豊かさと寿命の両方に関係していそうな<strong>別の要因</strong>はありますか？</li>
+<li>スマホ時間と睡眠時間の関係について、「スマホを使いすぎるから睡眠が短くなる」以外の説明は考えられますか？</li>
+<li>このクラスのデータの結果を、「日本の大学生全体」に当てはめてよいでしょうか？</li>
+</ol>
+</div>
+</div>
+<!-- 教員メモ：1・2の議論は、次回（相関と因果）への橋渡しです。「医療・衛生・教育の水準」「夜更かしだから長くスマホを使う（逆の因果）」などが出てくれば十分です。3は第10回（サンプル）につながる論点として軽く触れる程度で。 -->
+</section>
+<section id="振り返り" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="振り返り"><span class="header-section-number">8.7</span> 振り返り</h2>
+<div class="my-note callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>今日のまとめ
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>2つの量的な変数の関係は、<strong>散布図</strong>で見る。まず「1つの点は何か」「軸は何か」を確認する。</li>
+<li><strong>相関係数</strong>（<code>=CORREL</code>）は、−1〜1の値で<strong>直線的な</strong>関係の強さを表す。</li>
+<li>相関係数は、<strong>外れ値</strong>に弱く、<strong>曲がった関係</strong>を捉えられない。必ず散布図と一緒に見る。</li>
+</ul>
+</div>
+</div>
+<p><strong>次回の問い：</strong>「朝食を食べる子は成績が良い。だから朝食を食べれば成績が上がる？」</p>
+<p>相関があることと、原因と結果の関係（因果）があることの違いを考えます。</p>
+</section>
+<section id="今週の課題" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="今週の課題"><span class="header-section-number">8.8</span> 今週の課題</h2>
+<div class="mondai callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>演習
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>課題_8_氏名.xlsx</strong> をBlackboardに提出してください（<strong>金曜日24時まで</strong>）。</p>
+<p>授業中に終わらなかったシートは、提出までに仕上げてください。</p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -682,13 +1069,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./lec07.html" class="pagination-link" aria-label="タイトル">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">タイトル</span></span>
+      <a href="./lec07.html" class="pagination-link" aria-label="変化を見る：時系列データ">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">変化を見る：時系列データ</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./lec09.html" class="pagination-link" aria-label="タイトル">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">タイトル</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./lec09.html" class="pagination-link" aria-label="相関と因果：データから言えること・言えないこと">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">相関と因果：データから言えること・言えないこと</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
