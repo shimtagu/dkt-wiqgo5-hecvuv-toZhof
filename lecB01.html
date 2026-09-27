@@ -21,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -305,8 +340,33 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sec-prepare" id="toc-sec-prepare" class="nav-link active" data-scroll-target="#sec-prepare"><span class="header-section-number">14.1</span> 今日の準備</a></li>
+  <li><a href="#sec-setup" id="toc-sec-setup" class="nav-link" data-scroll-target="#sec-setup"><span class="header-section-number">14.2</span> パッケージの準備</a></li>
+  <li><a href="#sec-data" id="toc-sec-data" class="nav-link" data-scroll-target="#sec-data"><span class="header-section-number">14.3</span> 今日使うデータ</a></li>
+  <li><a href="#sec-review" id="toc-sec-review" class="nav-link" data-scroll-target="#sec-review"><span class="header-section-number">14.4</span> R の復習</a>
+  <ul class="collapse">
+  <li><a href="#sec-read" id="toc-sec-read" class="nav-link" data-scroll-target="#sec-read"><span class="header-section-number">14.4.1</span> ファイルの読み込み（CSV・Excel）</a></li>
+  <li><a href="#sec-dplyr" id="toc-sec-dplyr" class="nav-link" data-scroll-target="#sec-dplyr"><span class="header-section-number">14.4.2</span> dplyr の5つの動詞</a></li>
+  <li><a href="#sec-ggplot" id="toc-sec-ggplot" class="nav-link" data-scroll-target="#sec-ggplot"><span class="header-section-number">14.4.3</span> ggplot2 の基本</a></li>
+  <li><a href="#sec-quarto" id="toc-sec-quarto" class="nav-link" data-scroll-target="#sec-quarto"><span class="header-section-number">14.4.4</span> Quarto の復習</a></li>
+  </ul></li>
+  <li><a href="#sec-flow" id="toc-sec-flow" class="nav-link" data-scroll-target="#sec-flow"><span class="header-section-number">14.5</span> データ分析の5つのステップ</a>
+  <ul class="collapse">
+  <li><a href="#sec-step1" id="toc-sec-step1" class="nav-link" data-scroll-target="#sec-step1"><span class="header-section-number">14.5.1</span> ステップ1：問い（Research Question）と仮説を立てる</a></li>
+  <li><a href="#sec-step2" id="toc-sec-step2" class="nav-link" data-scroll-target="#sec-step2"><span class="header-section-number">14.5.2</span> ステップ2：データの確認・前処理と記述統計</a></li>
+  <li><a href="#sec-step3" id="toc-sec-step3" class="nav-link" data-scroll-target="#sec-step3"><span class="header-section-number">14.5.3</span> ステップ3：可視化</a></li>
+  <li><a href="#sec-step4" id="toc-sec-step4" class="nav-link" data-scroll-target="#sec-step4"><span class="header-section-number">14.5.4</span> ステップ4：分析（検定・相関・回帰）</a></li>
+  <li><a href="#sec-step5" id="toc-sec-step5" class="nav-link" data-scroll-target="#sec-step5"><span class="header-section-number">14.5.5</span> ステップ5：考察・結論</a></li>
+  </ul></li>
+  <li><a href="#sec-assignment" id="toc-sec-assignment" class="nav-link" data-scroll-target="#sec-assignment"><span class="header-section-number">14.6</span> 本日の課題</a></li>
+  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link" data-scroll-target="#sec-summary"><span class="header-section-number">14.7</span> まとめ</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -330,8 +390,1295 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><strong>R の復習と、5つのステップによるデータ分析</strong></p>
+<div style="margin-top: 2.0em;">
+
+</div>
+<p><strong>今日の目標</strong></p>
+<ol type="1">
+<li>後期のスタートとして、<strong>RStudio・Rプロジェクト・Quarto</strong> の使い方を思い出す。</li>
+<li><strong>CSV ファイルと Excel ファイル</strong>を読み込み、dplyr と ggplot2 でデータを扱えることを確認する。</li>
+<li>前期第13回で学んだ<strong>データ分析の5つのステップ</strong>を、もう一度一通り体験する。</li>
+</ol>
+<div style="margin-top: 2.0em;">
+
+</div>
+<div class="my-note callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>今日の位置づけ</strong></p>
+<p>後期は、毎回与えられるデータについて自分で問いと仮説を立て、分析し、レポートにまとめる授業です。その土台になるのが、前期の最後に学んだ「5つのステップ」です。</p>
+<p>今日は前半で R の基本操作を復習し、後半で前期第10回でも使った<strong>学生成績データ</strong>を使って、5つのステップをもう一度通して体験します。</p>
+</div>
+</div>
+<div style="margin-top: 3.0em;">
+
+</div>
+<section id="sec-prepare" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="sec-prepare"><span class="header-section-number">14.1</span> 今日の準備</h2>
+<p>前期と同じ手順で、今日の作業用の R プロジェクトを作成します。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 92%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1.</td>
+<td style="text-align: left;">RStudio を起動し、左上のアイコン（＋R）から新規 R プロジェクトを作成する（New Directory → New Project）。</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2.</td>
+<td style="text-align: left;">Directory name に「LessonB01」と入力し、Browse から Kドライブの「R_programming」を選んで Create Project をクリックする。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3.</td>
+<td style="text-align: left;">Blackboard から <code>Student_Performance.csv</code>・<code>Student_Performance.xlsx</code>・<code>assignmentB01.qmd</code> をダウンロードし、「R_programming/LessonB01」フォルダに入れる。</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4.</td>
+<td style="text-align: left;">講義資料のコードを試すときは、R Script（<code>practiceB01.R</code>）を新規作成して保存する。</td>
+</tr>
+</tbody>
+</table>
+<div class="my-note callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>この資料のコードは、データを <code>data</code> フォルダに入れた場合の書き方（<code>"data/Student_Performance.csv"</code>）になっています。プロジェクトの直下にデータを置いた場合は、<code>read_csv("Student_Performance.csv")</code> のように <code>data/</code> を外してください。</p>
+</div>
+</div>
+<div style="margin-top: 4.0em;">
+
+</div>
+</section>
+<section id="sec-setup" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="sec-setup"><span class="header-section-number">14.2</span> パッケージの準備</h2>
+<p>大学の PC はシャットダウンするたびに初期化されるため、毎回インストールが必要です。</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">CRAN =</span> <span class="st">"https://cran.rstudio.com/"</span>))</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">install.packages</span>(<span class="st">"readxl"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">install.packages</span>(<span class="st">"broom"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">install.packages</span>(<span class="st">"modelsummary"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>必要なパッケージを読み込みます。</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">library</span>(broom)</span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="fu">library</span>(modelsummary)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div style="margin-top: 4.0em;">
+
+</div>
+</section>
+<section id="sec-data" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="sec-data"><span class="header-section-number">14.3</span> 今日使うデータ</h2>
+<p><strong><a href="https://www.kaggle.com/datasets/nikhil7280/student-performance-multiple-linear-regression">学生成績データ</a></strong>（<code>Student_Performance.csv</code>）</p>
+<p>学生 10,000 人について、学習時間や睡眠時間などの生活習慣と、成績の指標が記録されたデータです。前期第10回（回帰分析1）でも使いました。今回は変数名を短く整えたものを使います。</p>
+<p><strong>変数の説明</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 60%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>変数名</th>
+<th>内容</th>
+<th>種類</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>study_hours</code></td>
+<td>1日の学習時間（時間、1〜9）</td>
+<td>数値</td>
+</tr>
+<tr class="even">
+<td><code>previous_score</code></td>
+<td>前回のテストの点数（40〜99）</td>
+<td>数値</td>
+</tr>
+<tr class="odd">
+<td><code>activities</code></td>
+<td>課外活動への参加（<code>Yes</code> / <code>No</code>）</td>
+<td>カテゴリ</td>
+</tr>
+<tr class="even">
+<td><code>sleep_hours</code></td>
+<td>1日の睡眠時間（時間、4〜9）</td>
+<td>数値</td>
+</tr>
+<tr class="odd">
+<td><code>practice</code></td>
+<td>解いた練習問題集の数（0〜9）</td>
+<td>数値</td>
+</tr>
+<tr class="even">
+<td><code>score</code></td>
+<td>成績の指標（10〜100、大きいほど成績が良い）</td>
+<td>数値</td>
+</tr>
+</tbody>
+</table>
+<div class="my-note callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>このデータは学習用に作られた（シミュレーションされた）データです。そのため、実際の調査データに比べて変数どうしの関係が非常にきれいに出ます。後期の総合分析演習で扱う実際のデータでは、ここまではっきりした結果にならないことが普通です。</p>
+</div>
+</div>
+<div style="margin-top: 4.0em;">
+
+</div>
+</section>
+<section id="sec-review" class="level2" data-number="14.4">
+<h2 data-number="14.4" class="anchored" data-anchor-id="sec-review"><span class="header-section-number">14.4</span> R の復習</h2>
+<section id="sec-read" class="level3" data-number="14.4.1">
+<h3 data-number="14.4.1" class="anchored" data-anchor-id="sec-read"><span class="header-section-number">14.4.1</span> ファイルの読み込み（CSV・Excel）</h3>
+<p>CSV ファイルは、tidyverse に含まれる readr パッケージの <code>read_csv()</code> で読み込みます。</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>df_student <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/Student_Performance.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Excel ファイルは、readxl パッケージの <code>read_excel()</code> で読み込みます。readxl は <code>library(tidyverse)</code> だけでは読み込まれないので、<code>library(readxl)</code> が必要です。</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>df_student_xlsx <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/Student_Performance.xlsx"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>読み込んだら、まず <code>glimpse()</code> で<strong>行数・列数・変数の型</strong>を確認します。</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">glimpse</span>(df_student)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 10,000
+Columns: 6
+$ study_hours    &lt;dbl&gt; 7, 4, 8, 5, 7, 3, 7, 8, 5, 4, 8, 8, 3, 6, 5, 2, 8, 6, 2…
+$ previous_score &lt;dbl&gt; 99, 82, 51, 52, 75, 78, 73, 45, 77, 89, 91, 79, 47, 47,…
+$ activities     &lt;chr&gt; "Yes", "No", "Yes", "Yes", "No", "No", "Yes", "Yes", "N…
+$ sleep_hours    &lt;dbl&gt; 9, 4, 7, 5, 8, 9, 5, 4, 8, 4, 4, 6, 9, 4, 7, 4, 8, 7, 4…
+$ practice       &lt;dbl&gt; 1, 2, 2, 2, 5, 6, 6, 6, 2, 0, 5, 2, 2, 2, 8, 3, 4, 2, 9…
+$ score          &lt;dbl&gt; 91, 65, 45, 36, 66, 61, 63, 42, 61, 69, 84, 73, 27, 33,…</code></pre>
+</div>
+</div>
+<div class="my-note callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>読み込めないときの確認ポイント</strong></p>
+<ul>
+<li>ファイルが R プロジェクトのフォルダ（または <code>data</code> フォルダ）に入っているか</li>
+<li>ファイル名のつづり・大文字と小文字・拡張子（<code>.csv</code> / <code>.xlsx</code>）が正しいか</li>
+<li><code>"</code> で囲んでいるか</li>
+</ul>
+<p>エラー <code>'data/Student_Performance.csv' does not exist</code> は、「その場所にファイルが無い」という意味です。右下の Files ペインで、ファイルの場所を確認しましょう。</p>
+</div>
+</div>
+<div style="margin-top: 2.0em;">
+
+</div>
+<div class="mondai callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>Student_Performance.xlsx</code> を <code>read_excel()</code> で読み込み、<code>df_student_xlsx</code> という名前で保存してください。そのあと <code>glimpse()</code> で中身を確認し、<strong>行数と列数</strong>を答えてください。</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>df_student_xlsx <span class="ot">&lt;-</span> <span class="fu">___</span>(<span class="st">"data/Student_Performance.xlsx"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="fu">___</span>(df_student_xlsx)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div class="kotae callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>df_student_xlsx <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/Student_Performance.xlsx"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2"></a></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="fu">glimpse</span>(df_student_xlsx)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 10,000
+Columns: 6
+$ study_hours    &lt;dbl&gt; 7, 4, 8, 5, 7, 3, 7, 8, 5, 4, 8, 8, 3, 6, 5, 2, 8, 6, 2…
+$ previous_score &lt;dbl&gt; 99, 82, 51, 52, 75, 78, 73, 45, 77, 89, 91, 79, 47, 47,…
+$ activities     &lt;chr&gt; "Yes", "No", "Yes", "Yes", "No", "No", "Yes", "Yes", "N…
+$ sleep_hours    &lt;dbl&gt; 9, 4, 7, 5, 8, 9, 5, 4, 8, 4, 4, 6, 9, 4, 7, 4, 8, 7, 4…
+$ practice       &lt;dbl&gt; 1, 2, 2, 2, 5, 6, 6, 6, 2, 0, 5, 2, 2, 2, 8, 3, 4, 2, 9…
+$ score          &lt;dbl&gt; 91, 65, 45, 36, 66, 61, 63, 42, 61, 69, 84, 73, 27, 33,…</code></pre>
+</div>
+</div>
+<p>行数は 10,000、列数は 6 です。CSV 版と同じデータなので、<code>df_student</code> と同じ大きさになります。</p>
+</div>
+</div>
+</div>
+<div style="margin-top: 3.0em;">
+
+</div>
+</section>
+<section id="sec-dplyr" class="level3" data-number="14.4.2">
+<h3 data-number="14.4.2" class="anchored" data-anchor-id="sec-dplyr"><span class="header-section-number">14.4.2</span> dplyr の5つの動詞</h3>
+<p>前期第2回で学んだ dplyr の5つの動詞を、パイプ <code>|&gt;</code> でつなげて使います。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">関数</th>
+<th style="text-align: left;">働き</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>filter()</code></td>
+<td style="text-align: left;">条件に合う<strong>行</strong>を取り出す</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>select()</code></td>
+<td style="text-align: left;">必要な<strong>列</strong>を取り出す</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>mutate()</code></td>
+<td style="text-align: left;">新しい列を作る・列を変更する</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>arrange()</code></td>
+<td style="text-align: left;">並べ替える（<code>desc()</code> で降順）</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>summarise()</code></td>
+<td style="text-align: left;">集計する（<code>group_by()</code> と組み合わせてグループごとに）</td>
+</tr>
+</tbody>
+</table>
+<p>例として、学習時間が9時間の学生だけを取り出し、成績が高い順に並べてみます。</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-6"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-6-1"><a href="#annotated-cell-6-1"></a>df_student <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="1">1</button><span id="annotated-cell-6-2" class="code-annotation-target"><a href="#annotated-cell-6-2"></a>  <span class="fu">filter</span>(study_hours <span class="sc">==</span> <span class="dv">9</span>) <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="2">2</button><span id="annotated-cell-6-3" class="code-annotation-target"><a href="#annotated-cell-6-3"></a>  <span class="fu">select</span>(study_hours, previous_score, score) <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="3">3</button><span id="annotated-cell-6-4" class="code-annotation-target"><a href="#annotated-cell-6-4"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(score))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-6" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-6" data-code-lines="2" data-code-annotation="1">学習時間が9時間の行だけを取り出す（<code>=</code> ではなく <code>==</code> を使う）。</span>
+</dd>
+<dt data-target-cell="annotated-cell-6" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-6" data-code-lines="3" data-code-annotation="2">必要な列だけを取り出す。</span>
+</dd>
+<dt data-target-cell="annotated-cell-6" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-6" data-code-lines="4" data-code-annotation="3">成績が高い順に並べ替える。</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,115 × 3
+   study_hours previous_score score
+         &lt;dbl&gt;          &lt;dbl&gt; &lt;dbl&gt;
+ 1           9             98   100
+ 2           9             98   100
+ 3           9             99   100
+ 4           9             98    99
+ 5           9             99    99
+ 6           9             99    99
+ 7           9             99    99
+ 8           9             96    99
+ 9           9             97    98
+10           9             99    98
+# ℹ 1,105 more rows</code></pre>
+</div>
+</div>
+<p><code>mutate()</code> で新しい列を作ることもできます。ここでは、成績が60以上なら「合格」、それ以外は「不合格」とする列 <code>pass</code> を作ります。</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>df_student <span class="ot">&lt;-</span> df_student <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">mutate</span>(<span class="at">pass =</span> <span class="fu">if_else</span>(score <span class="sc">&gt;=</span> <span class="dv">60</span>, <span class="st">"合格"</span>, <span class="st">"不合格"</span>))</span>
+<span id="cb11-3"><a href="#cb11-3"></a></span>
+<span id="cb11-4"><a href="#cb11-4"></a>df_student <span class="sc">|&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a>  <span class="fu">count</span>(pass)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  pass       n
+  &lt;chr&gt;  &lt;int&gt;
+1 不合格  5710
+2 合格    4290</code></pre>
+</div>
+</div>
+<div style="margin-top: 2.0em;">
+
+</div>
+<div class="mondai callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>df_student</code> を使い、<strong>課外活動に参加していて（<code>activities</code> が <code>"Yes"</code>）、睡眠時間が8時間以上</strong>の学生だけを取り出してください。何人いるでしょうか。</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>df_student <span class="sc">|&gt;</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">___</span>(activities <span class="sc">==</span> <span class="st">"Yes"</span>, sleep_hours ___ <span class="dv">8</span>) <span class="sc">|&gt;</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a>  <span class="fu">nrow</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div class="kotae callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>df_student <span class="sc">|&gt;</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">filter</span>(activities <span class="sc">==</span> <span class="st">"Yes"</span>, sleep_hours <span class="sc">&gt;=</span> <span class="dv">8</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a>  <span class="fu">nrow</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1639</code></pre>
+</div>
+</div>
+<p><code>filter()</code> の中でカンマ <code>,</code> で条件を並べると、「かつ（AND）」の意味になります。</p>
+</div>
+</div>
+</div>
+<div style="margin-top: 2.0em;">
+
+</div>
+<div class="mondai callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>df_student</code> を使い、<strong>学習時間（<code>study_hours</code>）ごと</strong>に人数と成績（<code>score</code>）の平均を計算してください。</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>df_student <span class="sc">|&gt;</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a>  <span class="fu">___</span>(study_hours) <span class="sc">|&gt;</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a>  <span class="fu">___</span>(</span>
+<span id="cb16-4"><a href="#cb16-4"></a>    <span class="at">n          =</span> <span class="fu">n</span>(),</span>
+<span id="cb16-5"><a href="#cb16-5"></a>    <span class="at">mean_score =</span> <span class="fu">mean</span>(___),</span>
+<span id="cb16-6"><a href="#cb16-6"></a>    <span class="at">.groups    =</span> <span class="st">"drop"</span></span>
+<span id="cb16-7"><a href="#cb16-7"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div class="kotae callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>df_student <span class="sc">|&gt;</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>  <span class="fu">group_by</span>(study_hours) <span class="sc">|&gt;</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb17-4"><a href="#cb17-4"></a>    <span class="at">n          =</span> <span class="fu">n</span>(),</span>
+<span id="cb17-5"><a href="#cb17-5"></a>    <span class="at">mean_score =</span> <span class="fu">mean</span>(score),</span>
+<span id="cb17-6"><a href="#cb17-6"></a>    <span class="at">.groups    =</span> <span class="st">"drop"</span></span>
+<span id="cb17-7"><a href="#cb17-7"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 9 × 3
+  study_hours     n mean_score
+        &lt;dbl&gt; &lt;int&gt;      &lt;dbl&gt;
+1           1  1152       44.1
+2           2  1085       46.4
+3           3  1119       49.8
+4           4  1085       52.7
+5           5  1094       55.5
+6           6  1133       58.5
+7           7  1129       60.2
+8           8  1088       64.2
+9           9  1115       65.7</code></pre>
+</div>
+</div>
+<p>学習時間が長いほど、成績の平均が高くなっています。</p>
+</div>
+</div>
+</div>
+<div style="margin-top: 3.0em;">
+
+</div>
+</section>
+<section id="sec-ggplot" class="level3" data-number="14.4.3">
+<h3 data-number="14.4.3" class="anchored" data-anchor-id="sec-ggplot"><span class="header-section-number">14.4.3</span> ggplot2 の基本</h3>
+<p>ggplot2 は「データ → 軸の対応（<code>aes()</code>）→ グラフの種類（<code>geom_*()</code>）→ ラベル・見た目」の順にレイヤーを重ねてグラフを作ります。</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-8"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-8-1"><a href="#annotated-cell-8-1"></a>df_student <span class="sc">|&gt;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-8" data-target-annotation="1">1</button><span id="annotated-cell-8-2" class="code-annotation-target"><a href="#annotated-cell-8-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> score)) <span class="sc">+</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-8" data-target-annotation="2">2</button><span id="annotated-cell-8-3" class="code-annotation-target"><a href="#annotated-cell-8-3"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">fill =</span> <span class="st">"steelblue"</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-8" data-target-annotation="3">3</button><span id="annotated-cell-8-4" class="code-annotation-target"><a href="#annotated-cell-8-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"成績"</span>, <span class="at">y =</span> <span class="st">"人数"</span>) <span class="sc">+</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-8" data-target-annotation="4">4</button><span id="annotated-cell-8-5" class="code-annotation-target"><a href="#annotated-cell-8-5"></a>  <span class="fu">theme_minimal</span>()</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-8" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-8" data-code-lines="2" data-code-annotation="1">x 軸に成績を割り当てる。</span>
+</dd>
+<dt data-target-cell="annotated-cell-8" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-8" data-code-lines="3" data-code-annotation="2">ヒストグラムを描く（<code>binwidth</code> は棒の幅）。</span>
+</dd>
+<dt data-target-cell="annotated-cell-8" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-8" data-code-lines="4" data-code-annotation="3">軸ラベルを付ける。</span>
+</dd>
+<dt data-target-cell="annotated-cell-8" data-target-annotation="4">4</dt>
+<dd>
+<span data-code-cell="annotated-cell-8" data-code-lines="5" data-code-annotation="4">見た目のテーマを設定する。</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lecB01_files/figure-html/ggplot-hist-1.png" class="img-fluid figure-img" width="2100"></p>
+<figcaption>成績の分布</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div style="margin-top: 2.0em;">
+
+</div>
+<div class="mondai callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>df_student</code> を使い、<strong>課外活動の有無ごとの成績の箱ひげ図</strong>を描いてください。</p>
+<p>ただし、以下の条件を満たしてください。</p>
+<ul>
+<li>x 軸を <code>activities</code>、y 軸を <code>score</code> にする</li>
+<li>課外活動の有無で色分けし（<code>fill = activities</code>）、凡例は表示しない</li>
+<li>x 軸のラベルを「課外活動」、y 軸のラベルを「成績」にする</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>df_student <span class="sc">|&gt;</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> ___, <span class="at">y =</span> ___, <span class="at">fill =</span> ___)) <span class="sc">+</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a>  <span class="fu">___</span>() <span class="sc">+</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"課外活動"</span>, <span class="at">y =</span> <span class="st">"成績"</span>) <span class="sc">+</span></span>
+<span id="cb19-5"><a href="#cb19-5"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb19-6"><a href="#cb19-6"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div class="kotae callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>df_student <span class="sc">|&gt;</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> activities, <span class="at">y =</span> score, <span class="at">fill =</span> activities)) <span class="sc">+</span></span>
+<span id="cb20-3"><a href="#cb20-3"></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb20-4"><a href="#cb20-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"課外活動"</span>, <span class="at">y =</span> <span class="st">"成績"</span>) <span class="sc">+</span></span>
+<span id="cb20-5"><a href="#cb20-5"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb20-6"><a href="#cb20-6"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lecB01_files/figure-html/ans-ggplot-01-1.png" class="img-fluid figure-img" width="2100"></p>
+<figcaption>課外活動の有無と成績</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>2つの箱ひげ図はほとんど同じ位置にあり、見た目では大きな差はなさそうです。</p>
+</div>
+</div>
+</div>
+<div style="margin-top: 3.0em;">
+
+</div>
+</section>
+<section id="sec-quarto" class="level3" data-number="14.4.4">
+<h3 data-number="14.4.4" class="anchored" data-anchor-id="sec-quarto"><span class="header-section-number">14.4.4</span> Quarto の復習</h3>
+<p>課題は Quarto ファイル（<code>.qmd</code>）に書き、Render して HTML を作成します。</p>
+<ul>
+<li>ファイルの一番上の <code>---</code> で囲まれた部分が <strong>YAML ヘッダー</strong>です。<code>author:</code> に自分の氏名と学籍番号を書きます。</li>
+<li><code>```{r}</code> で始まるグレーの枠（<strong>コード・チャンク</strong>）に R のコードを書きます。チャンクの外には、結果の説明や考察を文章で書きます。</li>
+<li>書き終えたら <strong>[Render]</strong> を押し、<code>assignmentB01.html</code> ができたことを確認します。</li>
+<li>HTML ファイルを右クリックして「圧縮（ZIP形式）」し、<code>assignmentB01.html.zip</code> を Blackboard に提出します。</li>
+</ul>
+<div class="my-note callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Render では、qmd ファイルの<strong>上から順に</strong>すべてのコードが実行し直されます。コンソールで動いていても、qmd ファイルの中に <code>library()</code> や <code>read_csv()</code> が書かれていなければエラーになります（前期第6回の「RStudio の R と Render 時の R は別物」を思い出してください）。</p>
+<p>見出しや表、コールアウトの書き方は、前期第13回の「<a href="./lecA13.html#sec-quarto-writing">Quartoレポートの書き方</a>」を参照してください。</p>
+</div>
+</div>
+<div style="margin-top: 4.0em;">
+
+</div>
+</section>
+</section>
+<section id="sec-flow" class="level2" data-number="14.5">
+<h2 data-number="14.5" class="anchored" data-anchor-id="sec-flow"><span class="header-section-number">14.5</span> データ分析の5つのステップ</h2>
+<p>ここからは、前期第13回で学んだ5つのステップに沿って分析を進めます。<span class="marker">後期の総合分析演習のレポートも、この5つのステップで書きます</span>。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 43%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">ステップ</th>
+<th style="text-align: left;">内容</th>
+<th style="text-align: left;">主に使う関数</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">問い（RQ）と仮説を立てる</td>
+<td style="text-align: left;">（文章で書く）</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">データの確認・前処理と記述統計</td>
+<td style="text-align: left;"><code>filter()</code>, <code>select()</code>, <code>drop_na()</code>, <code>summarise()</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">可視化</td>
+<td style="text-align: left;"><code>ggplot()</code>, <code>geom_point()</code>, <code>geom_boxplot()</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">分析（検定・相関・回帰）</td>
+<td style="text-align: left;"><code>t.test()</code>, <code>cor.test()</code>, <code>lm()</code>, <code>tidy()</code>, <code>modelsummary()</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">考察・結論</td>
+<td style="text-align: left;">（文章で書く）</td>
+</tr>
+</tbody>
+</table>
+<div style="margin-top: 3.0em;">
+
+</div>
+<section id="sec-step1" class="level3" data-number="14.5.1">
+<h3 data-number="14.5.1" class="anchored" data-anchor-id="sec-step1"><span class="header-section-number">14.5.1</span> ステップ1：問い（Research Question）と仮説を立てる</h3>
+<p>分析は「とりあえずグラフを描く」ことから始めるのではなく、<strong>何を明らかにしたいか</strong>を先に決めます。良い問いの条件は次の3つでした。</p>
+<ol type="1">
+<li><strong>具体的な変数</strong>を指定できている</li>
+<li>データで<strong>答えられる</strong>（データに含まれる変数で検証できる）</li>
+<li><strong>比較・関係</strong>の視点が入っている（差があるか／関係があるか）</li>
+</ol>
+<p>問いを立てたら、分析結果を見る前に<strong>仮説</strong>を言葉にしておきます。</p>
+<p><strong>この資料で使う例</strong></p>
+<ul>
+<li>問い：学習時間（<code>study_hours</code>）が長い学生ほど、成績（<code>score</code>）は高いのか。その関係は、前回のテストの点数（<code>previous_score</code>）を考慮しても残るのか。</li>
+<li>仮説：勉強した分だけ理解が深まるため、学習時間が長いほど成績は高いと予想される。もともと成績の良い学生が長く勉強している可能性もあるが、前回の点数を考慮しても、学習時間の効果は残ると予想される。</li>
+</ul>
+<div style="margin-top: 2.0em;">
+
+</div>
+<div class="mondai callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>上の例を参考に、このデータを使った<strong>自分なりの問いを1つと、その仮説</strong>を書いてください（この問いは課題でも使います）。</p>
+<p>ヒント：<code>sleep_hours</code>（睡眠時間）、<code>practice</code>（練習問題集の数）、<code>activities</code>（課外活動）などに注目すると、例とは違う問いが立てられます。</p>
+</div>
+</div>
+<div class="kotae callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>解答例</strong></p>
+<ul>
+<li>問い：睡眠時間（<code>sleep_hours</code>）が長い学生ほど、成績は高いのか。</li>
+<li>仮説：十分に眠ると集中力や記憶の定着が良くなるため、睡眠時間が長い学生ほど成績は高いと予想される。</li>
+</ul>
+</div>
+</div>
+</div>
+<div style="margin-top: 4.0em;">
+
+</div>
+</section>
+<section id="sec-step2" class="level3" data-number="14.5.2">
+<h3 data-number="14.5.2" class="anchored" data-anchor-id="sec-step2"><span class="header-section-number">14.5.2</span> ステップ2：データの確認・前処理と記述統計</h3>
+<p><strong>前処理：欠損値の確認</strong></p>
+<p>分析に進む前に、欠損値（<code>NA</code>）の有無を確認します。</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(df_student))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   study_hours previous_score     activities    sleep_hours       practice 
+             0              0              0              0              0 
+         score           pass 
+             0              0 </code></pre>
+</div>
+</div>
+<p>このデータには欠損値がありません。欠損値がある場合は、<code>drop_na()</code> で除外するか、集計のときに <code>na.rm = TRUE</code> を指定します。</p>
+<div class="my-note callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>drop_na()</code> をデータ全体に使うと、分析に使わない列に <code>NA</code> がある行まで除外されてしまいます。<strong>先に <code>select()</code> で必要な列を選んでから</strong> <code>drop_na()</code> を使うのが安全です。</p>
+</div>
+</div>
+<p><strong>記述統計</strong></p>
+<p>問いに関係する変数について、件数・平均・標準偏差・最小値・最大値を計算します。</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>df_student <span class="sc">|&gt;</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb23-3"><a href="#cb23-3"></a>    <span class="at">n          =</span> <span class="fu">n</span>(),</span>
+<span id="cb23-4"><a href="#cb23-4"></a>    <span class="at">mean_study =</span> <span class="fu">mean</span>(study_hours),</span>
+<span id="cb23-5"><a href="#cb23-5"></a>    <span class="at">sd_study   =</span> <span class="fu">sd</span>(study_hours),</span>
+<span id="cb23-6"><a href="#cb23-6"></a>    <span class="at">mean_prev  =</span> <span class="fu">mean</span>(previous_score),</span>
+<span id="cb23-7"><a href="#cb23-7"></a>    <span class="at">sd_prev    =</span> <span class="fu">sd</span>(previous_score),</span>
+<span id="cb23-8"><a href="#cb23-8"></a>    <span class="at">mean_score =</span> <span class="fu">mean</span>(score),</span>
+<span id="cb23-9"><a href="#cb23-9"></a>    <span class="at">sd_score   =</span> <span class="fu">sd</span>(score),</span>
+<span id="cb23-10"><a href="#cb23-10"></a>    <span class="at">min_score  =</span> <span class="fu">min</span>(score),</span>
+<span id="cb23-11"><a href="#cb23-11"></a>    <span class="at">max_score  =</span> <span class="fu">max</span>(score)</span>
+<span id="cb23-12"><a href="#cb23-12"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 9
+      n mean_study sd_study mean_prev sd_prev mean_score sd_score min_score
+  &lt;int&gt;      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+1 10000       4.99     2.59      69.4    17.3       55.2     19.2        10
+# ℹ 1 more variable: max_score &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<div style="margin-top: 2.0em;">
+
+</div>
+<div class="mondai callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>自分の問いに関係する変数を選び、<strong>記述統計量（件数・平均・標準偏差など）</strong>を計算してください。グループ（<code>activities</code> など）ごとに計算すると、比較がしやすくなります。</p>
+</div>
+</div>
+<div class="kotae callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>解答例</strong>（ステップ1の解答例の問いの場合）</p>
+<p>睡眠時間ごとに、人数と成績の平均・標準偏差を計算します。</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>df_student <span class="sc">|&gt;</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a>  <span class="fu">group_by</span>(sleep_hours) <span class="sc">|&gt;</span></span>
+<span id="cb25-3"><a href="#cb25-3"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb25-4"><a href="#cb25-4"></a>    <span class="at">n          =</span> <span class="fu">n</span>(),</span>
+<span id="cb25-5"><a href="#cb25-5"></a>    <span class="at">mean_score =</span> <span class="fu">mean</span>(score),</span>
+<span id="cb25-6"><a href="#cb25-6"></a>    <span class="at">sd_score   =</span> <span class="fu">sd</span>(score),</span>
+<span id="cb25-7"><a href="#cb25-7"></a>    <span class="at">.groups    =</span> <span class="st">"drop"</span></span>
+<span id="cb25-8"><a href="#cb25-8"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  sleep_hours     n mean_score sd_score
+        &lt;dbl&gt; &lt;int&gt;      &lt;dbl&gt;    &lt;dbl&gt;
+1           4  1619       53.8     19.1
+2           5  1606       54.8     19.2
+3           6  1673       54.7     19.3
+4           7  1676       55.3     19.3
+5           8  1804       55.9     19.3
+6           9  1622       56.8     19.1</code></pre>
+</div>
+</div>
+<p>睡眠時間が長いほど成績の平均がわずかに高い傾向はありますが、4時間と9時間の差でも約3点で、標準偏差（約19点）に比べると小さな差です。</p>
+</div>
+</div>
+</div>
+<div style="margin-top: 4.0em;">
+
+</div>
+</section>
+<section id="sec-step3" class="level3" data-number="14.5.3">
+<h3 data-number="14.5.3" class="anchored" data-anchor-id="sec-step3"><span class="header-section-number">14.5.3</span> ステップ3：可視化</h3>
+<p>数値だけでは見えにくいパターンを、グラフで確認します。2つの数値の関係は<strong>散布図</strong>、グループの比較は<strong>箱ひげ図</strong>が基本です。</p>
+<p><code>study_hours</code> は1〜9の整数なので、そのまま散布図にすると点が縦一列に重なってしまいます。前期第4回で学んだ <code>geom_jitter()</code> で点を少しずらして描きます。</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-11"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-11-1"><a href="#annotated-cell-11-1"></a>df_student <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-11-2"><a href="#annotated-cell-11-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> study_hours, <span class="at">y =</span> score)) <span class="sc">+</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-11" data-target-annotation="1">1</button><span id="annotated-cell-11-3" class="code-annotation-target"><a href="#annotated-cell-11-3"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.2</span>, <span class="at">alpha =</span> <span class="fl">0.1</span>, <span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-11" data-target-annotation="2">2</button><span id="annotated-cell-11-4" class="code-annotation-target"><a href="#annotated-cell-11-4"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">color =</span> <span class="st">"gray30"</span>) <span class="sc">+</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-11" data-target-annotation="3">3</button><span id="annotated-cell-11-5" class="code-annotation-target"><a href="#annotated-cell-11-5"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>) <span class="sc">+</span></span>
+<span id="annotated-cell-11-6"><a href="#annotated-cell-11-6"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"学習時間（時間）"</span>, <span class="at">y =</span> <span class="st">"成績"</span>) <span class="sc">+</span></span>
+<span id="annotated-cell-11-7"><a href="#annotated-cell-11-7"></a>  <span class="fu">theme_minimal</span>()</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-11" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-11" data-code-lines="3" data-code-annotation="1">点を左右に少しずらし（<code>width</code>）、透明度（<code>alpha</code>）を下げて重なりを見やすくする。</span>
+</dd>
+<dt data-target-cell="annotated-cell-11" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-11" data-code-lines="4" data-code-annotation="2">回帰直線を引く。</span>
+</dd>
+<dt data-target-cell="annotated-cell-11" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-11" data-code-lines="5" data-code-annotation="3">x 軸の目盛りを1〜9の整数にする。</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lecB01_files/figure-html/step3-scatter-1.png" class="img-fluid figure-img" width="2100"></p>
+<figcaption>学習時間と成績の関係</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>右肩上がりの関係が見られます。ただし、同じ学習時間でも成績のばらつきはかなり大きいことも分かります。</p>
+<div style="margin-top: 2.0em;">
+
+</div>
+<div class="mondai callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>自分の問いに関係する変数を選び、<strong>適切なグラフを1つ以上</strong>描いてください。</p>
+</div>
+</div>
+<div class="kotae callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>解答例</strong>（ステップ1の解答例の問いの場合）</p>
+<p>睡眠時間ごとの成績の分布を、箱ひげ図で比較します。<code>sleep_hours</code> は数値なので、<code>factor()</code> でカテゴリに変換してから使います。</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>df_student <span class="sc">|&gt;</span></span>
+<span id="cb27-2"><a href="#cb27-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(sleep_hours), <span class="at">y =</span> score)) <span class="sc">+</span></span>
+<span id="cb27-3"><a href="#cb27-3"></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill =</span> <span class="st">"steelblue"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb27-4"><a href="#cb27-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"睡眠時間（時間）"</span>, <span class="at">y =</span> <span class="st">"成績"</span>) <span class="sc">+</span></span>
+<span id="cb27-5"><a href="#cb27-5"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lecB01_files/figure-html/ans-step3-1.png" class="img-fluid figure-img" width="2100"></p>
+<figcaption>睡眠時間別の成績</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>睡眠時間による成績の違いは、グラフではほとんど分かりません。</p>
+</div>
+</div>
+</div>
+<div style="margin-top: 4.0em;">
+
+</div>
+</section>
+<section id="sec-step4" class="level3" data-number="14.5.4">
+<h3 data-number="14.5.4" class="anchored" data-anchor-id="sec-step4"><span class="header-section-number">14.5.4</span> ステップ4：分析（検定・相関・回帰）</h3>
+<p>問いの形に合わせて、分析方法を選びます。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 45%">
+<col style="width: 40%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">問いの形</th>
+<th style="text-align: left;">分析方法</th>
+<th style="text-align: center;">前期の回</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2つのグループで平均に差があるか</td>
+<td style="text-align: left;">t 検定 <code>t.test()</code></td>
+<td style="text-align: center;">第7回</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2つの数値の間に関係があるか</td>
+<td style="text-align: left;">相関分析 <code>cor.test()</code></td>
+<td style="text-align: center;">第9回</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ある変数が別の変数にどれだけ影響するか</td>
+<td style="text-align: left;">回帰分析 <code>lm()</code></td>
+<td style="text-align: center;">第10回</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">グループによって値が違うか（他の変数を考慮して）</td>
+<td style="text-align: left;">ダミー変数を含む回帰分析</td>
+<td style="text-align: center;">第11回</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">影響の大きさがグループによって違うか</td>
+<td style="text-align: left;">交差項を含む回帰分析</td>
+<td style="text-align: center;">第12回</td>
+</tr>
+</tbody>
+</table>
+<p><strong>相関分析：学習時間と成績に関係はあるか</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">cor.test</span>(df_student<span class="sc">$</span>study_hours, df_student<span class="sc">$</span>score) <span class="sc">|&gt;</span></span>
+<span id="cb28-2"><a href="#cb28-2"></a>  <span class="fu">tidy</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 8
+  estimate statistic p.value parameter conf.low conf.high method     alternative
+     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;int&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      
+1    0.374      40.3       0      9998    0.357     0.390 Pearson's… two.sided  </code></pre>
+</div>
+</div>
+<p><strong>回帰分析：学習時間は成績にどれだけ影響するか</strong></p>
+<p>モデル1は学習時間だけの単回帰、モデル2は前回のテストの点数を加えた重回帰です。</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(score <span class="sc">~</span> study_hours, <span class="at">data =</span> df_student)</span>
+<span id="cb30-2"><a href="#cb30-2"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(score <span class="sc">~</span> study_hours <span class="sc">+</span> previous_score, <span class="at">data =</span> df_student)</span>
+<span id="cb30-3"><a href="#cb30-3"></a></span>
+<span id="cb30-4"><a href="#cb30-4"></a><span class="fu">modelsummary</span>(<span class="fu">list</span>(<span class="st">"モデル1"</span> <span class="ot">=</span> model1, <span class="st">"モデル2"</span> <span class="ot">=</span> model2),</span>
+<span id="cb30-5"><a href="#cb30-5"></a>             <span class="at">stars =</span> <span class="cn">TRUE</span>, <span class="at">gof_map =</span> <span class="fu">c</span>(<span class="st">"nobs"</span>, <span class="st">"r.squared"</span>, <span class="st">"adj.r.squared"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<!-- preamble start -->
+
+    <script src="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.js"></script>
+
+    <script>
+      // Create table-specific functions using external factory
+      const tableFns_hopokfnnzotu1dw6wtbl = TinyTable.createTableFunctions("tinytable_hopokfnnzotu1dw6wtbl");
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: '9', j: 2 }, { i: '9', j: 3 } ], css_id: 'tinytable_css_g20s8wllh4pi9ktlwohg',}, 
+          { positions: [ { i: '6', j: 2 }, { i: '6', j: 3 } ], css_id: 'tinytable_css_f5422t2uzz954jfttcxj',}, 
+          { positions: [ { i: '1', j: 2 }, { i: '2', j: 2 }, { i: '3', j: 2 }, { i: '4', j: 2 }, { i: '5', j: 2 }, { i: '7', j: 2 }, { i: '8', j: 2 }, { i: '1', j: 3 }, { i: '2', j: 3 }, { i: '3', j: 3 }, { i: '4', j: 3 }, { i: '5', j: 3 }, { i: '7', j: 3 }, { i: '8', j: 3 } ], css_id: 'tinytable_css_naso71lkbic02ysqfj38',}, 
+          { positions: [ { i: '0', j: 2 }, { i: '0', j: 3 } ], css_id: 'tinytable_css_jma5af2e5tua49sj0ept',}, 
+          { positions: [ { i: '9', j: 1 } ], css_id: 'tinytable_css_3l7mi3ymd30lr1c3ughn',}, 
+          { positions: [ { i: '6', j: 1 } ], css_id: 'tinytable_css_z5c9c0z2p52jo8cesats',}, 
+          { positions: [ { i: '1', j: 1 }, { i: '2', j: 1 }, { i: '3', j: 1 }, { i: '4', j: 1 }, { i: '5', j: 1 }, { i: '7', j: 1 }, { i: '8', j: 1 } ], css_id: 'tinytable_css_xqc0ihumbe4r04cr4f4a',}, 
+          { positions: [ { i: '0', j: 1 } ], css_id: 'tinytable_css_qs5j9ytckiuui99c6egy',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  tableFns_hopokfnnzotu1dw6wtbl.styleCell(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.css">
+    <style>
+    /* tinytable css entries after */
+    #tinytable_hopokfnnzotu1dw6wtbl td.tinytable_css_g20s8wllh4pi9ktlwohg, #tinytable_hopokfnnzotu1dw6wtbl th.tinytable_css_g20s8wllh4pi9ktlwohg {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_hopokfnnzotu1dw6wtbl td.tinytable_css_f5422t2uzz954jfttcxj, #tinytable_hopokfnnzotu1dw6wtbl th.tinytable_css_f5422t2uzz954jfttcxj {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_hopokfnnzotu1dw6wtbl td.tinytable_css_naso71lkbic02ysqfj38, #tinytable_hopokfnnzotu1dw6wtbl th.tinytable_css_naso71lkbic02ysqfj38 { text-align: center }
+    #tinytable_hopokfnnzotu1dw6wtbl td.tinytable_css_jma5af2e5tua49sj0ept, #tinytable_hopokfnnzotu1dw6wtbl th.tinytable_css_jma5af2e5tua49sj0ept {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_hopokfnnzotu1dw6wtbl td.tinytable_css_3l7mi3ymd30lr1c3ughn, #tinytable_hopokfnnzotu1dw6wtbl th.tinytable_css_3l7mi3ymd30lr1c3ughn {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_hopokfnnzotu1dw6wtbl td.tinytable_css_z5c9c0z2p52jo8cesats, #tinytable_hopokfnnzotu1dw6wtbl th.tinytable_css_z5c9c0z2p52jo8cesats {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_hopokfnnzotu1dw6wtbl td.tinytable_css_xqc0ihumbe4r04cr4f4a, #tinytable_hopokfnnzotu1dw6wtbl th.tinytable_css_xqc0ihumbe4r04cr4f4a { text-align: left }
+    #tinytable_hopokfnnzotu1dw6wtbl td.tinytable_css_qs5j9ytckiuui99c6egy, #tinytable_hopokfnnzotu1dw6wtbl th.tinytable_css_qs5j9ytckiuui99c6egy {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    </style>
+    <div class="container">
+      <table class="tinytable" id="tinytable_hopokfnnzotu1dw6wtbl" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+        
+        <thead>
+              <tr>
+                <th scope="col" data-row="0" data-col="1"> </th>
+                <th scope="col" data-row="0" data-col="2">モデル1</th>
+                <th scope="col" data-row="0" data-col="3">モデル2</th>
+              </tr>
+        </thead>
+        <tfoot><tr><td colspan="3">+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</td></tr></tfoot>
+        <tbody>
+                <tr>
+                  <td data-row="1" data-col="1">(Intercept)</td>
+                  <td data-row="1" data-col="2">41.379***</td>
+                  <td data-row="1" data-col="3">-29.817***</td>
+                </tr>
+                <tr>
+                  <td data-row="2" data-col="1"></td>
+                  <td data-row="2" data-col="2">(0.387)</td>
+                  <td data-row="2" data-col="3">(0.105)</td>
+                </tr>
+                <tr>
+                  <td data-row="3" data-col="1">study_hours</td>
+                  <td data-row="3" data-col="2">2.773***</td>
+                  <td data-row="3" data-col="3">2.858***</td>
+                </tr>
+                <tr>
+                  <td data-row="4" data-col="1"></td>
+                  <td data-row="4" data-col="2">(0.069)</td>
+                  <td data-row="4" data-col="3">(0.009)</td>
+                </tr>
+                <tr>
+                  <td data-row="5" data-col="1">previous_score</td>
+                  <td data-row="5" data-col="2"></td>
+                  <td data-row="5" data-col="3">1.019***</td>
+                </tr>
+                <tr>
+                  <td data-row="6" data-col="1"></td>
+                  <td data-row="6" data-col="2"></td>
+                  <td data-row="6" data-col="3">(0.001)</td>
+                </tr>
+                <tr>
+                  <td data-row="7" data-col="1">Num.Obs.</td>
+                  <td data-row="7" data-col="2">10000</td>
+                  <td data-row="7" data-col="3">10000</td>
+                </tr>
+                <tr>
+                  <td data-row="8" data-col="1">R2</td>
+                  <td data-row="8" data-col="2">0.140</td>
+                  <td data-row="8" data-col="3">0.986</td>
+                </tr>
+                <tr>
+                  <td data-row="9" data-col="1">R2 Adj.</td>
+                  <td data-row="9" data-col="2">0.140</td>
+                  <td data-row="9" data-col="3">0.986</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- hack to avoid NA insertion in last line -->
+</div>
+</div>
+<p><strong>（参考）t 検定：課外活動の有無で成績に差はあるか</strong></p>
+<p>2つのグループの平均を比べるときは t 検定を使います。</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">t.test</span>(score <span class="sc">~</span> activities, <span class="at">data =</span> df_student) <span class="sc">|&gt;</span></span>
+<span id="cb31-2"><a href="#cb31-2"></a>  <span class="fu">tidy</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 10
+  estimate estimate1 estimate2 statistic p.value parameter conf.low conf.high
+     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+1   -0.942      54.8      55.7     -2.45  0.0142     9991.    -1.70    -0.189
+# ℹ 2 more variables: method &lt;chr&gt;, alternative &lt;chr&gt;</code></pre>
+</div>
+</div>
+<div class="my-note callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>サンプルサイズが大きいときの注意</strong></p>
+<p>このデータは 10,000 人分あるため、ごく小さな差でも p 値が 0.05 を下回り「有意」になりやすくなります。課外活動の有無による成績の差は約 0.9 点で、有意ではあっても、100点満点の成績として実質的に意味のある差かどうかは別に考える必要があります。<span class="marker">p 値だけでなく、差や係数の大きさも必ず確認しましょう。</span></p>
+</div>
+</div>
+<div style="margin-top: 2.0em;">
+
+</div>
+<div class="mondai callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>自分の問いに対応する分析（t 検定・相関分析・回帰分析のいずれか）を実行し、結果を<strong>文章で解釈</strong>してください。回帰分析の場合は、係数の符号（プラス／マイナス）・大きさ・p 値を確認しましょう。</p>
+</div>
+</div>
+<div class="kotae callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>解答例</strong>（ステップ1の解答例の問いの場合）</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">cor.test</span>(df_student<span class="sc">$</span>sleep_hours, df_student<span class="sc">$</span>score) <span class="sc">|&gt;</span></span>
+<span id="cb33-2"><a href="#cb33-2"></a>  <span class="fu">tidy</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 8
+  estimate statistic    p.value parameter conf.low conf.high method  alternative
+     &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;     &lt;int&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;      
+1   0.0481      4.82 0.00000149      9998   0.0285    0.0676 Pearso… two.sided  </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>model_sleep <span class="ot">&lt;-</span> <span class="fu">lm</span>(score <span class="sc">~</span> sleep_hours, <span class="at">data =</span> df_student)</span>
+<span id="cb35-2"><a href="#cb35-2"></a>model_sleep <span class="sc">|&gt;</span></span>
+<span id="cb35-3"><a href="#cb35-3"></a>  <span class="fu">tidy</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  term        estimate std.error statistic    p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;
+1 (Intercept)   51.7       0.764     67.7  0         
+2 sleep_hours    0.545     0.113      4.82 0.00000149</code></pre>
+</div>
+</div>
+<p>相関係数は約 0.05 で、p 値 &lt; 0.05 のため帰無仮説（相関係数は0である）を棄却します。回帰分析では、睡眠時間が1時間長いと成績は平均で約 0.54 点高くなります。有意ではありますが、関係はとても弱く、影響も小さいと言えます。</p>
+</div>
+</div>
+</div>
+<div style="margin-top: 4.0em;">
+
+</div>
+</section>
+<section id="sec-step5" class="level3" data-number="14.5.5">
+<h3 data-number="14.5.5" class="anchored" data-anchor-id="sec-step5"><span class="header-section-number">14.5.5</span> ステップ5：考察・結論</h3>
+<p>分析結果を「出しっぱなし」にせず、必ず<strong>言葉でまとめます</strong>。考察には次の3つを書きます。</p>
+<ol type="1">
+<li><strong>結果の要約</strong>：ステップ1の問いに対して、データからどう答えられるか</li>
+<li><strong>解釈</strong>：係数や相関係数の大きさ・方向は、現実的にどう解釈できるか</li>
+<li><strong>限界・今後の課題</strong>：このデータ・分析では分からないこと（因果関係とは言えない理由など）</li>
+</ol>
+<div class="kotae callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>この資料の例の考察</strong></p>
+<ul>
+<li><strong>結果の要約</strong>：学習時間と成績には正の相関があり（相関係数 0.37）、回帰分析でも学習時間の係数はプラスで有意だった。前回のテストの点数を考慮しても学習時間の効果は残っており、仮説を支持する結果である。</li>
+<li><strong>解釈</strong>：モデル1では、学習時間が1時間長いと成績は平均で約 2.77 点高い。前回の点数を加えたモデル2でも、学習時間の係数は約 2.86 とほとんど変わらなかった。学習時間と前回の点数はほとんど関係していないため、学習時間の効果は「もともと成績の良い学生が長く勉強しているから」では説明できないと考えられる。また、モデル2の R² は約 0.99 と非常に高く、成績の大部分は前回の点数と学習時間で説明できる。</li>
+<li><strong>限界・今後の課題</strong>：このデータは学習用に作られたデータであり、実際の学生の結果とは限らない。また、観測データからは「勉強時間を増やせば成績が上がる」という因果関係までは言えない（やる気のある学生ほど長く勉強し、成績も良いという可能性がある）。今後は、睡眠時間や課外活動なども加えたモデルで検討したい。</li>
+</ul>
+</div>
+</div>
+</div>
+<div style="margin-top: 4.0em;">
+
+</div>
+</section>
+</section>
+<section id="sec-assignment" class="level2" data-number="14.6">
+<h2 data-number="14.6" class="anchored" data-anchor-id="sec-assignment"><span class="header-section-number">14.6</span> 本日の課題</h2>
+<div class="mondai callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>提出物：ミニレポート（<code>Student_Performance.csv</code> または <code>Student_Performance.xlsx</code> を使用）</strong></p>
+<p>今日の演習で立てた<strong>自分の問い</strong>について、5つのステップの構成でまとめてください。<span class="marker">資料の例（学習時間と成績）と同じ問いは不可</span>です。</p>
+<ol type="1">
+<li><strong>問い（Research Question）と仮説</strong></li>
+<li><strong>データの説明・前処理</strong>（使用した変数とその意味、欠損値の確認）</li>
+<li><strong>記述統計・可視化</strong></li>
+<li><strong>分析</strong>（t 検定・相関分析・回帰分析のいずれか）とその結果</li>
+<li><strong>考察・結論</strong>（結果の要約・解釈・限界）</li>
+</ol>
+<p><span class="marker">コードと出力（表・グラフ）を必ず含めてください。</span></p>
+</div>
+</div>
+<p><strong>提出方法</strong>：<code>assignmentB01.qmd</code> に作業し、Render して出力された HTML ファイルを ZIP 形式に圧縮して Blackboard から提出してください。提出期限は<span class="marker">金曜日24時</span>です。</p>
+<div style="margin-top: 4.0em;">
+
+</div>
+</section>
+<section id="sec-summary" class="level2" data-number="14.7">
+<h2 data-number="14.7" class="anchored" data-anchor-id="sec-summary"><span class="header-section-number">14.7</span> まとめ</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">項目</th>
+<th style="text-align: left;">ポイント</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ファイルの読み込み</td>
+<td style="text-align: left;">CSV は <code>read_csv()</code>、Excel は <code>read_excel()</code>（<code>library(readxl)</code> が必要）</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">dplyr</td>
+<td style="text-align: left;"><code>filter()</code>・<code>select()</code>・<code>mutate()</code>・<code>arrange()</code>・<code>summarise()</code> を <code>|&gt;</code> でつなぐ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ggplot2</td>
+<td style="text-align: left;"><code>ggplot(aes())</code> ＋ <code>geom_*()</code> ＋ <code>labs()</code> ＋ <code>theme_*()</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Quarto</td>
+<td style="text-align: left;">Render すると上から全コードが実行される。HTML を ZIP にして提出</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5つのステップ</td>
+<td style="text-align: left;">問い・仮説 → 前処理・記述統計 → 可視化 → 分析 → 考察</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">分析方法の選び方</td>
+<td style="text-align: left;">差なら t 検定、関係なら相関、影響なら回帰（ダミー・交差項）</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">結果の読み方</td>
+<td style="text-align: left;">p 値だけでなく、差や係数の大きさも確認する</td>
+</tr>
+</tbody>
+</table>
+<div style="margin-top: 2.0em;">
+
+</div>
+<div class="my-note callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>次回の予告</strong></p>
+<p>第2回と第3回では、<strong>R を使って書かれた論文の分析を、自分の手で再現（レプリケーション）</strong>します。</p>
+<ul>
+<li>論文を読み、どのようなデータで何を分析しているかを確認する</li>
+<li>論文と同じ分析を R で行い、同じ結果が得られるかを確かめる</li>
+<li>今日の5つのステップが、実際の論文の中でどう使われているかを見る</li>
+</ul>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
