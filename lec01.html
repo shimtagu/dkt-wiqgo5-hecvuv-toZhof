@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="2026年度　A（前期） B（後期） 時間： 月曜日 4 時限（15:45-17:30） 教室： C 館 地下1階 PC4 教室">
+<meta name="description" content="2026年度　後期 時間： 月曜日 2 時限（11:15-13:00） 教室： C 館 1階 PC2 教室">
 
-<title>1&nbsp; R 導入 – R プログラミング</title>
+<title>1&nbsp; データで考えるって何？ – データ課題探求</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,42 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -120,7 +105,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lec01.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">R 導入</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lec01.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">データで考えるって何？</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -135,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">R プログラミング</a> 
+      <a href="./">データ課題探求</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -154,79 +139,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec01.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">R 導入</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">データで考えるって何？</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">データ操作</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">表を読む・データの形を知る</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec03.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">可視化1</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec04.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">可視化2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec05.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">可視化3</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec06.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">記述統計</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec07.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">t 検定</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec08.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">コードを読む</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec09.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">相関分析</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">回帰分析1</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">回帰分析2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec12.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">回帰分析3</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec13.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">総合演習</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">タイトル</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -245,43 +230,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#プログラミングとは" id="toc-プログラミングとは" class="nav-link active" data-scroll-target="#プログラミングとは"><span class="header-section-number">1.1</span> プログラミングとは</a></li>
-  <li><a href="#rとは" id="toc-rとは" class="nav-link" data-scroll-target="#rとは"><span class="header-section-number">1.2</span> Rとは</a></li>
-  <li><a href="#r-を使う理由" id="toc-r-を使う理由" class="nav-link" data-scroll-target="#r-を使う理由"><span class="header-section-number">1.3</span> R を使う理由</a></li>
-  <li><a href="#r-と-rstudio" id="toc-r-と-rstudio" class="nav-link" data-scroll-target="#r-と-rstudio"><span class="header-section-number">1.4</span> R と RStudio</a></li>
-  <li><a href="#rstudio-の起動" id="toc-rstudio-の起動" class="nav-link" data-scroll-target="#rstudio-の起動"><span class="header-section-number">1.5</span> RStudio の起動</a></li>
-  <li><a href="#作業環境の構築" id="toc-作業環境の構築" class="nav-link" data-scroll-target="#作業環境の構築"><span class="header-section-number">1.6</span> 作業環境の構築</a></li>
-  <li><a href="#作業ディレクトリ" id="toc-作業ディレクトリ" class="nav-link" data-scroll-target="#作業ディレクトリ"><span class="header-section-number">1.7</span> 作業ディレクトリ</a>
+  <li><a href="#直感クイズに挑戦" id="toc-直感クイズに挑戦" class="nav-link active" data-scroll-target="#直感クイズに挑戦"><span class="header-section-number">1.1</span> 直感クイズに挑戦</a></li>
+  <li><a href="#答え合わせ直感とデータのずれ" id="toc-答え合わせ直感とデータのずれ" class="nav-link" data-scroll-target="#答え合わせ直感とデータのずれ"><span class="header-section-number">1.2</span> 答え合わせ：直感とデータのずれ</a></li>
+  <li><a href="#なぜ直感はずれるのか" id="toc-なぜ直感はずれるのか" class="nav-link" data-scroll-target="#なぜ直感はずれるのか"><span class="header-section-number">1.3</span> なぜ直感はずれるのか？</a></li>
+  <li><a href="#課題_1に取り組もう" id="toc-課題_1に取り組もう" class="nav-link" data-scroll-target="#課題_1に取り組もう"><span class="header-section-number">1.4</span> 課題_1に取り組もう</a>
   <ul class="collapse">
-  <li><a href="#なぜ重要か" id="toc-なぜ重要か" class="nav-link" data-scroll-target="#なぜ重要か">なぜ重要か？</a></li>
-  <li><a href="#作業ディレクトリの確認方法" id="toc-作業ディレクトリの確認方法" class="nav-link" data-scroll-target="#作業ディレクトリの確認方法">作業ディレクトリの確認方法</a></li>
-  <li><a href="#作業ディレクトリの設定方法" id="toc-作業ディレクトリの設定方法" class="nav-link" data-scroll-target="#作業ディレクトリの設定方法">作業ディレクトリの設定方法</a></li>
+  <li><a href="#アンケートについて" id="toc-アンケートについて" class="nav-link" data-scroll-target="#アンケートについて"><span class="header-section-number">1.4.1</span> アンケートについて</a></li>
+  <li><a href="#excelが初めての人へ" id="toc-excelが初めての人へ" class="nav-link" data-scroll-target="#excelが初めての人へ"><span class="header-section-number">1.4.2</span> Excelが初めての人へ</a></li>
   </ul></li>
-  <li><a href="#プロジェクトの活用" id="toc-プロジェクトの活用" class="nav-link" data-scroll-target="#プロジェクトの活用"><span class="header-section-number">1.8</span> プロジェクトの活用</a>
-  <ul class="collapse">
-  <li><a href="#rプロジェクトを使うメリット" id="toc-rプロジェクトを使うメリット" class="nav-link" data-scroll-target="#rプロジェクトを使うメリット">Rプロジェクトを使うメリット</a></li>
-  </ul></li>
-  <li><a href="#プロジェクトの作成" id="toc-プロジェクトの作成" class="nav-link" data-scroll-target="#プロジェクトの作成"><span class="header-section-number">1.9</span> プロジェクトの作成</a></li>
-  <li><a href="#r-スクリプト" id="toc-r-スクリプト" class="nav-link" data-scroll-target="#r-スクリプト"><span class="header-section-number">1.10</span> R スクリプト</a>
-  <ul class="collapse">
-  <li><a href="#なぜコンソールに直接打たないのか" id="toc-なぜコンソールに直接打たないのか" class="nav-link" data-scroll-target="#なぜコンソールに直接打たないのか">なぜコンソールに直接打たないのか？</a></li>
-  <li><a href="#スクリプトの実行方法" id="toc-スクリプトの実行方法" class="nav-link" data-scroll-target="#スクリプトの実行方法">スクリプトの実行方法</a></li>
-  <li><a href="#ボタンの使い分け" id="toc-ボタンの使い分け" class="nav-link" data-scroll-target="#ボタンの使い分け">ボタンの使い分け</a></li>
-  <li><a href="#スクリプトを保存する" id="toc-スクリプトを保存する" class="nav-link" data-scroll-target="#スクリプトを保存する">スクリプトを保存する</a></li>
-  </ul></li>
-  <li><a href="#r-コードを書いてみよう" id="toc-r-コードを書いてみよう" class="nav-link" data-scroll-target="#r-コードを書いてみよう"><span class="header-section-number">1.11</span> R コードを書いてみよう</a>
-  <ul class="collapse">
-  <li><a href="#計算機として使う" id="toc-計算機として使う" class="nav-link" data-scroll-target="#計算機として使う">計算機として使う</a></li>
-  <li><a href="#変数データに名前をつけて保存する" id="toc-変数データに名前をつけて保存する" class="nav-link" data-scroll-target="#変数データに名前をつけて保存する">変数（データに名前をつけて保存する）</a></li>
-  <li><a href="#関数複雑な計算を一瞬で行う" id="toc-関数複雑な計算を一瞬で行う" class="nav-link" data-scroll-target="#関数複雑な計算を一瞬で行う">関数（複雑な計算を一瞬で行う）</a></li>
-  </ul></li>
-  <li><a href="#quartoクゥオート" id="toc-quartoクゥオート" class="nav-link" data-scroll-target="#quartoクゥオート"><span class="header-section-number">1.12</span> Quarto（クゥオート）</a>
-  <ul class="collapse">
-  <li><a href="#なぜ-quarto-を使うのか" id="toc-なぜ-quarto-を使うのか" class="nav-link" data-scroll-target="#なぜ-quarto-を使うのか">なぜ Quarto を使うのか？</a></li>
-  <li><a href="#quarto-の仕組み" id="toc-quarto-の仕組み" class="nav-link" data-scroll-target="#quarto-の仕組み">Quarto の仕組み</a></li>
-  </ul></li>
-  <li><a href="#毎時間の準備と進め方" id="toc-毎時間の準備と進め方" class="nav-link" data-scroll-target="#毎時間の準備と進め方"><span class="header-section-number">1.13</span> 毎時間の準備と進め方</a></li>
-  <li><a href="#本日の課題" id="toc-本日の課題" class="nav-link" data-scroll-target="#本日の課題"><span class="header-section-number">1.14</span> 本日の課題</a></li>
+  <li><a href="#振り返り" id="toc-振り返り" class="nav-link" data-scroll-target="#振り返り"><span class="header-section-number">1.5</span> 振り返り</a></li>
+  <li><a href="#今週の課題" id="toc-今週の課題" class="nav-link" data-scroll-target="#今週の課題"><span class="header-section-number">1.6</span> 今週の課題</a></li>
   </ul>
 </nav>
     </div>
@@ -290,7 +248,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">R 導入</span></h1>
+<h1 class="title"><span id="sec-lec01" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">データで考えるって何？</span></span></h1>
 </div>
 
 
@@ -307,468 +265,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="プログラミングとは" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="プログラミングとは"><span class="header-section-number">1.1</span> プログラミングとは</h2>
-<ul>
-<li><strong>プログラミング</strong>とは、意図した計算を行うためコンピューターに指示を出すことです。そもそもコンピューターは「計算を行う」「計算結果を記憶する」という2つの基本機能を持っています。</li>
-<li><strong>プログラミング言語</strong>とは、コンピュータに指示を出すために使われる共通言語です。Java、 Python、 Ruby、 C++、 PHP、 JavaScript などがあり、それぞれ独自の<strong>構文（Syntax）</strong>、文法、制御構造を持っています。</li>
-<li>言語によって得意とする分野や用途が異なり、スマートフォンアプリ、ゲーム、Web システムなど、現代社会のあらゆるインフラがこれらの言語によって動いています。</li>
-</ul>
-<p>参考：<a href="https://programming-sc.com/column/column1/">15種類のプログラミング言語を難易度や職業別に徹底解説</a>（プロ検）</p>
-<div class="my-note callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>プログラミングと聞くと身構えてしまうかもしれませんが、R は「世界中の知恵（パッケージ）を借りて計算する、最高に便利な計算機」です。まずはエラーを恐れず、キーボードを叩くことから始めていきましょう！</p>
-</div>
-</div>
-</section>
-<section id="rとは" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="rとは"><span class="header-section-number">1.2</span> Rとは</h2>
-<p>皆さんがこれから学ぶ R は、統計解析やデータの可視化（グラフ作成）に特化したプログラミング言語であり、<strong>オープンソース</strong>（無償公開）の計算環境です。世界中の研究者やデータサイエンティストに愛用されており、以下のような高度な特徴を備えています。</p>
-<ul>
-<li><p><strong>データの操作（Data Manipulation）</strong></p>
-<p>Excel等で保存されている煩雑なデータを、ルールに基づいて一瞬で集計・加工する。</p></li>
-<li><p><strong>グラフィックス</strong></p>
-<p>論文やレポートにそのまま採用できる、出版クオリティの高品質な図表を作成する。</p></li>
-<li><p><strong>統計的モデリング</strong></p>
-<p>単純な平均の比較から、経済現象の要因分析（回帰分析）、機械学習を用いた予測まで幅広く対応する。</p></li>
-<li><p><strong>パッケージ（Packages）による拡張性</strong></p>
-<p>世界中の統計学者が開発・公開している「パッケージ」を追加することで、最新の分析手法を即座に利用できる。</p></li>
-</ul>
-</section>
-<section id="r-を使う理由" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="r-を使う理由"><span class="header-section-number">1.3</span> R を使う理由</h2>
-<p>実務で多用される Excel も非常に優秀なツールですが、学術研究や高度なデータ分析において R には圧倒的な優位性があります。</p>
-<ul>
-<li><p><strong>再現性（Reproducibility）</strong></p>
-<p>「どのボタンをどうクリックしたか」という記憶に頼る操作ではなく、「どのような命令（コード）を書いたか」が記録に残るため、第三者が全く同じ分析結果を 100% 再現できます。</p></li>
-<li><p><strong>ベクトル演算</strong></p>
-<p>R は「ベクトル（数値の列）」をひとかたまりとして一括処理することに最適化されており、大規模なデータセットに対しても計算ミスなく高速に処理を行うことが可能です。</p></li>
-</ul>
-</section>
-<section id="r-と-rstudio" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="r-と-rstudio"><span class="header-section-number">1.4</span> R と RStudio</h2>
-<p>Rを効率的に使いこなすために欠かせないのが <strong>RStudio</strong> です。これらは「エンジン」と「運転席」の関係に例えられます。</p>
-<ul>
-<li><p><strong>R（エンジン）</strong></p>
-<p>実際に計算処理を行う本体です。</p></li>
-<li><p><strong>RStudio（運転席 / IDE）</strong></p>
-<p>Rを操作しやすくするための<strong>統合開発環境（IDE: Integrated Development Environment）</strong>です。</p></li>
-</ul>
-<p>RStudio を使用することで、様々な作業を一つの画面で完結させることができます。</p>
-</section>
-<section id="rstudio-の起動" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="rstudio-の起動"><span class="header-section-number">1.5</span> RStudio の起動</h2>
-<p>画面左下のウィンドウズマークを押してRStudioを起動する。</p>
-<p>その際、R本体（R 4.5.1）と間違えないように。</p>
-<div id="fig-RStudio-start-1" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-RStudio-start-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/RStudio-start-1.png" id="fig-RStudio-start-1" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-RStudio-start-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.1
-</figcaption>
-</figure>
-</div>
-<p>以下のように RStudio が起動したことを確認してください。</p>
-<div id="fig-RStudio-start-2" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-RStudio-start-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/RStudio-start-2.png" id="fig-RStudio-start-2" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-RStudio-start-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.2
-</figcaption>
-</figure>
-</div>
-<p>上記は起動時の画面構成です。</p>
-<p>ここで、左上のプラスマークから「R Script」を選択します。</p>
-<div id="fig-RStudio-start-3" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-RStudio-start-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/RStudio-start-3.png" id="fig-RStudio-start-3" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-RStudio-start-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.3
-</figcaption>
-</figure>
-</div>
-<p>新しいR Scriptが作成され、画面が4つに分割されます。</p>
-<div id="fig-RStudio-start-4" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-RStudio-start-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/RStudio-start-4.png" id="fig-RStudio-start-4" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-RStudio-start-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.4
-</figcaption>
-</figure>
-</div>
-<p>これがRStudioで作業（分析）する時の通常の画面構成です。そして、RStudioの画面を構成する4つの領域のことを、一般的に<strong>「ペイン（Pane）」</strong>と呼びます。</p>
-<p>それぞれの役割を簡単に確認しておきましょう。</p>
-<ul>
-<li><p><strong>ソース（Source）</strong> ノート・メモ</p>
-<p>プログラム（スクリプト）を記述・保存する。何度も実行したい命令を蓄積します。</p></li>
-<li><p><strong>コンソール（Console）</strong> 計算機・実行窓</p>
-<p>命令を実行し、その結果をリアルタイムで確認する。</p></li>
-<li><p><strong>環境（Environment）</strong> 物置・データ管理</p>
-<p>読み込んだデータセットや変数の状態を一覧する。</p></li>
-<li><p><strong>出力/出力（Files/Plots）</strong> 本棚・掲示板</p>
-<p>作成したグラフを表示したり、関数の使い方（ドキュメント）を参照したりする。</p></li>
-</ul>
-<div class="my-note callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>画面が3つしか見当たらないときは？
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>左上の「ソース・ペイン」が最小化されている場合があります。その場合は、他のペインとの境界線をマウスでドラッグして広げるか、右上の四角いアイコンを押して広げてください。</p>
-</div>
-</div>
-</section>
-<section id="作業環境の構築" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="作業環境の構築"><span class="header-section-number">1.6</span> 作業環境の構築</h2>
-<p>大学のパソコンはシャットダウンするたびに初期化されるため、作業（分析）したファイルは初期化されない場所に保存する必要があります。</p>
-<p>拓殖大学では「Kドライブ」と呼ばれるドライブ（保存領域）が、各学生に割り当てられています。シャットダウンしても初期化されることはなく、大学内のどのパソコンからでもアクセスすることができます。</p>
-<p>本授業では、この「Kドライブ」に作業（分析）記録を残します。</p>
-<p>デスクトップ左上のPCから、Kドライブを開きます。</p>
-<div id="fig-K-drive-1" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-K-drive-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/K-drive-1.png" id="fig-K-drive-1" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-K-drive-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.5
-</figcaption>
-</figure>
-</div>
-<p>以下のように、フォルダのアドレスが<strong>（K:）</strong>となっいてることを確認してください。</p>
-<div id="fig-K-drive-2" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-K-drive-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/K-drive-2.png" id="fig-K-drive-2" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-K-drive-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.6
-</figcaption>
-</figure>
-</div>
-<p>Kドライブを開いている状態で、「新規作成」から「フォルダ」を選び、新規フォルダを作成します。</p>
-<div id="fig-K-drive-3" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-K-drive-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/K-drive-3.png" id="fig-K-drive-3" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-K-drive-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.7
-</figcaption>
-</figure>
-</div>
-<p>作成したフォルダの名前を「<strong>R_programming</strong>」に変更します。</p>
-<div id="fig-K-drive-4" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-K-drive-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/K-drive-4.png" id="fig-K-drive-4" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-K-drive-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.8
-</figcaption>
-</figure>
-</div>
-<p>今後は、この「R_programming」フォルダの中に本授業で使うファイルやデータを保存します。</p>
-</section>
-<section id="作業ディレクトリ" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="作業ディレクトリ"><span class="header-section-number">1.7</span> 作業ディレクトリ</h2>
-<p>R でデータ分析を行う際、コンピュータが「今、どこのフォルダを標準の作業場所にしているか」が非常に重要です。これを <strong>「作業ディレクトリ（Working Directory）」</strong> と呼びます。</p>
-<section id="なぜ重要か" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="なぜ重要か">なぜ重要か？</h3>
-<p>分析したいデータ（ExcelやCSV）を読み込むとき、R がそのファイルを探しに行く「基準点」になるからです。基準点がずれていると、「ファイルが見つかりません」というエラーが出てしまいます。</p>
-</section>
-<section id="作業ディレクトリの確認方法" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="作業ディレクトリの確認方法">作業ディレクトリの確認方法</h3>
-<p>RStudioの右下にある <strong>[Files]</strong> タブを見てください。そこに表示されているフォルダが、現在 R が見ている場所です。</p>
-<div id="fig-working-directory1" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-working-directory1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/working-directory1.png" id="fig-working-directory1" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-working-directory1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.9
-</figcaption>
-</figure>
-</div>
-<p>また、コンソール（Console）に<code>getwd()</code> と入力し実行することでも現在の作業ディレクトリが分かります。</p>
-<div id="fig-working-directory2" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-working-directory2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/working-directory2.png" id="fig-working-directory2" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-working-directory2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.10
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="作業ディレクトリの設定方法" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="作業ディレクトリの設定方法">作業ディレクトリの設定方法</h3>
-<p>手動で場所を指定したい場合は、主に以下の2つの方法があります。</p>
-<ul>
-<li><p>マウス操作で設定する</p>
-<ol type="1">
-<li>RStudioの上部メニューから <strong>[Session]</strong> をクリック。</li>
-<li><strong>[Set Working Directory]</strong> ＞ <strong>[Choose Directory…]</strong> を選択。</li>
-<li>作業したいフォルダ（例：Kドライブ内のフォルダ）を選択して <strong>[Open]</strong> を押す。</li>
-</ol></li>
-<li><p>コマンドで設定する</p>
-<ul>
-<li><code>setwd("K:/R_programming")</code> という関数を使います。</li>
-</ul></li>
-</ul>
-<div id="fig-working-directory3" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-working-directory3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/working-directory3.png" id="fig-working-directory3" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-working-directory3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.11
-</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="プロジェクトの活用" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="プロジェクトの活用"><span class="header-section-number">1.8</span> プロジェクトの活用</h2>
-<p>大学の演習用PC（Kドライブ）など、決まった場所で作業を続ける場合、毎回「作業場所」を指定するのは面倒です。そこで便利なのが <strong>「Rプロジェクト（.Rproj）」</strong> という機能です。</p>
-<section id="rプロジェクトを使うメリット" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="rプロジェクトを使うメリット">Rプロジェクトを使うメリット</h3>
-<ul>
-<li><p><strong>自動で作業場所が決まる</strong></p>
-<p>プロジェクトを開くだけで、そのフォルダが自動的に作業ディレクトリに設定されます。</p></li>
-<li><p><strong>前回の続きから再開</strong></p>
-<p>開いていたファイルや設定が保存され、次回スムーズに始められます。</p></li>
-<li><p><strong>ファイル迷子を防ぐ</strong></p>
-<p>「この授業のデータはこのフォルダ」という箱（プロジェクト）を最初に作ることで、必要なファイルを一括して格納し管理できます。</p></li>
-</ul>
-</section>
-</section>
-<section id="プロジェクトの作成" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="プロジェクトの作成"><span class="header-section-number">1.9</span> プロジェクトの作成</h2>
-<p>本授業では、第1回から第13回までの授業ごとにプロジェクトを作成します。毎回の授業開始時、以下の手順でその日の授業で使うプロジェクトを準備してください。</p>
-<ol type="1">
-<li>左下のウィンドウズマークからRStudioを立ち上げる。</li>
-<li>左上のアイコン（＋R）から新規Rプロジェクトを作成する。</li>
-</ol>
-<div id="fig-R-project-1" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-R-project-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/R-project-1.png" id="fig-R-project-1" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-R-project-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.12
-</figcaption>
-</figure>
-</div>
-<ol start="3" type="1">
-<li>New Directory を選択する。これにより、新しくフォルダが作成される。（既にあるフォルダをプロジェクトフォルダとして使う場合には Existing Directory を選んでください。）</li>
-</ol>
-<div id="fig-R-project-2" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-R-project-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/R-project-2.png" id="fig-R-project-2" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-R-project-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.13
-</figcaption>
-</figure>
-</div>
-<ol start="4" type="1">
-<li>R New Project を選択する。</li>
-</ol>
-<div id="fig-R-project-3" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-R-project-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/R-project-3.png" id="fig-R-project-3" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-R-project-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.14
-</figcaption>
-</figure>
-</div>
-<ol start="5" type="1">
-<li>Directory name に「Lesson01」と入力、Browse ボタンから、Kドライブに作成した「R_programming」を選択し、Create Project を押す。</li>
-</ol>
-<div id="fig-R-project-4" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-R-project-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/R-project-4.png" id="fig-R-project-4" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-R-project-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.15
-</figcaption>
-</figure>
-</div>
-<p>RStudio で、右上のプロジェクト名を確認する。</p>
-<div id="fig-R-project-5" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-R-project-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/R-project-5.png" id="fig-R-project-5" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-R-project-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.16
-</figcaption>
-</figure>
-</div>
-<p>この時、R_programming フォルダの中に、Lesson01 というフォルダ（ディレクトリ）が新しく作成されています。</p>
-<p>作業を中断し（一度RStudioを閉じ）た後、再開する際には、Lesson01 フォルダの中の <code>Lesson01.Rproj</code> ファイルをダブルクリックするだけで、一瞬で中断した時の状況に復元できます。</p>
-<p>第1回目の授業で必要なデータなどのファイルは全てこの Lesson01 フォルダの中に入れておくことで、R は迷うことなく必要なファイルを見つけられるようになります。</p>
-<div id="fig-R-project-6" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-R-project-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/R-project-6.png" id="fig-R-project-6" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-R-project-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.17
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="r-スクリプト" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="r-スクリプト"><span class="header-section-number">1.10</span> R スクリプト</h2>
-<p>左上のプラス（＋）マークから、R Scriptを選択し、新規 R Script を作成します。</p>
-<div id="fig-temp1" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-temp1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/RStudio-start-3.png" id="fig-temp1" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-temp1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.18
-</figcaption>
-</figure>
-</div>
-<section id="なぜコンソールに直接打たないのか" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="なぜコンソールに直接打たないのか">なぜコンソールに直接打たないのか？</h3>
-<p>下の「コンソール」に命令を打ち込んでも計算はできますが、エンターキーを押した瞬間に命令は消えてしまい、後から修正したり、明日同じ計算をやり直したりすることができません。</p>
-<ul>
-<li><p>コンソール: 使い捨ての計算機（やり直しが効かない）</p></li>
-<li><p>R Script: 記録に残るノート（保存して、何度でも再現できる）</p></li>
-</ul>
-<p>大学のレポートや分析では、必ずこの R Script に命令を書き溜めて保存する習慣をつけましょう。</p>
-</section>
-<section id="スクリプトの実行方法" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="スクリプトの実行方法">スクリプトの実行方法</h3>
-<p>R Scriptに書いた命令を実際にRに計算させるには、以下のショートカットキー、または画面右上のボタンを使用します。</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">実行の範囲</th>
-<th style="text-align: left;">Windows</th>
-<th style="text-align: left;">Mac</th>
-<th style="text-align: left;">対応ボタン</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">現在の1行<br>（または選択範囲）</td>
-<td style="text-align: left;">Ctrl + Enter</td>
-<td style="text-align: left;">Cmd + Return</td>
-<td style="text-align: left;">Run</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">最初から現在の行まで</td>
-<td style="text-align: left;">Ctrl + Alt + B</td>
-<td style="text-align: left;">Cmd + Opt + B</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">現在の行から最後まで</td>
-<td style="text-align: left;">Ctrl + Alt + E</td>
-<td style="text-align: left;">Cmd + Opt + E</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">ファイル全体<br>（全行実行）</td>
-<td style="text-align: left;">Ctrl + Shift + S</td>
-<td style="text-align: left;">Cmd + Shift + S</td>
-<td style="text-align: left;">Source</td>
-</tr>
-</tbody>
-</table>
-<div class="my-note callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>覚え方のコツ
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>ショートカットの最後の一文字は、英単語の頭文字になっています。</p>
-<ul>
-<li><strong>B</strong>：<strong>B</strong>eginning（最初）から現在の行まで実行</li>
-<li><strong>E</strong>：<strong>E</strong>nd（最後）まで実行</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="ボタンの使い分け" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="ボタンの使い分け">ボタンの使い分け</h3>
-<ul>
-<li><strong>Run</strong>： 「いま書いたこの1行、ちゃんと動くかな？」と<strong>一歩ずつ確認</strong>しながら進めるときに使います。実行したコードが下のコンソールにも表示されるので、試行錯誤に最適です。</li>
-<li><strong>Source</strong>： 「よし、最後まで書き上げたぞ！最初から一気に<strong>自動演奏</strong>させてみよう」というときに使います。コンソールが汚れず、最終的な結果だけをスマートに確認できます。</li>
-</ul>
-</section>
-<section id="スクリプトを保存する" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="スクリプトを保存する">スクリプトを保存する</h3>
-<p>作成した R Script は、必ず名前をつけて保存しましょう。</p>
-<ul>
-<li>[File] ＞ [Save]（または Ctrl + S）</li>
-<li>保存ボタンを押す</li>
-</ul>
-<div id="fig-R-script-1" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-R-script-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/R-script-1.png" id="fig-R-script-1" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-R-script-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.19
-</figcaption>
-</figure>
-</div>
-<ul>
-<li>名前を practice01 などとする。
-<ul>
-<li>ファイル名には全角文字（日本語）やスペースを使わず、英数字とアンダースコア（_）のみを使うのがプログラミングの鉄則です。</li>
-</ul></li>
-<li>今日作成したプロジェクトフォルダ（Lesson01 など）の中に入っていることを確認する。</li>
-</ul>
-<div id="fig-R-script-2" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-R-script-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/R-script-2.png" id="fig-R-script-2" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-R-script-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.20
-</figcaption>
-</figure>
+<div style="margin-top: 2.0em;">
+
 </div>
 <div class="my-note callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -776,164 +274,27 @@ Note
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Note</span>今日の問い
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>右下の「Files」に表示されているファイルの内容は実際のフォルダに保存されているファイルの内容と一致しています。</p>
+<p><strong>世界や日本について、私たちの直感はどれくらい正しいのでしょうか？</strong></p>
 </div>
 </div>
-<p><br></p>
-</section>
-</section>
-<section id="r-コードを書いてみよう" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="r-コードを書いてみよう"><span class="header-section-number">1.11</span> R コードを書いてみよう</h2>
-<p>RStudioの準備ができたら、実際にRに計算をさせてみましょう。まずは「Rスクリプト」に以下のコードを書き込み、1行ずつ Ctrl + Enter で実行して結果を確認してください。</p>
-<section id="計算機として使う" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="計算機として使う">計算機として使う</h3>
-<p>Rでは、一般的な数学の計算ができます。</p>
-<div class="mondai callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>1 + 1</p>
-<p>10 - 3</p>
-<p>5 × 4</p>
-<p>10 ÷ 2</p>
-<p>2の3乗</p>
-</div>
-</div>
-<div class="kotae callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>解答 1
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span>    <span class="co"># 足し算</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>[<span class="dv">1</span>] <span class="dv">2</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="dv">10</span> <span class="sc">-</span> <span class="dv">3</span>   <span class="co"># 引き算</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>[<span class="dv">1</span>] <span class="dv">7</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="dv">5</span> <span class="sc">*</span> <span class="dv">4</span>    <span class="co"># 掛け算（アスタリスク）</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a>[<span class="dv">1</span>] <span class="dv">20</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="dv">10</span> <span class="sc">/</span> <span class="dv">2</span>   <span class="co"># 割り算（スラッシュ）</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>[<span class="dv">1</span>] <span class="dv">5</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="dv">2</span><span class="sc">^</span><span class="dv">3</span>      <span class="co"># べき乗（2の3乗）</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a>[<span class="dv">1</span>] <span class="dv">8</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
-</section>
-<section id="変数データに名前をつけて保存する" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="変数データに名前をつけて保存する">変数（データに名前をつけて保存する）</h3>
-<p>プログラミングで最も重要なのが 「変数（Variable）」 です。数値に名前をつけて「物置（Environmentペイン）」に保存しておくことができます。 Rでは、&lt;-（矢印のような記号）を使って代入します。</p>
-<p><br></p>
-<div class="mondai callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>x という名前（変数）に 10 を保存（代入）する。</p>
-</div>
-</div>
-<div class="kotae callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>右上の環境（Environment）ペインに x が表示されます。</p>
-</div>
-</div>
-<p><br></p>
-<div class="mondai callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>y という名前（変数）に 5 を保存（代入）する。</p>
-</div>
-</div>
-<div class="kotae callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>y <span class="ot">&lt;-</span> <span class="dv">5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>右上の環境（Environment）ペインに y が表示されます。</p>
-</div>
-</div>
-<p><br></p>
-<div class="mondai callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>名前（変数）を使い、x と y を足す。</p>
-</div>
-</div>
-<div class="kotae callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>x <span class="sc">+</span> y</span>
-<span id="cb4-2"><a href="#cb4-2"></a>[<span class="dv">1</span>] <span class="dv">15</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
-<p><br></p>
-</section>
-<section id="関数複雑な計算を一瞬で行う" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="関数複雑な計算を一瞬で行う">関数（複雑な計算を一瞬で行う）</h3>
-<p>統計解析で欠かせないのが 「関数（Function）」 です。関数とは、特定の計算（平均を出す、グラフを描くなど）を自動で行ってくれる「魔法の箱」のようなものです。</p>
-<p>ここでは、複数の数値をまとめた「ベクトル（数値の列）」の平均値を求めてみましょう。</p>
-<p><br></p>
+<!--
+教員用：今日の流れ（105分）
+| 時間 | 内容 |
+|:---:|:---|
+| 10分 | 授業の進め方（「はじめに」を使って説明） |
+| 15分 | 導入：直感クイズに挑戦（まずは予想） |
+| 20分 | 答え合わせ：直感とデータのずれ |
+| 10分 | 共有：なぜ直感はずれるのか？（グループで話し合い） |
+| 45分 | 演習：課題_1（アンケート記入・クイズの記録・Excelの基本操作） |
+|  5分 | 振り返り・次回の予告 |
+-->
+<section id="直感クイズに挑戦" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="直感クイズに挑戦"><span class="header-section-number">1.1</span> 直感クイズに挑戦</h2>
+<p>まずは、何も調べずに直感で答えてください。<strong>正解することが目的ではありません。</strong>自分の予想を書き留めておくことが大切です。予想は、「課題_1」のExcelファイルに記録します。</p>
 <div class="mondai callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -944,295 +305,222 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><code>c()</code> という関数を使い、5人のテスト点数（70点、85点、90点、65点、80点）を「score」という名前に保存する。</p>
+<p>次の6問に、直感で答えてください。答えは「課題_1」のExcelファイルに記録してください。</p>
+<ol type="1">
+<li>日本の総人口のうち、65歳以上の人の割合はどれくらいでしょうか？<br>
+
+<ol type="a">
+<li>約10%　(b) 約20%　(c) 約30%</li>
+</ol></li>
+<li>日本に住む外国人（在留外国人）は、総人口のどれくらいでしょうか？<br>
+
+<ol type="a">
+<li>約3%　(b) 約8%　(c) 約15%</li>
+</ol></li>
+<li>日本で1年間を通じて働いた会社員など（給与所得者）の平均給与はいくらでしょうか？<br>
+
+<ol type="a">
+<li>約330万円　(b) 約480万円　(c) 約630万円</li>
+</ol></li>
+<li>2022年の参議院議員選挙で、20代の投票率はどれくらいだったでしょうか？<br>
+
+<ol type="a">
+<li>約15%　(b) 約35%　(c) 約55%</li>
+</ol></li>
+<li>過去20年間で、世界の人口のうち極度の貧困にある人の割合はどう変わったでしょうか？<br>
+
+<ol type="a">
+<li>約2倍に増えた　(b) あまり変わっていない　(c) 約半分に減った</li>
+</ol></li>
+<li>3番の「平均給与」について。あなたは、自分の周りの「普通の人」の年収も、だいたいこれくらいだと思いますか？<br>
+
+<ol type="a">
+<li>そう思う　(b) もっと低いと思う　(c) もっと高いと思う</li>
+</ol></li>
+</ol>
 </div>
 </div>
+</section>
+<section id="答え合わせ直感とデータのずれ" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="答え合わせ直感とデータのずれ"><span class="header-section-number">1.2</span> 答え合わせ：直感とデータのずれ</h2>
 <div class="kotae callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Tip</span>解答
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>score <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">70</span>, <span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">65</span>, <span class="dv">80</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>右上の環境（Environment）ペインに score が表示されます。</p>
-</div>
-</div>
-<p><br></p>
-<div class="mondai callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>5人の合計値を計算する。</p>
-</div>
-</div>
-<div class="kotae callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">sum</span>(score)</span>
-<span id="cb6-2"><a href="#cb6-2"></a>[<span class="dv">1</span>] <span class="dv">390</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol type="1">
+<li><strong>(c) 約30%</strong>：65歳以上の割合は29.4%で、過去最高です（2025年9月、総務省統計局）。およそ3人に1人が高齢者です。</li>
+<li><strong>(a) 約3%</strong>：在留外国人は約359万人（2024年6月末、出入国在留管理庁）で、総人口の約3%です。</li>
+<li><strong>(b) 約480万円</strong>：平均給与は478万円です（2024年分、国税庁「民間給与実態統計調査」）。</li>
+<li><strong>(b) 約35%</strong>：20代の投票率は33.99%でした（総務省）。全体の投票率は約52%です。</li>
+<li><strong>(c) 約半分に減った</strong>：多くの人が「増えた」「変わらない」と答えますが、実際には大きく減っています（Gapminder）。</li>
+<li><strong>正解はありません。</strong>ただし、「平均」は一部の高い値に引っ張られやすく、多くの人の実感より高くなりがちです。これは第3回で詳しく確かめます。</li>
+</ol>
 </div>
 </div>
 </div>
-<p><br></p>
-<div class="mondai callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>5人の平均値を計算する。</p>
-</div>
-</div>
-<div class="kotae callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">mean</span>(score)</span>
-<span id="cb7-2"><a href="#cb7-2"></a>[<span class="dv">1</span>] <span class="dv">78</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
-<p><br></p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>プログラミングの世界では、「全角」は大敵です。 数字、コンマ、カッコ、スペースがすべて「半角」になっているか、もう一度確認してみましょう。</p>
-</div>
-</div>
-<p><br></p>
+<!-- 教員メモ：1・3は2025年9月公表値で確認済み。2は2024年6月末（最新は2025年12月末公表あり、割合は約3%のまま）。4・5は未確認。 -->
+<p>何問当たりましたか？ 当たらなくても大丈夫です。スウェーデンの医師ハンス・ロスリングは、著書『FACTFULNESS』<span class="citation" data-cites="rosling2019factfulness">(<a href="references.html#ref-rosling2019factfulness" role="doc-biblioref">ロスリング, ロスリング, and ロスリング・ロンランド 2019</a>)</span>で、世界の多くの人がこうした質問に<strong>チンパンジーが適当に選ぶよりも低い正答率</strong>しか出せないことを紹介しています。私たちの頭の中の世界は、実際の世界とかなりずれているのです。</p>
 </section>
-</section>
-<section id="quartoクゥオート" class="level2" data-number="1.12">
-<h2 data-number="1.12" class="anchored" data-anchor-id="quartoクゥオート"><span class="header-section-number">1.12</span> Quarto（クゥオート）</h2>
-<p>これまでは、Rを使って計算する方法を学びました。しかし、実際のレポートや論文では、計算結果（数字やグラフ）だけでなく、その背景を説明する「文章」も必要です。</p>
-<p><strong>Quarto</strong> は、「文章」と「プログラム」と「実行結果」を一つのファイルに同居させ、そのまま提出用のレポート（HTMLやPDF）として出力できる非常に強力なツールです。</p>
-<section id="なぜ-quarto-を使うのか" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="なぜ-quarto-を使うのか">なぜ Quarto を使うのか？</h3>
+<section id="なぜ直感はずれるのか" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="なぜ直感はずれるのか"><span class="header-section-number">1.3</span> なぜ直感はずれるのか？</h2>
+<p>直感がずれる理由はいくつもあります。</p>
 <ul>
-<li><p><strong>コピペミスがゼロになる</strong></p>
-<p>計算結果をExcelやWordにコピペする手間がありません。プログラムが走れば、結果は自動的にレポートに反映されます。</p></li>
-<li><p><strong>「動く」ことが証明できる</strong></p>
-<p>提出されたHTMLを見れば、プログラムが正しく動いたことを一目で確認できます。</p></li>
-<li><p><strong>一生モノのスキル</strong></p>
-<p>現在、データサイエンスの現場では、このような「再現可能なレポート作成（Reproducible Reporting）」が世界標準になっています。</p></li>
+<li><strong>印象に残る出来事に引っ張られる</strong>：ニュースで目立つ出来事は、実際よりも多く起きているように感じます。</li>
+<li><strong>身近な人を基準にする</strong>：自分の周りの人が「普通」だと思いがちです。</li>
+<li><strong>昔の知識のままになっている</strong>：学校で習ったときから、世界は変わっています。</li>
+<li><strong>数字の見せ方にだまされる</strong>：「平均」や「グラフ」は、見せ方しだいで印象が大きく変わります。</li>
 </ul>
-</section>
-<section id="quarto-の仕組み" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="quarto-の仕組み">Quarto の仕組み</h3>
-<p>ここで、Blackboard から assignment01 というファイルをダウンロードし、K ドライブに先ほど作成した Lesson01 フォルダに格納してください。次に、RStudio 右下の Files から assignment01.qmd をクリックして開いてください。</p>
-<div id="fig-Quarto-1" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-Quarto-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/Quarto-1.png" id="fig-Quarto-1" class="img-fluid figure-img" style="width:90.0%">
+<p>だからこそ、<strong>思い込みをデータで確かめる</strong>ことが大切です。この授業では、その方法を一つずつ身につけていきます。</p>
+<div class="mondai callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-Quarto-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.21
-</figcaption>
-</figure>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>演習
 </div>
-<p>Quartoのファイル（拡張子 <code>.qmd</code>）は、いわば「分析の記録ノート」です。ファイルの中で R を実行し、その前後に説明を記入します。</p>
-<div id="fig-Quarto-2" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-Quarto-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/Quarto-2.png" id="fig-Quarto-2" class="img-fluid figure-img" style="width:90.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-Quarto-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.22
-</figcaption>
-</figure>
+<div class="callout-body-container callout-body">
+<p>グループ（3〜4人）で話し合ってください。</p>
+<ol type="1">
+<li>クイズでいちばん予想が外れた問題はどれでしたか？ なぜ外れたと思いますか？</li>
+<li>最近見たニュースやSNSで、「本当かな？」と思った数字や主張を1つ挙げてください。それを確かめるには、どんなデータがあればよいでしょうか？</li>
+</ol>
 </div>
-<p>冒頭（一番上）には、そのファイルの属性を決める定型フォーマットを、<code>---</code> と <code>---</code> で上下に囲み記入します。</p>
-<p>R コードは、<code>```{r}</code> と　<code>```</code> で上下から囲みます。この記号の間に囲まれた灰色の範囲をR コード・チャンク と呼び、通常のR スクリプトと同じようにコードを書きます。チャンク右上の「緑色の再生ボタン（▶）」を押すと、その場ですぐに実行結果を確認できます。</p>
-<p>Render（レンダリング）ボタンを押すと、RStudio が記載内容を上から順に実行し、コードの実行結果（グラフなど）が埋め込まれた Web ページ形式のレポートが作られます。</p>
-<p>次図の赤丸されているアイコンを押すとブラウザで表示されます。</p>
-<div id="fig-Quarto-3" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-Quarto-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/Quarto-3.png" id="fig-Quarto-3" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-Quarto-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.23
-</figcaption>
-</figure>
 </div>
 </section>
-</section>
-<section id="毎時間の準備と進め方" class="level2" data-number="1.13">
-<h2 data-number="1.13" class="anchored" data-anchor-id="毎時間の準備と進め方"><span class="header-section-number">1.13</span> 毎時間の準備と進め方</h2>
-<p>授業が始まったら以下の手順で準備してください。</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 12%">
-<col style="width: 87%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1.</td>
-<td style="text-align: left;">画面左下のウィンドウズマークを押してRStudioを起動する。</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2.</td>
-<td style="text-align: left;">RStudio 左上のアイコン（＋R）をクリックし、新規 R プロジェクトを作成する。</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">3.</td>
-<td style="text-align: left;">New Directory を選択する。（これにより、新しくフォルダが作成される。）</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">4.</td>
-<td style="text-align: left;">R New Project を選択する。</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">5.</td>
-<td style="text-align: left;">Directory name に「LessonXX」と入力、Browse ボタンから、Kドライブに作成した「R_programming」を選択し、Create Project をクリックする。</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">6.</td>
-<td style="text-align: left;">RStudio で、右上のプロジェクト名が LessonXX に変更されていることを確認する。</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">7.</td>
-<td style="text-align: left;">R_programming フォルダの中に、LessonXX というフォルダ（ディレクトリ）が新しく作成されていることを確認する。</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">8.</td>
-<td style="text-align: left;">RStudio 左上のプラス（＋）マークから、R Scriptを選択し、新規 R Script を作成する。</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">9.</td>
-<td style="text-align: left;">R Script を practiceXX という名前で保存する。</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">10.</td>
-<td style="text-align: left;">Blackboard から本授業で使うデータと「assignmentXX.qmd」ファイルをダウンロードし、先ほど作成した「R_programming/LessonXX」フォルダに格納する。</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">11.</td>
-<td style="text-align: left;">RStudio 右下のペインにある Files からそのファイルをクリックして開く。</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">12.</td>
-<td style="text-align: left;">演習と課題に取り組む。課題ファイルの中には、<code>```{r}</code> で始まるグレーの枠（R コード・チャンク）がある。ここに R コードを記入し、前後に必要な説明も記入する。</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">13.</td>
-<td style="text-align: left;">すべての問題が解けたら、画面上部にある [Render] をクリックして <code>assignmentXX.html</code> を作成する。</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">14.</td>
-<td style="text-align: left;">作成されたhtmlファイルをブラウザで開き、自分の名前や計算結果が正しく表示されているか確認する。</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">15.</td>
-<td style="text-align: left;">htmlファイルはBlackboardにアップロードできないので、作成したhtmlファイルを「ZIP形式」に圧縮する。htmlファイルを右クリックして「圧縮（ZIP形式）」をクリックする。</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">16.</td>
-<td style="text-align: left;">最後に、<code>assignmentXX.html.zip</code> を Blackboard の所定の場所にアップロードする。</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<div id="fig-Quarto-4" class="quarto-float quarto-figure quarto-figure-center anchored" width="90%">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-Quarto-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/A01/Quarto-4.png" id="fig-Quarto-4" class="img-fluid figure-img" style="width:90.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-Quarto-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;1.24
-</figcaption>
-</figure>
-</div>
+<section id="課題_1に取り組もう" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="課題_1に取り組もう"><span class="header-section-number">1.4</span> 課題_1に取り組もう</h2>
+<p>授業の後半は、Excelファイル「課題_1」を使って作業します。<span class="marker">作業したファイルが、そのまま今日の課題の提出物になります。</span></p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>提出するのは「ZIPファイル」です！
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>プログラムが書かれた <code>.qmd</code> ファイルではなく、Renderボタンを押して新しく作成された <code>.html</code> ファイルでもなく、htmlファイルを圧縮した <code>.zip</code> ファイルを提出してください。</p>
-</div>
-</div>
-<div class="my-note callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Renderでエラーが出たときは？
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>コードに間違い（打ち間違いやカッコの閉じ忘れ）があると、Renderが途中で止まり、HTMLが作成されません。エラーメッセージを読み、該当する行を修正してから、もう一度 [Render] を押してください。</p>
-</div>
-</div>
-</section>
-<section id="本日の課題" class="level2" data-number="1.14">
-<h2 data-number="1.14" class="anchored" data-anchor-id="本日の課題"><span class="header-section-number">1.14</span> 本日の課題</h2>
-<p>assignment01 に取り組み、<span class="marker">assignment01.html</span> を Blackboard から提出してください。</p>
-<div class="my-note callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Important</span>課題_1の進め方
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>Blackboardから 「assignment01.qmd」をダウンロードする。</li>
-<li>「assignment01.qmd」を「R_programming/Lesson01」に格納する。</li>
-<li>RStudio の右下にある Files から、 assignment01.qmd をクリックして開く。</li>
-<li>本日の演習課題に取り組む。</li>
-<li>終わったら Render を押し、HTML ファイルを作成する。</li>
-<li>「assignment01.html」をBlackboard から提出して終了する。</li>
+<li>Blackboardから <strong>課題_1.xlsx</strong> をダウンロードして開きます。</li>
+<li>最初のシート「はじめに」に、学籍番号と氏名を入力します。</li>
+<li>シートを順番に進めます。<span class="marker">黄色のセル</span>が、皆さんが入力する場所です。</li>
+<li>最後に、ファイル名を <strong>課題_1_氏名.xlsx</strong> に変えて保存し、Blackboardに提出します。</li>
 </ol>
 </div>
 </div>
+<p>課題_1には、次のシートがあります。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">シート</th>
+<th style="text-align: left;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">はじめに</td>
+<td style="text-align: left;">学籍番号・氏名の入力、進め方の説明</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1_クイズ</td>
+<td style="text-align: left;">今日のクイズの予想と正解を記録し、正解数を数える</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2_アンケート</td>
+<td style="text-align: left;">受講生アンケートへの回答</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3_基本操作</td>
+<td style="text-align: left;">入力、合計・平均、並べ替え、書式など、Excelの基本操作の練習</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4_チャレンジ</td>
+<td style="text-align: left;">グラフや条件付き書式などに挑戦（Excelに慣れている人向け）</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">5_振り返り</td>
+<td style="text-align: left;">今日の授業の振り返り</td>
+</tr>
+</tbody>
+</table>
+<section id="アンケートについて" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="アンケートについて"><span class="header-section-number">1.4.1</span> アンケートについて</h3>
+<p>この授業では、<strong>皆さん自身のデータ</strong>を教材として使います。アンケートの結果は次回以降、Excelで分析します。</p>
+<ul>
+<li>答えたくない質問は、<strong>空欄のままで構いません</strong>。空欄でも減点はしません。</li>
+<li>回答は、名前や学籍番号を取り除いたうえで、この授業の教材としてのみ使用します。</li>
+</ul>
+</section>
+<section id="excelが初めての人へ" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="excelが初めての人へ"><span class="header-section-number">1.4.2</span> Excelが初めての人へ</h3>
+<ul>
+<li>セルをクリックして文字や数字を入力し、<strong>Enterキー</strong>で確定します。</li>
+<li>画面下のタブ（「はじめに」「1_クイズ」など）をクリックすると、シートを切り替えられます。</li>
+<li>作業の途中でも、こまめに <strong>Ctrl + S</strong>（Macは <strong>command + S</strong>）で保存しましょう。</li>
+<li>分からないときは、周りの人や教員、AIに遠慮なく聞いてください。</li>
+</ul>
+<p><strong>基本課題</strong>は、シート「1_クイズ」「2_アンケート」「3_基本操作」「5_振り返り」です。<strong>チャレンジ課題</strong>（シート「4_チャレンジ」）は、Excelに慣れている人や、基本課題が終わった人が取り組んでください。</p>
+</section>
+</section>
+<section id="振り返り" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="振り返り"><span class="header-section-number">1.5</span> 振り返り</h2>
+<div class="my-note callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>今日のまとめ
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>私たちの直感は、データとかなりずれていることがある。</li>
+<li>直感がずれる理由を知り、<strong>思い込みをデータで確かめる</strong>ことが大切。</li>
+<li>この授業では、皆さん自身のデータと公開データを使って、問いを確かめていく。</li>
+</ul>
+</div>
+</div>
+<p><strong>次回の問い：</strong>「このクラスは、どんな集団？」</p>
+<p>今日のアンケート結果をExcelで開き、データの「形」を学びます。</p>
+</section>
+<section id="今週の課題" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="今週の課題"><span class="header-section-number">1.6</span> 今週の課題</h2>
+<div class="mondai callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>演習
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>課題_1_氏名.xlsx</strong> をBlackboardに提出してください（<strong>金曜日24時まで</strong>）。</p>
+<p>授業中に終わらなかったシートは、提出までに仕上げてください。</p>
+</div>
+</div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-rosling2019factfulness" class="csl-entry" role="listitem">
+ロスリングハンス, ロスリングオーラ, and ロスリング・ロンランドアンナ. 2019. <em>FACTFULNESS（ファクトフルネス）10の思い込みを乗り越え、データを基に世界を正しく見る習慣</em>. Translated by 上杉周作 and 関美和. 日経BP.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1689,8 +977,8 @@ Note
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./lec02.html" class="pagination-link" aria-label="データ操作">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">データ操作</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./lec02.html" class="pagination-link" aria-label="表を読む・データの形を知る">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">表を読む・データの形を知る</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
