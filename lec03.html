@@ -8,7 +8,7 @@
 
 <meta name="description" content="2026年度　後期 時間： 月曜日 2 時限（11:15-13:00） 教室： C 館 1階 PC2 教室">
 
-<title>3&nbsp; 「平均」のワナ：代表値 – データ課題探求</title>
+<title>3&nbsp; グラフを描く – データ課題探求</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lec03.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">「平均」のワナ：代表値</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lec03.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">グラフを描く</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -131,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec03.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">「平均」のワナ：代表値</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">グラフを描く</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -210,17 +210,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#導入平均給与478万円をどう感じる" id="toc-導入平均給与478万円をどう感じる" class="nav-link active" data-scroll-target="#導入平均給与478万円をどう感じる"><span class="header-section-number">3.1</span> 導入：「平均給与478万円」をどう感じる？</a></li>
-  <li><a href="#代表値データを1つの数字で表す" id="toc-代表値データを1つの数字で表す" class="nav-link" data-scroll-target="#代表値データを1つの数字で表す"><span class="header-section-number">3.2</span> 代表値：データを1つの数字で表す</a>
+  <li><a href="#グラフの種類と使い分け" id="toc-グラフの種類と使い分け" class="nav-link active" data-scroll-target="#グラフの種類と使い分け"><span class="header-section-number">3.1</span> グラフの種類と使い分け</a></li>
+  <li><a href="#excelでグラフを作る基本" id="toc-excelでグラフを作る基本" class="nav-link" data-scroll-target="#excelでグラフを作る基本"><span class="header-section-number">3.2</span> Excelでグラフを作る基本</a>
   <ul class="collapse">
-  <li><a href="#平均値は引っ張られる" id="toc-平均値は引っ張られる" class="nav-link" data-scroll-target="#平均値は引っ張られる"><span class="header-section-number">3.2.1</span> 平均値は「引っ張られる」</a></li>
-  <li><a href="#実際のデータではどうなっている" id="toc-実際のデータではどうなっている" class="nav-link" data-scroll-target="#実際のデータではどうなっている"><span class="header-section-number">3.2.2</span> 実際のデータではどうなっている？</a></li>
+  <li><a href="#つの手順" id="toc-つの手順" class="nav-link" data-scroll-target="#つの手順"><span class="header-section-number">3.2.1</span> 3つの手順</a></li>
+  <li><a href="#グラフを整える" id="toc-グラフを整える" class="nav-link" data-scroll-target="#グラフを整える"><span class="header-section-number">3.2.2</span> グラフを整える</a></li>
+  <li><a href="#グラフごとのポイント" id="toc-グラフごとのポイント" class="nav-link" data-scroll-target="#グラフごとのポイント"><span class="header-section-number">3.2.3</span> グラフごとのポイント</a></li>
   </ul></li>
-  <li><a href="#excelで代表値を計算する" id="toc-excelで代表値を計算する" class="nav-link" data-scroll-target="#excelで代表値を計算する"><span class="header-section-number">3.3</span> Excelで代表値を計算する</a></li>
-  <li><a href="#課題_3に取り組もう" id="toc-課題_3に取り組もう" class="nav-link" data-scroll-target="#課題_3に取り組もう"><span class="header-section-number">3.4</span> 課題_3に取り組もう</a></li>
-  <li><a href="#共有ニュースの平均を疑ってみる" id="toc-共有ニュースの平均を疑ってみる" class="nav-link" data-scroll-target="#共有ニュースの平均を疑ってみる"><span class="header-section-number">3.5</span> 共有：ニュースの「平均」を疑ってみる</a></li>
-  <li><a href="#振り返り" id="toc-振り返り" class="nav-link" data-scroll-target="#振り返り"><span class="header-section-number">3.6</span> 振り返り</a></li>
-  <li><a href="#今週の課題" id="toc-今週の課題" class="nav-link" data-scroll-target="#今週の課題"><span class="header-section-number">3.7</span> 今週の課題</a></li>
+  <li><a href="#課題_3に取り組もう" id="toc-課題_3に取り組もう" class="nav-link" data-scroll-target="#課題_3に取り組もう"><span class="header-section-number">3.3</span> 課題_3に取り組もう</a></li>
+  <li><a href="#振り返り" id="toc-振り返り" class="nav-link" data-scroll-target="#振り返り"><span class="header-section-number">3.4</span> 振り返り</a></li>
   </ul>
 </nav>
     </div>
@@ -229,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-lec03" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">「平均」のワナ：代表値</span></span></h1>
+<h1 class="title"><span id="sec-lec03" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">グラフを描く</span></span></h1>
 </div>
 
 
@@ -246,6 +244,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Excelでいろいろなグラフを作ってみる</p>
 <div style="margin-top: 2.0em;">
 
 </div>
@@ -259,230 +258,154 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>“平均年収”は、普通の人の年収なのでしょうか？</strong></p>
+<p><strong>データを、どんなグラフで見せれば伝わるのでしょうか？</strong></p>
 </div>
 </div>
 <!--
 教員用：今日の流れ（105分）
 | 時間 | 内容 |
 |:---:|:---|
-| 10分 | 導入：「平均給与478万円」をどう感じる？（課題_3の「1_予想」に記入） |
-| 25分 | 解説：平均値・中央値・最頻値、Excelで代表値を計算する |
-| 45分 | 演習：課題_3 |
-| 20分 | 共有：ニュースの「平均」を疑ってみる |
-|  5分 | 振り返り・次回の予告 |
+| 10分 | 導入：表とグラフ、どちらが分かりやすい？ |
+| 25分 | 解説：グラフの種類と使い分け、Excelでグラフを作る基本（棒グラフを一緒に作る） |
+| 50分 | 演習：課題_3 |
+| 15分 | 共有：いちばん発見があったグラフ |
+|  5分 | 振り返り |
 -->
-<section id="導入平均給与478万円をどう感じる" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="導入平均給与478万円をどう感じる"><span class="header-section-number">3.1</span> 導入：「平均給与478万円」をどう感じる？</h2>
-<p>第1回のクイズで、日本の給与所得者の平均給与は<strong>478万円</strong>（2024年分、国税庁「民間給与実態統計調査」）だと紹介しました。そのとき、6問目で「自分の周りの普通の人の年収も、だいたいこれくらいだと思うか？」と聞きました。</p>
-<div class="mondai callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>演習
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>直感で答えて、「課題_3」のシート「1_予想」に記入してください。</p>
-<ol type="1">
-<li>日本の給与所得者のうち、年収が平均（478万円）<strong>より低い人</strong>は、全体のどれくらいだと思いますか？<br>
+<div style="margin-top: 2.0em;">
 
-<ol type="a">
-<li>約3割　(b) 約5割　(c) 約6割以上</li>
-</ol></li>
-<li>「平均」という言葉を聞いたとき、あなたは「真ん中くらいの人」をイメージしますか？ それとも別のものをイメージしますか？</li>
-</ol>
 </div>
-</div>
-<div class="kotae callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>解答
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="1">
-<li><strong>(c) 約6割以上</strong>：国税庁「民間給与実態統計調査」（2024年分）の給与階級別分布（1年を通じて勤務した給与所得者）では、年収<strong>400万円以下が48.1%</strong>、<strong>500万円以下が63.4%</strong>です。平均の478万円はその間にあるので、<span class="marker">平均より低い人はおよそ6割</span>と考えられます。</li>
-<li>正解はありません。今日の授業で、「平均」と「真ん中」の違いを確かめます。</li>
-</ol>
-</div>
-</div>
-</div>
-<!-- 教員メモ：1.の数値は国税庁「令和6年分 民間給与実態統計調査」第16表（給与階級別給与所得者数・構成比）より。構成比 100万円以下7.7%、〜200万円11.1%、〜300万円13.2%、〜400万円16.1%、〜500万円15.3%（累積 48.1%→63.4%）。新しい年の結果が出ていれば更新。 -->
-</section>
-<section id="代表値データを1つの数字で表す" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="代表値データを1つの数字で表す"><span class="header-section-number">3.2</span> 代表値：データを1つの数字で表す</h2>
-<p>たくさんのデータを、1つの数字で「だいたいこれくらい」と表したものを<span class="marker">代表値</span>と呼びます。代表的なものは次の3つです。</p>
+<p>前回は、アンケートの結果を<strong>表</strong>のまま眺めました。並べ替えやフィルターで多くのことが分かりましたが、53人分の数字を見て、全体の様子をつかむのは大変です。</p>
+<p>今日は、データを<strong>グラフ</strong>にしてみます。<span class="marker">グラフにすると、表では気づかなかった特徴が、一目で見えるようになります。</span></p>
+<!-- 教員メモ：導入では、課題_3「3_折れ線グラフ」の投票率の表（21行）を見せて「20歳代の投票率はどう変化した？」と聞き、その場で折れ線グラフにして見せると、表とグラフの違いが伝わりやすい。 -->
+<section id="グラフの種類と使い分け" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="グラフの種類と使い分け"><span class="header-section-number">3.1</span> グラフの種類と使い分け</h2>
+<p>グラフには、それぞれ得意なことがあります。<span class="marker">「何を伝えたいか」から、グラフの種類を選ぶ</span>ことが大切です。</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 15%">
-<col style="width: 50%">
 <col style="width: 35%">
+<col style="width: 25%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">代表値</th>
-<th style="text-align: left;">意味</th>
-<th style="text-align: left;">Excelの関数</th>
+<th style="text-align: left;">伝えたいこと</th>
+<th style="text-align: left;">向いているグラフ</th>
+<th style="text-align: left;">例</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">平均値</td>
-<td style="text-align: left;">全部を足して、個数で割った値</td>
-<td style="text-align: left;"><code>=AVERAGE(範囲)</code></td>
+<td style="text-align: left;">大きさを<strong>比べる</strong></td>
+<td style="text-align: left;">棒グラフ</td>
+<td style="text-align: left;">政治への関心別の人数、都道府県別の人口</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">中央値</td>
-<td style="text-align: left;">小さい順に並べたとき、<strong>ちょうど真ん中</strong>にくる値</td>
-<td style="text-align: left;"><code>=MEDIAN(範囲)</code></td>
+<td style="text-align: left;">全体の中の<strong>内訳（割合）</strong></td>
+<td style="text-align: left;">円グラフ</td>
+<td style="text-align: left;">Excel経験の内訳、支出の内訳</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">最頻値</td>
-<td style="text-align: left;">いちばん<strong>多く現れる</strong>値</td>
-<td style="text-align: left;"><code>=MODE.SNGL(範囲)</code></td>
-</tr>
-</tbody>
-</table>
-<p>中央値は、データの個数が偶数のときは、真ん中の2つの値の平均になります。</p>
-<section id="平均値は引っ張られる" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="平均値は引っ張られる"><span class="header-section-number">3.2.1</span> 平均値は「引っ張られる」</h3>
-<p>次の架空の例を見てください。ある会社の社員10人の年収です。</p>
-<table class="caption-top table">
-<caption>架空の例</caption>
-<colgroup>
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">社員</th>
-<th style="text-align: center;">A</th>
-<th style="text-align: center;">B</th>
-<th style="text-align: center;">C</th>
-<th style="text-align: center;">D</th>
-<th style="text-align: center;">E</th>
-<th style="text-align: center;">F</th>
-<th style="text-align: center;">G</th>
-<th style="text-align: center;">H</th>
-<th style="text-align: center;">I</th>
-<th style="text-align: center;">J</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">年収（万円）</td>
-<td style="text-align: center;">250</td>
-<td style="text-align: center;">280</td>
-<td style="text-align: center;">300</td>
-<td style="text-align: center;">320</td>
-<td style="text-align: center;">350</td>
-<td style="text-align: center;">380</td>
-<td style="text-align: center;">400</td>
-<td style="text-align: center;">420</td>
-<td style="text-align: center;">450</td>
-<td style="text-align: center;">3000</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>平均値</strong>：(250 + 280 + … + 450 + 3000) ÷ 10 = <strong>615万円</strong></li>
-<li><strong>中央値</strong>：5番目（350）と6番目（380）の平均 = <strong>365万円</strong></li>
-</ul>
-<p>社長のJさん1人の年収が高いために、平均値は615万円まで引き上げられています。<strong>10人中9人が「平均以下」</strong>です。この会社の「普通の社員」の年収を表すのは、平均値と中央値のどちらでしょうか？</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>平均値と中央値の使い分け
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>平均値は、<strong>極端に大きい（小さい）値＝外れ値</strong>に引っ張られやすい。</li>
-<li>中央値は、外れ値の影響を受けにくい。</li>
-<li>年収や貯蓄額のように、<span class="marker">一部の人がとても大きな値をもつデータでは、平均値は「普通の人」より高くなりやすい。</span></li>
-<li>だからこそ、<strong>平均値と中央値の両方</strong>を確かめることが大切です。</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="実際のデータではどうなっている" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="実際のデータではどうなっている"><span class="header-section-number">3.2.2</span> 実際のデータではどうなっている？</h3>
-<p>厚生労働省「国民生活基礎調査」（2023年調査）によると、2022年の<strong>1世帯当たり</strong>の所得は次の通りです。</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">指標</th>
-<th style="text-align: left;">値</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">平均所得金額</td>
-<td style="text-align: left;">524万2千円</td>
+<td style="text-align: left;">時間による<strong>変化</strong></td>
+<td style="text-align: left;">折れ線グラフ</td>
+<td style="text-align: left;">投票率の推移、物価の推移</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">所得金額の中央値</td>
-<td style="text-align: left;">405万円</td>
+<td style="text-align: left;">データの<strong>散らばり方（分布）</strong></td>
+<td style="text-align: left;">ヒストグラム</td>
+<td style="text-align: left;">通学時間、所得</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">平均所得金額以下の世帯の割合</td>
-<td style="text-align: left;">62.2%</td>
+<td style="text-align: left;">2つの変数の<strong>関係</strong></td>
+<td style="text-align: left;">散布図</td>
+<td style="text-align: left;">スマホ時間と睡眠時間</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">グループごとの<strong>内訳を比べる</strong></td>
+<td style="text-align: left;">帯グラフ（100%積み上げ棒）</td>
+<td style="text-align: left;">学年別の政治への関心</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">いくつもの項目の<strong>バランス</strong></td>
+<td style="text-align: left;">レーダーチャート</td>
+<td style="text-align: left;">クラス別・教科別の平均点</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>3つの数値</strong>を一度に見る</td>
+<td style="text-align: left;">バブルチャート</td>
+<td style="text-align: left;">販売数・売上・構成比</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>地域</strong>による違い</td>
+<td style="text-align: left;">ヒートマップ（塗り分けマップ）</td>
+<td style="text-align: left;">都道府県別の人口</td>
 </tr>
 </tbody>
 </table>
-<p>出典：厚生労働省「2023（令和5）年 国民生活基礎調査の概況」</p>
-<p><span class="marker">平均と中央値の差は約120万円。6割以上の世帯が「平均以下」</span>です。「平均」は、決して「真ん中の人」ではないのです。</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>「何の平均か」にも注意
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>国税庁の「平均給与478万円」は、<strong>1人当たり</strong>の給与（1年を通じて勤務した給与所得者）です。国民生活基礎調査の「平均所得524万円」は、<strong>1世帯当たり</strong>の所得（年金なども含む）です。同じ「平均年収」のように見えても、<strong>誰の・何の平均か</strong>が違えば、数字は違います。ニュースで数字を見たら、まず定義を確かめましょう。</p>
-</div>
-</div>
-<!-- 教員メモ：授業前に最新の国民生活基礎調査（厚労省）の概況を確認し、新しい年の結果が出ていれば更新。国税庁の平均給与も同様。 -->
 </section>
-</section>
-<section id="excelで代表値を計算する" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="excelで代表値を計算する"><span class="header-section-number">3.3</span> Excelで代表値を計算する</h2>
-<p>関数は、<code>=</code> で始めて入力します。</p>
+<section id="excelでグラフを作る基本" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="excelでグラフを作る基本"><span class="header-section-number">3.2</span> Excelでグラフを作る基本</h2>
+<section id="つの手順" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="つの手順"><span class="header-section-number">3.2.1</span> 3つの手順</h3>
 <ol type="1">
-<li>結果を表示したい空いているセル（例：M2）をクリックします。</li>
-<li><code>=AVERAGE(</code> と入力します。</li>
-<li>計算したい範囲をドラッグで選びます（例：C2からC41まで）。すると <code>=AVERAGE(C2:C41</code> のように範囲が自動で入ります。</li>
-<li><code>)</code> を入力して <code>Enter</code> を押します。</li>
+<li>グラフにしたいデータを、<strong>見出しの行も含めて</strong>ドラッグで選びます。</li>
+<li><strong>「挿入」タブ</strong>をクリックします。</li>
+<li>「グラフ」のグループから、グラフの種類を選びます。</li>
 </ol>
-<p><code>C2:C41</code> は「C2からC41まで」という意味です。<span class="marker">範囲の最後の行番号は、自分のデータの最終行に合わせてください。</span></p>
-<p>別のシートのデータを使うときは、<code>=AVERAGE(データ!C2:C101)</code> のように「<strong>シート名!範囲</strong>」と書きます。式の入力中にシートのタブをクリックして範囲をドラッグすると、自動で入ります。課題_3では、クラスの人数が何人でも使えるように、範囲を101行目までにしています（空欄のセルは計算に含まれません）。</p>
+<p>どれを選べばよいか迷ったら、<strong>「おすすめグラフ」</strong>を押すと、Excelが候補を示してくれます。</p>
+</section>
+<section id="グラフを整える" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="グラフを整える"><span class="header-section-number">3.2.2</span> グラフを整える</h3>
+<p>作ったばかりのグラフは、そのままでは「何のグラフか」が伝わりません。グラフをクリックすると右上に出る<strong>「＋」ボタン</strong>から、次の要素を付けましょう。</p>
+<div style="margin-top: 2.0em;">
+
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">要素</th>
+<th style="text-align: left;">何のためか</th>
+<th style="text-align: left;">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">グラフタイトル</td>
+<td style="text-align: left;">何の、いつのデータかを伝える</td>
+<td style="text-align: left;">タイトルの文字をクリックして書き換える</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">軸ラベル</td>
+<td style="text-align: left;">単位を伝える（「人」「%」など）</td>
+<td style="text-align: left;">「＋」→「軸ラベル」にチェック</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">データラベル</td>
+<td style="text-align: left;">正確な数値を表示する</td>
+<td style="text-align: left;">「＋」→「データラベル」にチェック</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">凡例</td>
+<td style="text-align: left;">線や色が何を表すかを示す</td>
+<td style="text-align: left;">「＋」→「凡例」にチェック</td>
+</tr>
+</tbody>
+</table>
+<div style="margin-top: 2.0em;">
+
+</div>
+<ul>
+<li><strong>移動</strong>：グラフの枠をドラッグします。<strong>大きさ</strong>は、四隅の○をドラッグして変えます。</li>
+<li><strong>削除</strong>：グラフの枠をクリックして選び、<code>Delete</code> キーを押します。</li>
+<li><strong>色やデザイン</strong>：グラフを選ぶと出る<strong>「グラフのデザイン」タブ</strong>で、スタイルや色を変えられます。</li>
+</ul>
+<div style="margin-top: 2.0em;">
+
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -494,16 +417,48 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><code>#DIV/0!</code> と表示される → 範囲に数値が1つも入っていません。範囲を確認しましょう。</li>
-<li><code>#NAME?</code> と表示される → 関数名のつづりが間違っています（例：<code>AVERGE</code>）。</li>
-<li>数値のはずなのにセルの左に寄っている → 文字として入力されています（全角数字など）。第2回のチャレンジ課題を参考に整えましょう。</li>
+<li><strong>思っていたのと違うグラフになった</strong> → <code>Ctrl</code> + <code>Z</code> で戻して、選ぶ範囲を確かめます。見出しの行を含めたか、余計な列を選んでいないかを確認しましょう。</li>
+<li><strong>項目と系列が逆になった</strong> → 「グラフのデザイン」タブ →<strong>「行/列の切り替え」</strong>を押します。</li>
+<li><strong>離れた2つの列を選びたい</strong> → 1つ目の列をドラッグしたあと、<code>Ctrl</code>（Macは <code>command</code>）を押しながら2つ目の列をドラッグします。</li>
 </ul>
 </div>
 </div>
+<div style="margin-top: 2.0em;">
+
+</div>
 </section>
-<section id="課題_3に取り組もう" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="課題_3に取り組もう"><span class="header-section-number">3.4</span> 課題_3に取り組もう</h2>
-<p>授業の後半は、Excelファイル「課題_3」を使って作業します。<span class="marker">作業したファイルが、そのまま今日の課題の提出物になります。</span></p>
+<section id="グラフごとのポイント" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="グラフごとのポイント"><span class="header-section-number">3.2.3</span> グラフごとのポイント</h3>
+<p><strong>棒グラフ</strong>：「縦棒/横棒グラフの挿入」→「集合縦棒」。項目名が長いときは「集合横棒」の方が読みやすくなります。</p>
+<p><strong>円グラフ</strong>：「円またはドーナツグラフの挿入」→「円」。「＋」→「データラベル」の右の「▶」→「その他のオプション」で<strong>「パーセンテージ」</strong>にチェックすると、割合が表示されます。項目が多すぎると読めなくなるので、目安は5つ程度までです。</p>
+<p><strong>折れ線グラフ</strong>：「折れ線/面グラフの挿入」→「折れ線」。複数の列を選ぶと、1つのグラフに複数の線が描かれ、比べることができます。</p>
+<p><strong>ヒストグラム</strong>：「統計グラフの挿入」→「ヒストグラム」。数値の列を1つ選ぶだけで、Excelが自動で区間に分けて人数を数えてくれます。区間の幅は、横軸を右クリック →「軸の書式設定」→<strong>「ビンの幅」</strong>で変えられます。</p>
+<p><strong>散布図</strong>：「散布図（X, Y）またはバブルチャートの挿入」→「散布図」。数値の列を2つ選びます。<strong>左の列が横軸、右の列が縦軸</strong>になり、1つの点が1人を表します。</p>
+<p><strong>帯グラフ</strong>：「縦棒/横棒グラフの挿入」→「100%積み上げ横棒」。グループ（学年など）ごとに、全体を100%とした内訳を並べて比べられます。</p>
+<p><strong>レーダーチャート</strong>：「ウォーターフォール図、じょうごグラフ、株価チャート、等高線グラフ、レーダーチャートの挿入」→「マーカー付きレーダー」。平均点が同じでも、得意・不得意の「形」の違いが見えます。</p>
+<p><strong>バブルチャート</strong>：「散布図（X, Y）またはバブルチャートの挿入」→「バブル」。横軸・縦軸に加えて、<strong>円の大きさ</strong>で3つ目の数値を表します。</p>
+<p><strong>ヒートマップ（塗り分けマップ）</strong>：都道府県名と数値を選び、「マップ」→「塗り分けマップ」。値の大きさを色の濃さで表し、日本地図を塗り分けます（Microsoft 365 で、インターネットに接続しているときに使えます）。</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>グラフには出典を付ける
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>公開データからグラフを作ったら、グラフの下に<strong>出典</strong>（データのもとになった資料と年）を書きましょう。「挿入」タブ →「テキストボックス」で書き込めます。出典のないグラフは、正しいかどうか確かめられません。</p>
+</div>
+</div>
+</section>
+</section>
+<section id="課題_3に取り組もう" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="課題_3に取り組もう"><span class="header-section-number">3.3</span> 課題_3に取り組もう</h2>
+<p>Excelファイル「課題_3」を使って作業します。<span class="marker">作業したファイルが、そのまま今日の課題の提出物になります。</span></p>
+<div style="margin-top: 2.0em;">
+
+</div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -517,16 +472,19 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li>Blackboardから <strong>課題_3.xlsx</strong> をダウンロードして開きます。</li>
 <li>最初のシート「はじめに」に、学籍番号と氏名を入力します。</li>
-<li>シートを順番に進めます。<span class="marker">黄色のセル</span>が、皆さんが入力する場所です。灰色のセルに「入力する式」が書いてあるので、同じ式を黄色のセルに入力します。</li>
+<li>シートを順番に進めます。作ったグラフは、各シートの表の右側に置きます。<span class="marker">黄色のセル</span>には、グラフから読み取ったことを入力します。</li>
 <li>最後に、ファイル名を <strong>課題_3_氏名.xlsx</strong> に変えて保存し、Blackboardに提出します。</li>
 </ol>
 </div>
 </div>
-<!-- 教員メモ：課題_3の「データ」シートは見出しのみ。第1回のアンケート回答（課題_2と同じもの）を2行目から貼り付けてから配布。「4_所得分布」には国民生活基礎調査（2023年調査）の図9の数値を入力済み。 -->
+<!-- 教員メモ：「データ」シートには、第2回の乱れを直したアンケート結果（data/survey_clean.xlsx、53人）を入力済み。「3_折れ線グラフ」の投票率は、総務省「衆議院議員総選挙における年代別投票率（抽出）の推移」PDF（https://www.soumu.go.jp/main_content/000255967.pdf）と2026年10月11日に照合済み（第31回〜第51回）。 -->
+<div style="margin-top: 2.0em;">
+
+</div>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 75%">
+<col style="width: 30%">
+<col style="width: 70%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -537,41 +495,63 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">はじめに</td>
-<td style="text-align: left;">学籍番号・氏名の入力、進め方と関数の入力のしかた</td>
+<td style="text-align: left;">学籍番号・氏名の入力、進め方の説明</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">データ</td>
-<td style="text-align: left;">クラスのアンケート結果（1行＝1人）</td>
+<td style="text-align: left;">クラスのアンケート結果（1行＝1人、第2回で整えたもの）</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">1_予想</td>
-<td style="text-align: left;">導入の2問の予想</td>
+<td style="text-align: left;">1_棒グラフ</td>
+<td style="text-align: left;">政治への関心別の人数を、棒グラフで比べる</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">2_架空の会社</td>
-<td style="text-align: left;">架空の会社の年収で、平均値と中央値を比べる（社長の年収が10000万円の場合も）</td>
+<td style="text-align: left;">2_円グラフ</td>
+<td style="text-align: left;">Excel経験の内訳を、円グラフで表す</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">3_クラスの代表値</td>
-<td style="text-align: left;">通学時間・スマホ時間・睡眠時間の平均値と中央値、朝食日数の最頻値</td>
+<td style="text-align: left;">3_折れ線グラフ</td>
+<td style="text-align: left;">衆議院選挙の年代別投票率の推移を、折れ線グラフで見る</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">4_所得分布</td>
-<td style="text-align: left;">日本の世帯所得の分布で累積相対度数を計算し、中央値・平均値の位置を確かめる</td>
+<td style="text-align: left;">4_ヒストグラム</td>
+<td style="text-align: left;">クラスの通学時間の分布を、ヒストグラムで見る</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">5_チャレンジ</td>
-<td style="text-align: left;">ピボットテーブルと FILTER 関数で学年別に比べる、「平均」を使ったニュースを探す（Excelに慣れている人向け）</td>
+<td style="text-align: left;">5_散布図</td>
+<td style="text-align: left;">スマホ時間と睡眠時間の関係を、散布図で見る</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">6_振り返り</td>
-<td style="text-align: left;">平均値と中央値の差の理由、ニュースの「平均」の考察、代表値の使い分け</td>
+<td style="text-align: left;">6_帯グラフ</td>
+<td style="text-align: left;">帯グラフで学年を比べる、自分で問いを立ててグラフを作る</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7_棒グラフ2</td>
+<td style="text-align: left;">おにぎり屋さんの売上を、種類ごと・支店ごとの2通りの棒グラフで見る（架空の例）</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8_レーダーチャート</td>
+<td style="text-align: left;">クラス別・教科別の平均点の特徴を見る（架空の例）</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">9_バブルチャート</td>
+<td style="text-align: left;">2つの営業部の販売数・売上・構成比を一度に見る（架空の例）</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">10_ヒートマップ</td>
+<td style="text-align: left;">都道府県別の人口を、日本地図の塗り分けで見る（2020年国勢調査）</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">11_振り返り</td>
+<td style="text-align: left;">場面に合ったグラフを選ぶ、今日の発見</td>
 </tr>
 </tbody>
 </table>
-<p><strong>基本課題</strong>は「1_予想」〜「4_所得分布」と「6_振り返り」です。<strong>チャレンジ課題</strong>（「5_チャレンジ」）は、Excelに慣れている人や、基本課題が終わった人が取り組んでください。</p>
-<div class="kotae callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div style="margin-top: 2.0em;">
+
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -580,80 +560,28 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>2_架空の会社</strong></p>
+<p>読み取りの例です（1〜6はこのクラスの53人のデータ）。</p>
 <ul>
-<li>元の例：平均値 <strong>615万円</strong>、中央値 <strong>365万円</strong>。</li>
-<li>社長が10000万円：平均値は <strong>1315万円</strong>に大きく上がりますが、中央値は <strong>365万円のまま</strong>変わりません。中央値は「真ん中の順番の値」なので、いちばん上の人がどれだけ高くなっても影響を受けません。「普通の社員」を表すのは<strong>中央値</strong>です。</li>
-</ul>
-<p><strong>3_クラスの代表値</strong></p>
-<ul>
-<li>数値はクラスのデータで決まります。一般に、通学時間には「2時間以上」のような長い人が少数いることが多く、平均値が中央値より大きくなりやすいです。平均値＞中央値のときは、<strong>大きい方に外れた値がある</strong>と考えられます。</li>
-</ul>
-<p><strong>4_所得分布</strong></p>
-<ul>
-<li>累積相対度数は、300〜400万円未満で48.9%、400〜500万円未満で59.6%です。<strong>400〜500万円未満</strong>の階級で初めて50%を超えます。中央値405万円はこの階級に入っています。</li>
-<li>一方、平均値524万2千円は<strong>500〜600万円未満</strong>の階級です。平均値は「真ん中の世帯」よりかなり上にあります。</li>
-</ul>
-<p><strong>5_チャレンジ</strong></p>
-<ul>
-<li><code>FILTER</code> 関数は Microsoft 365 / Excel 2021 以降で使えます。使えない場合は、フィルターで1つの学年だけを表示し、その範囲を選んで <code>MEDIAN</code> を使う方法でもかまいません。</li>
-<li>人数が少ない学年では、1人の値で平均が大きく動きます。<strong>何人のデータか</strong>を必ず一緒に示しましょう。</li>
-<li>課題Bのヒント：総務省統計局「家計調査（貯蓄・負債編）」では、貯蓄現在高の平均値と中央値の両方が公表されています。平均値は中央値よりかなり大きくなっています。</li>
+<li><strong>1_棒グラフ</strong>：いちばん多いのは「ある程度関心がある」（24人）。「とても関心がある」（3人）と「まったく関心がない」（1人）は、どちらも少数です。</li>
+<li><strong>2_円グラフ</strong>：「入力程度なら使ったことがある」が約半分（28人、52.8%）。「関数（SUMなど）を使える」が約3割（16人、30.2%）です。</li>
+<li><strong>3_折れ線グラフ</strong>：1967年から2026年まで、すべての選挙で20歳代の投票率は60歳代より低くなっています。20歳代は1967年の66.69%から、2014年には32.58%まで下がりました。全体の投票率が下がった選挙（1996年、2014年など）では、20歳代も下がっています。</li>
+<li><strong>4_ヒストグラム</strong>：ビンの幅を10分にすると、「50分超〜60分」の区間がいちばん多くなります（17人、そのうち16人が60分）。20〜40分の人もまとまっていて、90分を超える人も少しいます。</li>
+<li><strong>5_散布図</strong>：点は全体に散らばっていて、「スマホ時間が長い人ほど睡眠時間が短い」というはっきりした傾向は見えません。予想と違った人も多いのではないでしょうか。</li>
+<li><strong>6_帯グラフ</strong>：2年生は「ある程度関心がある」が約6割（18人中11人）で、1年生の約4割（35人中13人）より多くなっています。ただし2年生は18人と少ないので、1人の違いで割合が大きく動きます。</li>
+<li><strong>7_棒グラフ2</strong>：おかかは茗荷谷店だけで飛びぬけて売れています。同じデータでも、種類ごと・支店ごとのどちらでまとめるかで、見えることが変わります。</li>
+<li><strong>8_レーダーチャート</strong>：3クラスの全教科の平均点はほぼ同じ（64.6〜65.6点）ですが、Aクラスは国語・英語・地理、Bクラスは数学・物理、Cクラスは化学・生物が得意と、形がまったく違います。</li>
+<li><strong>9_バブルチャート</strong>：第一営業部は販売数が多いのに売上は少なく、1個あたりの金額が小さい取引が中心です。小川さんは販売数が最も少ないのに売上が多く、目立つ位置にあります。</li>
+<li><strong>10_ヒートマップ</strong>：東京・神奈川・大阪・愛知・埼玉など大都市圏が濃く、鳥取・島根・高知などは薄くなります。</li>
 </ul>
 </div>
 </div>
 </div>
+<!-- 教員メモ：全シートの模範解答と見本のグラフは data/課題_3_解答.xlsx（tools/k3.py で学生用と同時に生成）。10_ヒートマップの塗り分けマップはopenpyxlでは作れないため、解答ファイルではカラースケールで代用。国勢調査の数値は教員が貼り付けたもの（総数の合計126,146,099人は公表値と一致）。 -->
 </section>
-<section id="共有ニュースの平均を疑ってみる" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="共有ニュースの平均を疑ってみる"><span class="header-section-number">3.5</span> 共有：ニュースの「平均」を疑ってみる</h2>
-<div class="mondai callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>演習
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>グループ（3〜4人）で話し合ってください。</p>
-<ol type="1">
-<li>「平均値」と「中央値」のどちらを使うべきか、次の場合について話し合ってください。
-<ul>
-<li>日本人の「普通の」貯蓄額を知りたい</li>
-<li>このクラスのテストの出来を、他のクラスと比べたい</li>
-<li>靴屋さんが、いちばん多く仕入れるべき靴のサイズを決めたい</li>
-</ul></li>
-<li>「平均」の数字だけを見て判断すると、どんな誤解が生まれそうでしょうか？ 例を1つ考えてください。</li>
-</ol>
-</div>
-</div>
-<div class="kotae callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>解答
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>正解が1つに決まるわけではありませんが、考え方の例です。</p>
-<ul>
-<li>貯蓄額：一部にとても多い人がいるので、<strong>中央値</strong>の方が「普通の人」に近い。</li>
-<li>テスト：極端な点数が少なければ<strong>平均値</strong>でよいが、0点の欠席者などがいれば中央値も確認する。</li>
-<li>靴のサイズ：「いちばん多く売れるサイズ」を知りたいので<strong>最頻値</strong>。平均値（例：24.7cm）は、実際には存在しないサイズになることもある。</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="振り返り" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="振り返り"><span class="header-section-number">3.6</span> 振り返り</h2>
+<section id="振り返り" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="振り返り"><span class="header-section-number">3.4</span> 振り返り</h2>
 <div class="my-note callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -665,29 +593,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>代表値には、<strong>平均値・中央値・最頻値</strong>がある。</li>
-<li>平均値は外れ値に引っ張られやすく、年収のようなデータでは「普通の人」より高くなりやすい。</li>
-<li>数字を見たら、<strong>「何の平均か」「中央値はいくらか」</strong>を確かめる。</li>
+<li>「何を伝えたいか」に合わせて、<strong>棒・円・折れ線・ヒストグラム・散布図・帯グラフ</strong>などを使い分ける。</li>
+<li>Excelでは、<strong>データを選ぶ →「挿入」→ グラフの種類</strong>の3つの手順でグラフが作れる。</li>
+<li>グラフには、<strong>タイトル・軸ラベル（単位）・出典</strong>を付けて、何のグラフかが伝わるようにする。</li>
 </ul>
-</div>
-</div>
-<p><strong>次回の問い：</strong>「都道府県の差は、どれくらい大きい？」</p>
-<p>今日は「真ん中」を1つの数字で表しました。でも、データの特徴は真ん中だけでは分かりません。次回は、データの<strong>ばらつき</strong>と<strong>分布</strong>を見ていきます。</p>
-</section>
-<section id="今週の課題" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="今週の課題"><span class="header-section-number">3.7</span> 今週の課題</h2>
-<div class="mondai callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>演習
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>課題_3_氏名.xlsx</strong> をBlackboardに提出してください（<strong>金曜日24時まで</strong>）。</p>
-<p>授業中に終わらなかったシートは、提出までに仕上げてください。</p>
 </div>
 </div>
 
