@@ -8,7 +8,7 @@
 
 <meta name="description" content="2026年度　後期 時間： 月曜日 2 時限（11:15-13:00） 教室： C 館 1階 PC2 教室">
 
-<title>4&nbsp; ばらつきと分布 – データ課題探求</title>
+<title>4&nbsp; 数えて比べる – データ課題探求</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,6 +73,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <meta name="robots" content="noindex, nofollow">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -85,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lec04.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">ばらつきと分布</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lec04.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">数えて比べる</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -137,13 +166,13 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec04.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">ばらつきと分布</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">数えて比べる</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec05.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">グラフ</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">ピボットテーブル</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -210,17 +239,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#導入都道府県の差を予想しよう" id="toc-導入都道府県の差を予想しよう" class="nav-link active" data-scroll-target="#導入都道府県の差を予想しよう"><span class="header-section-number">4.1</span> 導入：都道府県の差を予想しよう</a></li>
-  <li><a href="#真ん中だけでは分からない" id="toc-真ん中だけでは分からない" class="nav-link" data-scroll-target="#真ん中だけでは分からない"><span class="header-section-number">4.2</span> 真ん中だけでは分からない</a>
+  <li><a href="#countifで数える" id="toc-countifで数える" class="nav-link active" data-scroll-target="#countifで数える"><span class="header-section-number">4.1</span> COUNTIFで数える</a>
   <ul class="collapse">
-  <li><a href="#ばらつきを表す指標" id="toc-ばらつきを表す指標" class="nav-link" data-scroll-target="#ばらつきを表す指標"><span class="header-section-number">4.2.1</span> ばらつきを表す指標</a></li>
-  <li><a href="#分布とヒストグラム" id="toc-分布とヒストグラム" class="nav-link" data-scroll-target="#分布とヒストグラム"><span class="header-section-number">4.2.2</span> 分布とヒストグラム</a></li>
+  <li><a href="#countif関数" id="toc-countif関数" class="nav-link" data-scroll-target="#countif関数"><span class="header-section-number">4.1.1</span> COUNTIF関数</a></li>
+  <li><a href="#数値の条件" id="toc-数値の条件" class="nav-link" data-scroll-target="#数値の条件"><span class="header-section-number">4.1.2</span> 数値の条件</a></li>
+  <li><a href="#式をコピーすると範囲がずれる絶対参照" id="toc-式をコピーすると範囲がずれる絶対参照" class="nav-link" data-scroll-target="#式をコピーすると範囲がずれる絶対参照"><span class="header-section-number">4.1.3</span> 式をコピーすると範囲がずれる：絶対参照（$）</a></li>
   </ul></li>
-  <li><a href="#excelでヒストグラムを作る" id="toc-excelでヒストグラムを作る" class="nav-link" data-scroll-target="#excelでヒストグラムを作る"><span class="header-section-number">4.3</span> Excelでヒストグラムを作る</a></li>
+  <li><a href="#割合にする" id="toc-割合にする" class="nav-link" data-scroll-target="#割合にする"><span class="header-section-number">4.2</span> 割合にする</a></li>
+  <li><a href="#条件を2つにして表を作る" id="toc-条件を2つにして表を作る" class="nav-link" data-scroll-target="#条件を2つにして表を作る"><span class="header-section-number">4.3</span> 条件を2つにして表を作る</a>
+  <ul class="collapse">
+  <li><a href="#countifs関数" id="toc-countifs関数" class="nav-link" data-scroll-target="#countifs関数"><span class="header-section-number">4.3.1</span> COUNTIFS関数</a></li>
+  <li><a href="#クロス表を作る" id="toc-クロス表を作る" class="nav-link" data-scroll-target="#クロス表を作る"><span class="header-section-number">4.3.2</span> クロス表を作る</a></li>
+  <li><a href="#学年ごとの割合にする" id="toc-学年ごとの割合にする" class="nav-link" data-scroll-target="#学年ごとの割合にする"><span class="header-section-number">4.3.3</span> 学年ごとの割合にする</a></li>
+  </ul></li>
   <li><a href="#課題_4に取り組もう" id="toc-課題_4に取り組もう" class="nav-link" data-scroll-target="#課題_4に取り組もう"><span class="header-section-number">4.4</span> 課題_4に取り組もう</a></li>
-  <li><a href="#共有差が大きいとはどういうことか" id="toc-共有差が大きいとはどういうことか" class="nav-link" data-scroll-target="#共有差が大きいとはどういうことか"><span class="header-section-number">4.5</span> 共有：「差が大きい」とはどういうことか？</a></li>
-  <li><a href="#振り返り" id="toc-振り返り" class="nav-link" data-scroll-target="#振り返り"><span class="header-section-number">4.6</span> 振り返り</a></li>
-  <li><a href="#今週の課題" id="toc-今週の課題" class="nav-link" data-scroll-target="#今週の課題"><span class="header-section-number">4.7</span> 今週の課題</a></li>
+  <li><a href="#振り返り" id="toc-振り返り" class="nav-link" data-scroll-target="#振り返り"><span class="header-section-number">4.5</span> 振り返り</a></li>
   </ul>
 </nav>
     </div>
@@ -229,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-lec04" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">ばらつきと分布</span></span></h1>
+<h1 class="title"><span id="sec-lec04" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">数えて比べる</span></span></h1>
 </div>
 
 
@@ -246,6 +279,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>COUNTIF／COUNTIFSと比率</p>
 <div style="margin-top: 2.0em;">
 
 </div>
@@ -259,212 +293,319 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>都道府県の差は、どれくらい大きいのでしょうか？</strong></p>
+<p><strong>人数がちがうグループは、どうやって比べればよいのでしょうか？</strong></p>
 </div>
 </div>
 <!--
 教員用：今日の流れ（105分）
 | 時間 | 内容 |
 |:---:|:---|
-| 10分 | 導入：都道府県の差を予想する（課題_4の「1_予想」に記入） |
-| 25分 | 解説：ばらつきと分布、Excelでヒストグラムを作る |
-| 45分 | 演習：課題_4 |
-| 20分 | 共有：「差が大きい」とはどういうことか？ |
-|  5分 | 振り返り・次回の予告 |
+| 10分 | 導入：「関数を使える人」は1年9人、2年9人。同じくらい？ |
+| 30分 | 解説：COUNTIF、絶対参照（$）、割合、COUNTIFSとクロス表（COUNTIFとCOUNTIFSは一緒に入力する） |
+| 55分 | 演習：課題_4 |
+|  5分 | 共有：人数と割合で見え方が変わった例 |
+|  5分 | 振り返り |
 -->
-<section id="導入都道府県の差を予想しよう" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="導入都道府県の差を予想しよう"><span class="header-section-number">4.1</span> 導入：都道府県の差を予想しよう</h2>
-<p>「東京と地方の格差」という言葉をよく耳にします。では、都道府県の間の差は、実際にどれくらいあるのでしょうか？</p>
-<div class="mondai callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div style="margin-top: 2.0em;">
+
+</div>
+<p>前回は、集計された表からグラフを作りました。実は、前回の表の人数は、<span class="marker">COUNTIF</span>という関数で自動的に数えていました。今日は、この「数える」作業を自分でやってみます。</p>
+<p>まず、次の結果を見てください。このクラスで「Excelの関数（SUMなど）を使える」「グラフや関数を使いこなせる」と答えた人の数です。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">学年</th>
+<th style="text-align: center;">関数を使える人</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1年</td>
+<td style="text-align: center;">9人</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2年</td>
+<td style="text-align: center;">9人</td>
+</tr>
+</tbody>
+</table>
+<p>同じ9人なので、「1年と2年は同じくらい」と言ってよいでしょうか？</p>
+<!-- 教員メモ：ここで少し考えさせてから、1年は35人中9人（25.7%）、2年は18人中9人（50.0%）であることを示す。数字はこのクラスのデータ（data/survey_clean.xlsx、53人）。 -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>演習
+<span class="screen-reader-only">Tip</span>答え
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>直感で答えて、「課題_4」のシート「1_予想」に記入してください。</p>
-<ol type="1">
-<li>1人当たりの県民所得がいちばん高い都道府県は、いちばん低い都道府県の何倍くらいだと思いますか？<br>
-
-<ol type="a">
-<li>約1.2倍　(b) 約2倍　(c) 約5倍</li>
-</ol></li>
-<li>47都道府県を「1人当たり県民所得」で並べたとき、多くの県は平均の近くに固まっていると思いますか？ それとも、広くばらばらに散らばっていると思いますか？</li>
-</ol>
+<p>1年は35人、2年は18人と、学年の人数そのものが違います。割合にすると、1年は35人中9人で<strong>25.7%</strong>、2年は18人中9人で<strong>50.0%</strong>です。2年生では、半分の人が関数を使えることになります。</p>
 </div>
 </div>
-<!-- 教員メモ：1.の正解は、内閣府「県民経済計算」の最新年度の1人当たり県民所得で最大/最小を計算して示す。授業前に確認のうえ記入。 -->
-</section>
-<section id="真ん中だけでは分からない" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="真ん中だけでは分からない"><span class="header-section-number">4.2</span> 真ん中だけでは分からない</h2>
-<p>前回は、データの「真ん中」を代表値で表しました。でも、代表値が同じでも、データの様子がまったく違うことがあります。</p>
-<p>次の架空の例は、2つのクラス（各5人）のテストの点数です。</p>
-<table class="caption-top table">
-<caption>架空の例</caption>
-<thead>
-<tr class="header">
-<th style="text-align: center;"></th>
-<th style="text-align: center;">1人目</th>
-<th style="text-align: center;">2人目</th>
-<th style="text-align: center;">3人目</th>
-<th style="text-align: center;">4人目</th>
-<th style="text-align: center;">5人目</th>
-<th style="text-align: center;">平均値</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">クラスA</td>
-<td style="text-align: center;">58</td>
-<td style="text-align: center;">59</td>
-<td style="text-align: center;">60</td>
-<td style="text-align: center;">61</td>
-<td style="text-align: center;">62</td>
-<td style="text-align: center;">60</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">クラスB</td>
-<td style="text-align: center;">30</td>
-<td style="text-align: center;">45</td>
-<td style="text-align: center;">60</td>
-<td style="text-align: center;">75</td>
-<td style="text-align: center;">90</td>
-<td style="text-align: center;">60</td>
-</tr>
-</tbody>
-</table>
-<p>どちらも平均値は60点です。でも、クラスAは全員がほぼ同じ点数、クラスBは点数が大きく違います。この違いを<span class="marker">ばらつき</span>と呼びます。</p>
-<section id="ばらつきを表す指標" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="ばらつきを表す指標"><span class="header-section-number">4.2.1</span> ばらつきを表す指標</h3>
+</div>
+<p><span class="marker">人数がちがうグループを比べるときは、人数ではなく割合で比べる</span>ことが大切です。今日は、Excelで「数える → 割合にする → 条件を2つにして表を作る」までを、順番に練習します。</p>
+<section id="countifで数える" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="countifで数える"><span class="header-section-number">4.1</span> COUNTIFで数える</h2>
+<section id="countif関数" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="countif関数"><span class="header-section-number">4.1.1</span> COUNTIF関数</h3>
+<p>アンケートの「選挙経験」で、「ある」と答えた人は何人でしょうか？ 53人分を目で数えるのは大変ですが、<span class="marker">COUNTIF関数</span>を使えば、一瞬で数えられます。</p>
+<pre><code>=COUNTIF(範囲, 条件)</code></pre>
+<p>「範囲」の中に、「条件」に当てはまるセルがいくつあるかを数えます。</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 20%">
 <col style="width: 50%">
-<col style="width: 30%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">指標</th>
+<th style="text-align: left;">書いた式</th>
 <th style="text-align: left;">意味</th>
-<th style="text-align: left;">Excelの関数</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">最大値</td>
-<td style="text-align: left;">いちばん大きい値</td>
-<td style="text-align: left;"><code>=MAX(範囲)</code></td>
+<td style="text-align: left;"><code>=COUNTIF(データ!H2:H101,"ある")</code></td>
+<td style="text-align: left;">シート「データ」のH列（選挙経験）で、「ある」と書かれたセルの数</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">最小値</td>
-<td style="text-align: left;">いちばん小さい値</td>
-<td style="text-align: left;"><code>=MIN(範囲)</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">範囲（レンジ）</td>
-<td style="text-align: left;">最大値 − 最小値</td>
-<td style="text-align: left;"><code>=MAX(範囲)-MIN(範囲)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">標準偏差</td>
-<td style="text-align: left;">各データが平均から<strong>平均的にどれくらい離れているか</strong></td>
-<td style="text-align: left;"><code>=STDEV.P(範囲)</code></td>
+<td style="text-align: left;"><code>=COUNTIF(データ!H2:H101,A8)</code></td>
+<td style="text-align: left;">同じ範囲で、セルA8に書いてある言葉と同じセルの数</td>
 </tr>
 </tbody>
 </table>
-<p>上の例では、範囲はクラスAが4点（62−58）、クラスBが60点（90−30）です。</p>
-<p>範囲は分かりやすいですが、<strong>最大と最小の2つの値だけ</strong>で決まるので、1つの極端な値に大きく左右されます。そこで、全員のデータを使ってばらつきを表すのが<strong>標準偏差</strong>です（チャレンジ課題で扱います）。</p>
-</section>
-<section id="分布とヒストグラム" class="level3" data-number="4.2.2">
-<h3 data-number="4.2.2" class="anchored" data-anchor-id="分布とヒストグラム"><span class="header-section-number">4.2.2</span> 分布とヒストグラム</h3>
-<p>データがどの値のあたりに、どれくらい集まっているかを<span class="marker">分布</span>と呼びます。分布を見るのに便利なのが<strong>ヒストグラム</strong>です。</p>
+<div style="margin-top: 2.0em;">
+
+</div>
 <ul>
-<li>値をいくつかの区間（<strong>階級</strong>、Excelでは「ビン」）に区切り、</li>
-<li>それぞれの区間に入るデータの個数（<strong>度数</strong>）を、棒の高さで表します。</li>
+<li>範囲を101行目までにしているのは、人数が増えても数えもれがないようにするためです。空のセルは数えられません。</li>
+<li>条件に言葉を直接書くときは、<code>"ある"</code> のように <strong>” “（ダブルクォーテーション）</strong> で囲みます。</li>
+<li>条件を<strong>セル（A8など）で指定</strong>すると、式をコピーするだけで、ほかの回答も数えられます。</li>
 </ul>
-<p>ヒストグラムを見ると、次のような分布の形が分かります。</p>
+</section>
+<section id="数値の条件" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="数値の条件"><span class="header-section-number">4.1.2</span> 数値の条件</h3>
+<p>数値の列では、「〜以上」「〜未満」のような条件も使えます。</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 50%">
+<col style="width: 25%">
 <col style="width: 30%">
+<col style="width: 45%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">分布の形</th>
-<th style="text-align: left;">特徴</th>
+<th style="text-align: left;">条件の書き方</th>
+<th style="text-align: left;">意味</th>
 <th style="text-align: left;">例</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">左右対称の山型</td>
-<td style="text-align: left;">真ん中に多く集まり、両側に少なくなる</td>
-<td style="text-align: left;">身長</td>
+<td style="text-align: left;"><code>"&gt;=60"</code></td>
+<td style="text-align: left;">60以上</td>
+<td style="text-align: left;">通学時間が60分以上の人</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">右に裾が長い</td>
-<td style="text-align: left;">小さい値に多く集まり、大きい値の方に少数が長く伸びる</td>
-<td style="text-align: left;">年収、通学時間</td>
+<td style="text-align: left;"><code>"&lt;=30"</code></td>
+<td style="text-align: left;">30以下</td>
+<td style="text-align: left;">通学時間が30分以下の人</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">山が2つある</td>
-<td style="text-align: left;">異なる2つのグループが混ざっている可能性</td>
-<td style="text-align: left;">男女を合わせた身長</td>
+<td style="text-align: left;"><code>"&gt;8"</code></td>
+<td style="text-align: left;">8より大きい</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>"&lt;6"</code></td>
+<td style="text-align: left;">6未満（6は入らない）</td>
+<td style="text-align: left;">睡眠時間が6時間未満の人</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>7</code></td>
+<td style="text-align: left;">ちょうど7</td>
+<td style="text-align: left;">朝食を毎日（週7日）食べる人</td>
 </tr>
 </tbody>
 </table>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>分布の形と代表値
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><span class="marker">右に裾が長い分布では、平均値は中央値より大きくなります。</span>前回の「平均年収」がまさにこの形でした。代表値を見るときは、ヒストグラムで分布の形も確かめましょう。</p>
-</div>
-</div>
 </section>
-</section>
-<section id="excelでヒストグラムを作る" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="excelでヒストグラムを作る"><span class="header-section-number">4.3</span> Excelでヒストグラムを作る</h2>
-<ol type="1">
-<li>ヒストグラムにしたい列（変数名を含む）をドラッグで選びます。</li>
-<li><strong>「挿入」タブ</strong>をクリックします。</li>
-<li>「グラフ」グループの<strong>「統計グラフの挿入」</strong>（小さな棒が並んだアイコン）をクリックし、<strong>「ヒストグラム」</strong>を選びます。</li>
-<li>ヒストグラムが作られます。</li>
-</ol>
-<p><strong>階級の幅（ビンの幅）を変えるには：</strong></p>
-<ol type="1">
-<li>グラフの<strong>横軸</strong>の数字の上で右クリック → <strong>「軸の書式設定」</strong>をクリックします。</li>
-<li>右側に出てくる設定画面の「ビン」で、<strong>「ビンの幅」</strong>を選び、数値（例：200）を入力します。</li>
-</ol>
+<section id="式をコピーすると範囲がずれる絶対参照" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="式をコピーすると範囲がずれる絶対参照"><span class="header-section-number">4.1.3</span> 式をコピーすると範囲がずれる：絶対参照（$）</h3>
+<p>Excelでは、式をコピーすると、式の中のセル番地も一緒にずれます。たとえば、B8に入れた <code>=COUNTIF(データ!H2:H101,A8)</code> を1つ下のB9にコピーすると、次のようになります。</p>
+<pre><code>=COUNTIF(データ!H3:H102,A9)</code></pre>
+<p>A8がA9にずれるのは便利ですが、<span class="marker">数える範囲までずれてしまう</span>のは困ります。2行目の人が数えられなくなるからです。</p>
+<p>そこで、ずらしたくない番地には <strong>$（ドル記号）</strong> を付けます。これを<span class="marker">絶対参照</span>と呼びます。</p>
+<pre><code>=COUNTIF(データ!$H$2:$H$101,A8)</code></pre>
+<div style="margin-top: 2.0em;">
+
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 35%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">書き方</th>
+<th style="text-align: left;">コピーしたとき</th>
+<th style="text-align: left;">使う場面</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>A8</code></td>
+<td style="text-align: left;">列も行もずれる</td>
+<td style="text-align: left;">条件のセルなど、一緒にずれてほしいもの</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>$A$8</code></td>
+<td style="text-align: left;">列も行もずれない</td>
+<td style="text-align: left;">数える範囲、合計のセルなど</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>$A8</code></td>
+<td style="text-align: left;">列は固定、行はずれる</td>
+<td style="text-align: left;">クロス表（後で説明します）</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>A$8</code></td>
+<td style="text-align: left;">列はずれる、行は固定</td>
+<td style="text-align: left;">クロス表（後で説明します）</td>
+</tr>
+</tbody>
+</table>
+<div style="margin-top: 2.0em;">
+
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Macの場合・うまくいかないとき
+<span class="screen-reader-only">Tip</span>$ をかんたんに付ける
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>式の中でセル番地をクリックし、<strong><code>F4</code> キー</strong>を押すと <code>$A$8</code> になります。もう一度押すと <code>A$8</code>、もう一度で <code>$A8</code>、もう一度で <code>A8</code> に戻ります。ノートPCでは <code>Fn</code> + <code>F4</code> のこともあります。</p>
+</div>
+</div>
+</section>
+</section>
+<section id="割合にする" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="割合にする"><span class="header-section-number">4.2</span> 割合にする</h2>
+<p>人数が数えられたら、次は割合にします。</p>
+<p><span class="math display">\[
+\text{割合} = \frac{\text{その回答の人数}}{\text{全体の人数（合計）}}
+\]</span></p>
+<p>Excelでは、人数の隣のセルに <code>=B7/$B$12</code> のような式を入れます（B7が人数、B12が合計）。割り算の結果は0.453のような小数になるので、「ホーム」タブの <strong>「%」ボタン</strong> で、45.3% のような表示に変えます。</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>合計のセルには $ を付ける
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>=B7/B12</code> のまま下にコピーすると、B12がB13、B14…とずれて、空のセルで割ることになり、<strong><code>#DIV/0!</code></strong>（0で割ったエラー）が出ます。割る数（合計）は、<code>$B$12</code> のように固定しましょう。</p>
+</div>
+</div>
+<div style="margin-top: 2.0em;">
+
+</div>
+<p>割合で比べるときに、もう1つ大切なことがあります。<span class="marker">何を100%にしているのか</span>です。「クラス全体（53人）を100%にした割合」と「1年生（35人）を100%にした割合」では、同じ人数でも割合が変わります。割合を見たら、「何人のうちの何%か」を必ず確かめる習慣をつけましょう。</p>
+</section>
+<section id="条件を2つにして表を作る" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="条件を2つにして表を作る"><span class="header-section-number">4.3</span> 条件を2つにして表を作る</h2>
+<section id="countifs関数" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="countifs関数"><span class="header-section-number">4.3.1</span> COUNTIFS関数</h3>
+<p>「1年生で、選挙経験がある人」のように、<span class="marker">2つの条件の両方に当てはまる人</span>を数えるときは、COUNTIFS関数を使います（最後に S が付きます）。</p>
+<pre><code>=COUNTIFS(範囲1, 条件1, 範囲2, 条件2)</code></pre>
+<pre><code>=COUNTIFS(データ!$B$2:$B$101,"1年",データ!$H$2:$H$101,"ある")</code></pre>
+<p>条件は3つ以上に増やすこともできます。</p>
+</section>
+<section id="クロス表を作る" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="クロス表を作る"><span class="header-section-number">4.3.2</span> クロス表を作る</h3>
+<p>COUNTIFSを使うと、2つの変数を組み合わせた表を作れます。このような表を<span class="marker">クロス表</span>（クロス集計表）と呼びます。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">学年＼政治への関心</th>
+<th style="text-align: center;">とても関心がある</th>
+<th style="text-align: center;">ある程度関心がある</th>
+<th style="text-align: center;">…</th>
+<th style="text-align: center;">合計</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1年</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">?</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2年</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">合計</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">53</td>
+</tr>
+</tbody>
+</table>
+<p>クロス表の左上のセルには、次のような式を入れます（A9に「1年」、B8に「とても関心がある」と書いてある場合）。</p>
+<pre><code>=COUNTIFS(データ!$B$2:$B$101,$A9,データ!$G$2:$G$101,B$8)</code></pre>
+<p><code>$A9</code> は「学年の書いてあるA列」だけを固定し、<code>B$8</code> は「回答の書いてある8行目」だけを固定しています。こうしておくと、<span class="marker">1つの式を右にも下にもコピーするだけで、表全体が埋まります。</span></p>
+</section>
+<section id="学年ごとの割合にする" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="学年ごとの割合にする"><span class="header-section-number">4.3.3</span> 学年ごとの割合にする</h3>
+<p>クロス表ができたら、学年ごとの人数（合計の列）を100%にして、割合を求めます。こうすると、人数のちがう1年と2年を、同じ「ものさし」で比べられます。割合の表は、第3回で作った<strong>帯グラフ</strong>にすると、違いがひと目で分かります。</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>うまくいかないときは
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Macでは、<strong>「挿入」タブ → 「グラフ」→「統計」→「ヒストグラム」</strong>です。</li>
-<li>「統計グラフ」が見つからない場合は、Excelのバージョンが古い可能性があります（Excel 2016以降で使えます）。教員に相談してください。</li>
+<li><strong>結果が 0 になる</strong> → 条件の言葉が、データと完全に同じか確かめます（全角・半角、スペース、「1年」と「１年」など）。</li>
+<li><strong>式がそのまま文字で表示される</strong> → 先頭の <code>=</code> が全角になっていないか、セルの表示形式が「文字列」になっていないか確かめます。</li>
+<li><strong>コピーしたら数がおかしい</strong> → セルをダブルクリックして、範囲がずれていないか（$ が付いているか）を確かめます。</li>
+<li><strong><code>#DIV/0!</code> が出る</strong> → 割る数（合計）のセルに $ を付けます。</li>
 </ul>
 </div>
 </div>
 </section>
+</section>
 <section id="課題_4に取り組もう" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="課題_4に取り組もう"><span class="header-section-number">4.4</span> 課題_4に取り組もう</h2>
-<p>授業の後半は、Excelファイル「課題_4」を使って作業します。<span class="marker">作業したファイルが、そのまま今日の課題の提出物になります。</span></p>
+<p>Excelファイル「課題_4」を使って作業します。<span class="marker">作業したファイルが、そのまま今日の課題の提出物になります。</span></p>
+<div style="margin-top: 2.0em;">
+
+</div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -478,24 +619,19 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li>Blackboardから <strong>課題_4.xlsx</strong> をダウンロードして開きます。</li>
 <li>最初のシート「はじめに」に、学籍番号と氏名を入力します。</li>
-<li>シートを順番に進めます。<span class="marker">黄色のセル</span>が、皆さんが入力する場所です。灰色のセルに「入力する式」が書いてあるので、同じ式を黄色のセルに入力します。作ったヒストグラムは、各シートの「グラフ貼り付け場所」に貼り付けます。</li>
+<li>シートを順番に進めます。<span class="marker">黄色のセル</span>に、式や答えを入力します。</li>
 <li>最後に、ファイル名を <strong>課題_4_氏名.xlsx</strong> に変えて保存し、Blackboardに提出します。</li>
 </ol>
 </div>
 </div>
-<!-- 教員メモ：課題_4.xlsx の2つのデータシートは、配布前に教員が値を貼り付けること。
-「都道府県」シート：A列に47都道府県名（北海道〜沖縄県、JISコード順）を入力済み。B〜D列の2〜48行目に、同じ順で次の値を貼り付ける。
-・B「1人当たり県民所得（千円）」：内閣府 経済社会総合研究所「県民経済計算（平成23年度－令和4年度）」の統計表「1人当たり県民所得」（soukatu7.xlsx、https://www.esri.cao.go.jp/jp/sna/data/data_list/kenmin/files/contents/main_2022.html ）の最新年度の列。
-・C「合計特殊出生率」：厚生労働省「人口動態統計（確定数）」の都道府県別合計特殊出生率（最新年）。
-・D「人口10万人当たり医師数（人）」：厚生労働省「医師・歯科医師・薬剤師統計」の都道府県別・人口10万対医療施設従事医師数（最新年）。
-　C・Dは e-Stat「社会・人口統計体系（都道府県データ）」からまとめて取得してもよい。
-・F2〜F5の出典欄の「（　　年度）」「取得日」を記入すること。
-「データ」シート：第1回のアンケート回答（課題_2と同じもの）を2行目から貼り付ける。
-導入の問1の正解と、下の解答の具体的な数値は、貼り付けたデータで確認して記入すること。 -->
+<!-- 教員メモ：「データ」シートには data/survey_clean.xlsx（53人）を入力済み。模範解答は data/課題_4_解答.xlsx（tools/k4.py で学生用と同時に生成。赤字が解答で、式はExcelで開くと計算される）。 -->
+<div style="margin-top: 2.0em;">
+
+</div>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 75%">
+<col style="width: 30%">
+<col style="width: 70%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -509,42 +645,44 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">学籍番号・氏名の入力、進め方の説明</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">都道府県</td>
-<td style="text-align: left;">都道府県別データ（1行＝1都道府県、47行）</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">データ</td>
 <td style="text-align: left;">クラスのアンケート結果（1行＝1人）</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">1_予想</td>
-<td style="text-align: left;">導入の2問の予想</td>
-</tr>
 <tr class="odd">
-<td style="text-align: left;">2_県民所得</td>
-<td style="text-align: left;">1人当たり県民所得の最大値・最小値・平均値・中央値・範囲、最大は最小の何倍か</td>
+<td style="text-align: left;">1_COUNTIF</td>
+<td style="text-align: left;">選挙経験・Excel経験の人数を、COUNTIFで数える</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">3_ヒストグラム</td>
-<td style="text-align: left;">1人当たり県民所得のヒストグラムを作り、分布の形を読み取る</td>
+<td style="text-align: left;">2_数値の条件</td>
+<td style="text-align: left;">「60分以上」「6時間未満」などの条件で数える</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">4_通学時間</td>
-<td style="text-align: left;">このクラスの通学時間のヒストグラムと、平均値・中央値の関係</td>
+<td style="text-align: left;">3_割合</td>
+<td style="text-align: left;">政治への関心の人数を割合にする、$ の実験</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">5_チャレンジ</td>
-<td style="text-align: left;">標準偏差の計算、変動係数、階級の幅による見え方の違い（Excelに慣れている人向け）</td>
+<td style="text-align: left;">4_COUNTIFS</td>
+<td style="text-align: left;">学年×政治への関心のクロス表を作る</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">6_振り返り</td>
-<td style="text-align: left;">分布の特徴の説明、「都道府県の差は大きいか」の考察</td>
+<td style="text-align: left;">5_クロス表の割合</td>
+<td style="text-align: left;">学年ごとの割合にして、人数で比べたときと見比べる</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6_発展</td>
+<td style="text-align: left;">帯グラフにする、学年×選挙経験のクロス表、自分で問いを立てて確かめる</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7_振り返り</td>
+<td style="text-align: left;">関数の使い分け、今日の発見</td>
 </tr>
 </tbody>
 </table>
-<p><strong>基本課題</strong>は「1_予想」〜「4_通学時間」と「6_振り返り」です。<strong>チャレンジ課題</strong>（「5_チャレンジ」）は、Excelに慣れている人や、基本課題が終わった人が取り組んでください。</p>
-<div class="kotae callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div style="margin-top: 2.0em;">
+
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -553,48 +691,23 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>2_県民所得・3_ヒストグラム</strong>の数値は配布データで決まります。考え方のポイント：</p>
+<p>このクラスの53人のデータでの答えです。</p>
 <ul>
-<li>1人当たり県民所得では、<strong>1つの都道府県だけが大きく飛び抜けている</strong>ことがあります。その場合、範囲（最大−最小）や「最大は最小の○倍」は、その1つの値に大きく左右されます。</li>
-<li>飛び抜けた値を除くと、残りの都道府県の差はどれくらいか、ヒストグラムで確かめてみましょう。</li>
+<li><strong>1_COUNTIF</strong>：選挙経験が「ある」は25人、「ない」は19人、「まだ選挙権がない・機会がなかった」は9人です。Excel経験でいちばん多いのは「入力程度なら使ったことがある」（28人）です。</li>
+<li><strong>2_数値の条件</strong>：通学時間60分以上は29人、30分以下は9人、睡眠時間6時間未満は6人、朝食を毎日食べる人は15人、スマホ時間8時間以上は21人、前期GPA3.0以上は14人です。</li>
+<li><strong>3_割合</strong>：「ある程度関心がある」が45.3%で最も多く、「とても関心がある」と合わせると50.9%です。$ を付けずにコピーすると、E8から下が <code>#DIV/0!</code> になります。</li>
+<li><strong>4_COUNTIFS</strong>：「ある程度関心がある」は1年13人、2年11人です。人数だけ見ると1年の方が多くなります。</li>
+<li><strong>5_クロス表の割合</strong>：「関心がある」（とても＋ある程度）は、1年が42.9%（15人）、2年が66.7%（12人）です。人数では1年の方が多いのに、割合では2年の方が約24ポイント高く、見え方が逆になります。ただし2年は18人なので、1人で約5.6ポイント動きます。</li>
+<li><strong>6_発展</strong>：選挙経験が「ある」は、1年が40.0%、2年が61.1%です。また、選挙経験が「ある」人で「関心がある」のは68.0%、「ない」人では36.8%です。ただし、どちらが原因かはこの表だけでは分かりません。</li>
 </ul>
-<p><strong>4_通学時間</strong>：通学時間は多くの場合、<strong>右に裾が長い</strong>分布になります。そのとき、平均値は中央値より大きくなります。</p>
-<p><strong>5_チャレンジ</strong></p>
-<ul>
-<li>課題A：クラスA 約1.41点、クラスB 約21.2点。</li>
-<li>課題B：クラスBの偏差は −30, −15, 0, 15, 30。2乗すると 900, 225, 0, 225, 900。その平均（分散）は 2250 ÷ 5 = 450。平方根は約21.2で、<code>STDEV.P</code> と一致します。</li>
-<li>課題C：単位や大きさが違う変数（千円と人数など）の標準偏差は、そのままでは比べられません。変動係数は単位に関係なく「平均に対してどれくらいばらついているか」を表すので、比較に使えます。</li>
-<li>課題D：ビンの幅が小さすぎると棒がでこぼこして全体の形が分かりにくく、大きすぎると細かい違いが消えてしまいます。<strong>唯一の正解の幅はありません。</strong>いくつか試して、分布の特徴が分かりやすい幅を選び、どの幅にしたかを明記することが大切です。</li>
-</ul>
-<p><strong>補足：</strong> <code>STDEV.S</code> という関数もあります。これは、データが「もっと大きな集団から選ばれた一部（標本）」であるときに使います。47都道府県のように全体がそろっているデータには <code>STDEV.P</code> を使います。標本については第10回で学びます。</p>
 </div>
 </div>
 </div>
 </section>
-<section id="共有差が大きいとはどういうことか" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="共有差が大きいとはどういうことか"><span class="header-section-number">4.5</span> 共有：「差が大きい」とはどういうことか？</h2>
-<div class="mondai callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>演習
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>グループ（3〜4人）で話し合ってください。</p>
-<ol type="1">
-<li>「1人当たり県民所得の都道府県差は大きい」と言えるでしょうか？ 言えるとしたら、どの数字（最大/最小の比、範囲、標準偏差、ヒストグラムの形など）を根拠にしますか？</li>
-<li>同じデータでも、「差は大きい」とも「差は小さい」とも言えそうでした。ニュースで「格差が広がった」と聞いたとき、どんなことを確かめればよいでしょうか？</li>
-</ol>
-</div>
-</div>
-</section>
-<section id="振り返り" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="振り返り"><span class="header-section-number">4.6</span> 振り返り</h2>
+<section id="振り返り" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="振り返り"><span class="header-section-number">4.5</span> 振り返り</h2>
 <div class="my-note callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -606,30 +719,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>代表値が同じでも、<strong>ばらつき</strong>が違えばデータの様子はまったく違う。</li>
-<li>ばらつきは、最大値・最小値・範囲・<strong>標準偏差</strong>などで表せる。</li>
-<li><strong>ヒストグラム</strong>で分布の形を見ると、代表値だけでは分からない特徴が見えてくる。</li>
-<li>ヒストグラムは、<strong>階級の幅しだいで印象が変わる</strong>。</li>
+<li><strong>COUNTIF</strong>は、条件に当てはまるセルの数を数える。条件が2つなら<strong>COUNTIFS</strong>を使う。</li>
+<li>式をコピーしてもずらしたくない番地には、<strong>$（絶対参照）</strong>を付ける。</li>
+<li>人数のちがうグループは、<strong>割合</strong>で比べる。そのとき、<strong>何を100%にしているか</strong>を確かめる。</li>
 </ul>
-</div>
-</div>
-<p><strong>次回の問い：</strong>「このグラフ、本当に正しく伝えている？」</p>
-<p>今日、ヒストグラムの見え方が設定で変わることを体験しました。次回は、ニュースや広告のグラフに潜む「だましのテクニック」と、正しく伝わるグラフの作り方を学びます。</p>
-</section>
-<section id="今週の課題" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="今週の課題"><span class="header-section-number">4.7</span> 今週の課題</h2>
-<div class="mondai callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>演習
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>課題_4_氏名.xlsx</strong> をBlackboardに提出してください（<strong>金曜日24時まで</strong>）。</p>
-<p>授業中に終わらなかったシートは、提出までに仕上げてください。</p>
 </div>
 </div>
 
@@ -1090,8 +1183,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./lec05.html" class="pagination-link" aria-label="グラフ">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">グラフ</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./lec05.html" class="pagination-link" aria-label="ピボットテーブル">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">ピボットテーブル</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

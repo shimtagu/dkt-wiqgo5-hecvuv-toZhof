@@ -8,7 +8,7 @@
 
 <meta name="description" content="2026年度　後期 時間： 月曜日 2 時限（11:15-13:00） 教室： C 館 1階 PC2 教室">
 
-<title>5&nbsp; グラフ – データ課題探求</title>
+<title>5&nbsp; ピボットテーブル – データ課題探求</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lec05.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">グラフ</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lec05.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">ピボットテーブル</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -137,13 +137,13 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec04.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">ばらつきと分布</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">数えて比べる</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec05.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">グラフ</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">ピボットテーブル</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -210,19 +210,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#導入2つのグラフどちらが正しい" id="toc-導入2つのグラフどちらが正しい" class="nav-link active" data-scroll-target="#導入2つのグラフどちらが正しい"><span class="header-section-number">5.1</span> 導入：2つのグラフ、どちらが正しい？</a></li>
-  <li><a href="#グラフの使い分け" id="toc-グラフの使い分け" class="nav-link" data-scroll-target="#グラフの使い分け"><span class="header-section-number">5.2</span> グラフの使い分け</a></li>
-  <li><a href="#グラフのだましのテクニック" id="toc-グラフのだましのテクニック" class="nav-link" data-scroll-target="#グラフのだましのテクニック"><span class="header-section-number">5.3</span> グラフの「だましのテクニック」</a></li>
-  <li><a href="#excelでグラフを作る" id="toc-excelでグラフを作る" class="nav-link" data-scroll-target="#excelでグラフを作る"><span class="header-section-number">5.4</span> Excelでグラフを作る</a>
+  <li><a href="#ピボットテーブルとは" id="toc-ピボットテーブルとは" class="nav-link active" data-scroll-target="#ピボットテーブルとは"><span class="header-section-number">5.1</span> ピボットテーブルとは</a></li>
+  <li><a href="#ピボットテーブルを作る" id="toc-ピボットテーブルを作る" class="nav-link" data-scroll-target="#ピボットテーブルを作る"><span class="header-section-number">5.2</span> ピボットテーブルを作る</a>
   <ul class="collapse">
-  <li><a href="#基本の手順棒グラフ" id="toc-基本の手順棒グラフ" class="nav-link" data-scroll-target="#基本の手順棒グラフ"><span class="header-section-number">5.4.1</span> 基本の手順（棒グラフ）</a></li>
-  <li><a href="#グラフを見やすく整える" id="toc-グラフを見やすく整える" class="nav-link" data-scroll-target="#グラフを見やすく整える"><span class="header-section-number">5.4.2</span> グラフを見やすく整える</a></li>
-  <li><a href="#縦軸の範囲を変える" id="toc-縦軸の範囲を変える" class="nav-link" data-scroll-target="#縦軸の範囲を変える"><span class="header-section-number">5.4.3</span> 縦軸の範囲を変える</a></li>
+  <li><a href="#作り方" id="toc-作り方" class="nav-link" data-scroll-target="#作り方"><span class="header-section-number">5.2.1</span> 作り方</a></li>
+  <li><a href="#項目の順番を変える" id="toc-項目の順番を変える" class="nav-link" data-scroll-target="#項目の順番を変える"><span class="header-section-number">5.2.2</span> 項目の順番を変える</a></li>
   </ul></li>
-  <li><a href="#課題_5に取り組もう" id="toc-課題_5に取り組もう" class="nav-link" data-scroll-target="#課題_5に取り組もう"><span class="header-section-number">5.5</span> 課題_5に取り組もう</a></li>
-  <li><a href="#共有誤解を招くグラフを描き直す" id="toc-共有誤解を招くグラフを描き直す" class="nav-link" data-scroll-target="#共有誤解を招くグラフを描き直す"><span class="header-section-number">5.6</span> 共有：誤解を招くグラフを描き直す</a></li>
-  <li><a href="#振り返り" id="toc-振り返り" class="nav-link" data-scroll-target="#振り返り"><span class="header-section-number">5.7</span> 振り返り</a></li>
-  <li><a href="#今週の課題" id="toc-今週の課題" class="nav-link" data-scroll-target="#今週の課題"><span class="header-section-number">5.8</span> 今週の課題</a></li>
+  <li><a href="#集計のしかたを変える" id="toc-集計のしかたを変える" class="nav-link" data-scroll-target="#集計のしかたを変える"><span class="header-section-number">5.3</span> 集計のしかたを変える</a>
+  <ul class="collapse">
+  <li><a href="#個数合計平均" id="toc-個数合計平均" class="nav-link" data-scroll-target="#個数合計平均"><span class="header-section-number">5.3.1</span> 個数・合計・平均</a></li>
+  <li><a href="#割合で表示する" id="toc-割合で表示する" class="nav-link" data-scroll-target="#割合で表示する"><span class="header-section-number">5.3.2</span> 割合で表示する</a></li>
+  <li><a href="#発展グループ化とピボットグラフ" id="toc-発展グループ化とピボットグラフ" class="nav-link" data-scroll-target="#発展グループ化とピボットグラフ"><span class="header-section-number">5.3.3</span> 発展：グループ化とピボットグラフ</a></li>
+  </ul></li>
+  <li><a href="#課題_5に取り組もう" id="toc-課題_5に取り組もう" class="nav-link" data-scroll-target="#課題_5に取り組もう"><span class="header-section-number">5.4</span> 課題_5に取り組もう</a></li>
+  <li><a href="#振り返り" id="toc-振り返り" class="nav-link" data-scroll-target="#振り返り"><span class="header-section-number">5.5</span> 振り返り</a></li>
   </ul>
 </nav>
     </div>
@@ -231,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-lec05" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">グラフ</span></span></h1>
+<h1 class="title"><span id="sec-lec05" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">ピボットテーブル</span></span></h1>
 </div>
 
 
@@ -248,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>グラフで伝える・グラフにだまされない</p>
+<p>ドラッグだけで集計する</p>
 <div style="margin-top: 2.0em;">
 
 </div>
@@ -262,249 +263,231 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>このグラフ、本当に正しく伝えているのでしょうか？</strong></p>
+<p><strong>先週、関数で作ったクロス表を、もっと速く作ることはできないでしょうか？</strong></p>
 </div>
 </div>
 <!--
 教員用：今日の流れ（105分）
 | 時間 | 内容 |
 |:---:|:---|
-| 10分 | 導入：2つのグラフ、どちらが正しい？（課題_5の「1_予想」に記入） |
-| 25分 | 解説：グラフの使い分けと「だましのテクニック」、Excelでグラフを作る |
-| 45分 | 演習：課題_5 |
-| 20分 | 共有：誤解を招くグラフを描き直す |
-|  5分 | 振り返り・次回の予告 |
+| 10分 | 導入：先週COUNTIFSで作った学年×政治への関心の表を、ピボットテーブルでその場で作って見せる |
+| 30分 | 解説：ピボットテーブルの作り方、行・列・値、個数と平均、割合での表示（一緒に操作する） |
+| 55分 | 演習：課題_5 |
+|  5分 | 共有：朝食とGPA、人数の少ないグループの平均 |
+|  5分 | 振り返り |
 -->
-<section id="導入2つのグラフどちらが正しい" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="導入2つのグラフどちらが正しい"><span class="header-section-number">5.1</span> 導入：2つのグラフ、どちらが正しい？</h2>
-<p>次の架空の例は、ある世論調査での政党の支持率です。</p>
-<table class="caption-top table">
-<caption>架空の例</caption>
-<thead>
-<tr class="header">
-<th style="text-align: center;">政党</th>
-<th style="text-align: center;">A党</th>
-<th style="text-align: center;">B党</th>
-<th style="text-align: center;">C党</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">支持率（%）</td>
-<td style="text-align: center;">32</td>
-<td style="text-align: center;">30</td>
-<td style="text-align: center;">29</td>
-</tr>
-</tbody>
-</table>
-<p>このデータから、2人が次のようなグラフを作りました。</p>
-<ul>
-<li><strong>グラフ①</strong>：縦軸が0%から始まる棒グラフ。3つの棒の高さは、ほとんど同じに見える。</li>
-<li><strong>グラフ②</strong>：縦軸が28%から始まる棒グラフ。A党の棒は、C党の棒の<strong>4倍</strong>の高さに見える。</li>
-</ul>
-<!-- 教員メモ：グラフ①②はExcelで作成してスクリーンショットを貼るか、授業中にその場で作って見せる。画像を用意する場合は images/lec05_axis1.png, images/lec05_axis2.png として配置し、下記のように挿入。
-![グラフ①](images/lec05_axis1.png) ![グラフ②](images/lec05_axis2.png) -->
-<div class="mondai callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div style="margin-top: 2.0em;">
+
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>演習
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>「課題_5」のシート「1_予想」に答えを記入してください。</p>
-<ol type="1">
-<li>グラフ①とグラフ②は、どちらも<strong>同じデータ</strong>から作られています。どちらかが「うそ」のデータを使っているでしょうか？</li>
-<li>A党の支持者がこのグラフを選挙のチラシに使うとしたら、どちらを選びそうですか？ それはなぜでしょうか？</li>
-</ol>
-</div>
-</div>
-<div class="kotae callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>解答
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="1">
-<li>どちらもデータ自体はうそではありません。<strong>縦軸の始まり（最小値）</strong>が違うだけです。</li>
-<li>グラフ②です。棒グラフは「棒の長さ」で大きさを比べるので、軸を途中から始めると、わずか3ポイントの差が4倍の差のように見えてしまいます（28%より上の部分は、A党が4、C党が1）。</li>
-</ol>
-</div>
-</div>
-</div>
-<p><span class="marker">データがうそでなくても、グラフの見せ方しだいで印象は大きく変わる</span>のです。</p>
-</section>
-<section id="グラフの使い分け" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="グラフの使い分け"><span class="header-section-number">5.2</span> グラフの使い分け</h2>
-<p>グラフには、それぞれ得意なことがあります。<span class="marker">「何を伝えたいか」から、グラフの種類を選ぶ</span>ことが大切です。</p>
+<p>前回は、COUNTIFとCOUNTIFSを使って、学年と政治への関心のクロス表を作りました。式を書き、$ を付け、コピーして、合計を出して……と、なかなか手間がかかりました。</p>
+<p>今日学ぶ<span class="marker">ピボットテーブル</span>を使うと、同じ表が、式を1つも書かずに、マウスのドラッグだけで作れます。さらに、人数だけでなく<strong>平均</strong>も出せるので、「学年によって睡眠時間は違う？」のような問いにも、すぐに答えられます。</p>
+<!-- 教員メモ：導入では、課題_4の「4_COUNTIFS」の表を見せたあと、データの中をクリック →「挿入」→「ピボットテーブル」で、学年を行、政治への関心を列と値にドラッグして、同じ表ができるところを見せる。 -->
+<section id="ピボットテーブルとは" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="ピボットテーブルとは"><span class="header-section-number">5.1</span> ピボットテーブルとは</h2>
+<p>ピボットテーブルは、表のデータを、<span class="marker">指定した切り口で自動的に集計してくれる</span>Excelの機能です。「ピボット（pivot）」は「回転の軸」という意味で、切り口をくるくる変えながら、データをいろいろな角度から眺められます。</p>
+<p>ピボットテーブルでは、変数を次の4つの場所に入れて、表の形を決めます。</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 35%">
+<col style="width: 18%">
+<col style="width: 42%">
 <col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">伝えたいこと</th>
-<th style="text-align: left;">向いているグラフ</th>
+<th style="text-align: left;">場所</th>
+<th style="text-align: left;">役割</th>
 <th style="text-align: left;">例</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">大きさを<strong>比べる</strong></td>
-<td style="text-align: left;">棒グラフ</td>
-<td style="text-align: left;">都道府県別の人口、政党別の支持率</td>
+<td style="text-align: left;"><strong>行</strong></td>
+<td style="text-align: left;">表の左側に縦に並べる項目</td>
+<td style="text-align: left;">学年（1年、2年）</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">時間による<strong>変化</strong></td>
-<td style="text-align: left;">折れ線グラフ</td>
-<td style="text-align: left;">投票率の推移、物価の推移</td>
+<td style="text-align: left;"><strong>列</strong></td>
+<td style="text-align: left;">表の上側に横に並べる項目</td>
+<td style="text-align: left;">政治への関心（とても関心がある、…）</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">全体の中の<strong>内訳（割合）</strong></td>
-<td style="text-align: left;">円グラフ、帯グラフ（100%積み上げ棒）</td>
-<td style="text-align: left;">学年の構成、支出の内訳</td>
+<td style="text-align: left;"><strong>値</strong></td>
+<td style="text-align: left;">表の中で集計する変数と、集計のしかた</td>
+<td style="text-align: left;">人数（個数）、睡眠時間の平均</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">データの<strong>分布</strong></td>
-<td style="text-align: left;">ヒストグラム</td>
-<td style="text-align: left;">通学時間、所得（第4回）</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">2つの変数の<strong>関係</strong></td>
-<td style="text-align: left;">散布図</td>
-<td style="text-align: left;">所得と寿命（第8回）</td>
+<td style="text-align: left;"><strong>フィルター</strong></td>
+<td style="text-align: left;">一部のデータだけに絞る</td>
+<td style="text-align: left;">1年だけ</td>
 </tr>
 </tbody>
 </table>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div style="margin-top: 2.0em;">
+
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>円グラフの注意
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>円グラフは「全体を100%としたときの内訳」を表すグラフです。</p>
-<ul>
-<li>項目の合計が100%にならないデータ（複数回答など）には使えません。</li>
-<li>項目が多すぎると読めなくなります（目安は5つ程度まで）。</li>
-<li>角度の違いは、棒の長さの違いより読み取りにくいので、<strong>細かい比較には棒グラフ</strong>の方が向いています。</li>
-</ul>
-</div>
-</div>
+<p>「行」だけを使えば、前回COUNTIFで作ったような、1つの変数の集計表になります。「行」と「列」の両方を使えば、<span class="marker">クロス表</span>になります。</p>
 </section>
-<section id="グラフのだましのテクニック" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="グラフのだましのテクニック"><span class="header-section-number">5.3</span> グラフの「だましのテクニック」</h2>
-<p>報道や広告のグラフでよく見られる、誤解を招く見せ方です。</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 35%">
-<col style="width: 65%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">テクニック</th>
-<th style="text-align: left;">何が問題か</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">縦軸を0から始めない（棒グラフ）</td>
-<td style="text-align: left;">小さな差が大きな差に見える</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">立体（3D）のグラフ</td>
-<td style="text-align: left;">手前の部分が大きく見える。特に3Dの円グラフ</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">都合のよい期間だけを切り取る</td>
-<td style="text-align: left;">長い期間で見ると違う傾向が隠れる</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">目盛りの間隔がそろっていない</td>
-<td style="text-align: left;">変化の速さが正しく読み取れない</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">左右2つの縦軸（2軸グラフ）</td>
-<td style="text-align: left;">目盛りの取り方しだいで、2つの動きが連動しているように見せられる</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">絵やイラストの大きさで表す</td>
-<td style="text-align: left;">高さを2倍にすると、面積は4倍に見える</td>
-</tr>
-</tbody>
-</table>
+<section id="ピボットテーブルを作る" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="ピボットテーブルを作る"><span class="header-section-number">5.2</span> ピボットテーブルを作る</h2>
+<section id="作り方" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="作り方"><span class="header-section-number">5.2.1</span> 作り方</h3>
+<ol type="1">
+<li>シート「データ」の、表の中のセルを1つクリックします（どこでもかまいません）。</li>
+<li><strong>「挿入」タブ →「ピボットテーブル」</strong>をクリックします。「▼」が出たら「テーブルまたは範囲から」を選びます。</li>
+<li>「テーブル/範囲」に、表全体（例：<code>データ!$A$1:$K$54</code>）が入っていることを確かめます。</li>
+<li>ピボットテーブルを置く場所を選んで、「OK」を押します。
+<ul>
+<li><strong>新規ワークシート</strong>：新しいシートが作られ、そこに置かれます。</li>
+<li><strong>既存のワークシート</strong>：「場所」の欄をクリックしてから、置きたいシートのセルをクリックします。</li>
+</ul></li>
+<li>画面の右に<strong>「ピボットテーブルのフィールド」</strong>が出ます。上半分に並んでいる変数を、下の「行」「列」「値」のボックスへドラッグします。</li>
+</ol>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>折れ線グラフは0から始めなくてもよい？
+<span class="screen-reader-only">Important</span>ピボットテーブルを作る前に
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>棒グラフは<strong>長さ</strong>で大きさを表すので、縦軸は0から始めるのが原則です。一方、折れ線グラフは<strong>変化の傾き</strong>を見るグラフなので、必ずしも0から始める必要はありません（例：気温の変化）。ただし、軸の範囲を狭くすると、小さな変化が急激に見えます。<strong>軸の目盛りを必ず確認する</strong>習慣をつけましょう。</p>
+<p>ピボットテーブルは、<span class="marker">1行＝1人、1列＝1つの変数</span>という形のデータ（第2回で学んだ形）から作ります。1行目に見出しがあり、途中に空の行や列がないことを確かめましょう。データに乱れ（表記ゆれなど）があると、別の項目として集計されてしまいます。</p>
 </div>
 </div>
-<!-- 教員メモ：実際の報道・広告から誤解を招くグラフの例を2〜3点用意し、スライドで示す（出典を明記）。グラフを描き直す共有の題材にも使う。 -->
 </section>
-<section id="excelでグラフを作る" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="excelでグラフを作る"><span class="header-section-number">5.4</span> Excelでグラフを作る</h2>
-<section id="基本の手順棒グラフ" class="level3" data-number="5.4.1">
-<h3 data-number="5.4.1" class="anchored" data-anchor-id="基本の手順棒グラフ"><span class="header-section-number">5.4.1</span> 基本の手順（棒グラフ）</h3>
+<section id="項目の順番を変える" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="項目の順番を変える"><span class="header-section-number">5.2.2</span> 項目の順番を変える</h3>
+<p>ピボットテーブルでは、項目が自動的に並べられるため、「あまり関心がない」「ある程度関心がある」「とても関心がある」…のように、選択肢の順番とは違う順になることがあります。項目のセルを右クリック →<strong>「移動」→「上へ移動」</strong>などで、意味の分かる順番に並べ替えましょう。</p>
+</section>
+</section>
+<section id="集計のしかたを変える" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="集計のしかたを変える"><span class="header-section-number">5.3</span> 集計のしかたを変える</h2>
+<section id="個数合計平均" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="個数合計平均"><span class="header-section-number">5.3.1</span> 個数・合計・平均</h3>
+<p>「値」に入れた変数は、次のように集計されます。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 25%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">値に入れた変数</th>
+<th style="text-align: left;">最初の集計方法</th>
+<th style="text-align: left;">例</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">文字の変数（政治への関心など）</td>
+<td style="text-align: left;"><strong>個数</strong>（人数）</td>
+<td style="text-align: left;">個数 / 政治への関心</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">数値の変数（睡眠時間など）</td>
+<td style="text-align: left;"><strong>合計</strong></td>
+<td style="text-align: left;">合計 / 睡眠時間（時間）</td>
+</tr>
+</tbody>
+</table>
+<div style="margin-top: 2.0em;">
+
+</div>
+<p>睡眠時間の「合計」は、ふつうは知りたい数字ではありません。<span class="marker">数値の変数は、平均に変える</span>と、グループどうしを比べられるようになります。</p>
 <ol type="1">
-<li>グラフにしたいデータ（<strong>項目名と数値、見出しの行も含めて</strong>）をドラッグで選びます。</li>
-<li><strong>「挿入」タブ</strong>をクリックします。</li>
-<li>「グラフ」グループの<strong>「縦棒/横棒グラフの挿入」</strong>をクリックし、<strong>「集合縦棒」</strong>を選びます。</li>
+<li>「値」のボックスにある「合計 / 睡眠時間（時間）」をクリック →<strong>「値フィールドの設定」</strong>を選びます。</li>
+<li><strong>「集計方法」タブ</strong>で「平均」を選びます。</li>
+<li>左下の<strong>「表示形式」</strong>→「数値」→ 小数点以下の桁数を「2」にして「OK」、もう一度「OK」を押します。</li>
 </ol>
-<p>折れ線グラフは<strong>「折れ線/面グラフの挿入」</strong>、円グラフは<strong>「円またはドーナツグラフの挿入」</strong>から、同じように作れます。迷ったら<strong>「おすすめグラフ」</strong>を押すと、Excelが候補を示してくれます。</p>
+<p>同じ変数を2回「値」に入れて、1つは「平均」、もう1つは「個数」にすると、<span class="marker">平均と一緒に、そのグループの人数</span>も確かめられます。</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>平均を見るときは、人数も見る
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>グループの人数が少ないと、平均は1人の値に大きく左右されます。たとえば、ある条件のグループが1人しかいなければ、その人の値がそのまま「平均」になります。<span class="marker">平均を比べるときは、何人の平均なのかを必ず確かめましょう。</span></p>
+</div>
+</div>
 </section>
-<section id="グラフを見やすく整える" class="level3" data-number="5.4.2">
-<h3 data-number="5.4.2" class="anchored" data-anchor-id="グラフを見やすく整える"><span class="header-section-number">5.4.2</span> グラフを見やすく整える</h3>
-<ul>
-<li><strong>グラフタイトル</strong>：タイトルの文字をクリックして書き換えます。「何の、いつの、どんなデータか」が分かるタイトルにしましょう。</li>
-<li><strong>データラベル</strong>（棒の上に数値を表示）：グラフをクリック → 右上の<strong>「＋」</strong>ボタン → <strong>「データラベル」</strong>にチェック。</li>
-<li><strong>軸ラベル</strong>（単位の表示）：同じく「＋」→<strong>「軸ラベル」</strong>にチェックし、「支持率（%）」のように単位を書きます。</li>
-</ul>
-</section>
-<section id="縦軸の範囲を変える" class="level3" data-number="5.4.3">
-<h3 data-number="5.4.3" class="anchored" data-anchor-id="縦軸の範囲を変える"><span class="header-section-number">5.4.3</span> 縦軸の範囲を変える</h3>
-<ol type="1">
-<li>グラフの<strong>縦軸</strong>の数字の上で右クリック → <strong>「軸の書式設定」</strong>をクリックします。</li>
-<li>右側の設定画面の「境界値」の<strong>「最小値」</strong>に数値（例：28）を入力します。</li>
-<li>元に戻すときは、最小値の右にある<strong>「リセット」</strong>を押します。</li>
-</ol>
+<section id="割合で表示する" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="割合で表示する"><span class="header-section-number">5.3.2</span> 割合で表示する</h3>
+<p>クロス表を割合にするときも、「値フィールドの設定」を使います。<strong>「計算の種類」タブ</strong>で、何を100%にするかを選びます。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 42%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">計算の種類</th>
+<th style="text-align: left;">何を100%にするか</th>
+<th style="text-align: left;">使う場面</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">行集計に対する比率</td>
+<td style="text-align: left;"><strong>行ごと</strong>の合計（1年の35人、2年の18人）</td>
+<td style="text-align: left;">学年ごとの内訳を比べる</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">列集計に対する比率</td>
+<td style="text-align: left;"><strong>列ごと</strong>の合計</td>
+<td style="text-align: left;">回答ごとに、学年の内訳を見る</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">総計に対する比率</td>
+<td style="text-align: left;"><strong>全体</strong>（53人）</td>
+<td style="text-align: left;">全体の中での割合を見る</td>
+</tr>
+</tbody>
+</table>
+<div style="margin-top: 2.0em;">
+
+</div>
+<p>前回と同じく、ここでも<span class="marker">何を100%にしているか</span>が大切です。学年どうしを比べたいときは、「行集計に対する比率」を選びます。</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>出典を忘れずに
+<span class="screen-reader-only">Tip</span>うまくいかないときは
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>グラフの下には、<strong>出典</strong>（データのもとになった資料と年）を書きましょう。出典のないグラフは、正しいかどうか確かめられません。</p>
+<ul>
+<li><strong>「ピボットテーブルのフィールド」が消えた</strong> → ピボットテーブルの中のセルをクリックすると、また表示されます。</li>
+<li><strong>人数を数えたいのに「合計」になった</strong> → 数値の変数を「値」に入れると合計になります。「値フィールドの設定」で「個数」に変えるか、文字の変数（学年など）を「値」に入れます。</li>
+<li><strong>データを直したのに、ピボットテーブルが変わらない</strong> → ピボットテーブルの中を右クリック →<strong>「更新」</strong>を押します。関数と違い、自動では変わりません。</li>
+<li><strong>「(空白)」という項目が出る</strong> → 範囲に空の行が含まれているか、答えていない人がいます。</li>
+<li><strong>元に戻したい</strong> → ボックスから変数を、ピボットテーブルのフィールドの外へドラッグすると、取り除けます。</li>
+</ul>
 </div>
 </div>
 </section>
+<section id="発展グループ化とピボットグラフ" class="level3" data-number="5.3.3">
+<h3 data-number="5.3.3" class="anchored" data-anchor-id="発展グループ化とピボットグラフ"><span class="header-section-number">5.3.3</span> 発展：グループ化とピボットグラフ</h3>
+<ul>
+<li><strong>グループ化</strong>：通学時間のような数値を「行」に入れると、20分、30分、35分…と、値ごとにばらばらに並びます。行ラベルの数字を右クリック →<strong>「グループ化」</strong>で、「30分ごと」のようにまとめられます。</li>
+<li><strong>ピボットグラフ</strong>：ピボットテーブルの中をクリック →<strong>「ピボットテーブル分析」タブ →「ピボットグラフ」</strong>で、集計結果をそのままグラフにできます。ピボットテーブルの切り口を変えると、グラフも一緒に変わります。</li>
+</ul>
 </section>
-<section id="課題_5に取り組もう" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="課題_5に取り組もう"><span class="header-section-number">5.5</span> 課題_5に取り組もう</h2>
-<p>授業の後半は、Excelファイル「課題_5」を使って作業します。<span class="marker">作業したファイルが、そのまま今日の課題の提出物になります。</span></p>
+</section>
+<section id="課題_5に取り組もう" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="課題_5に取り組もう"><span class="header-section-number">5.4</span> 課題_5に取り組もう</h2>
+<p>Excelファイル「課題_5」を使って作業します。<span class="marker">作業したファイルが、そのまま今日の課題の提出物になります。</span></p>
+<div style="margin-top: 2.0em;">
+
+</div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -518,16 +501,19 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li>Blackboardから <strong>課題_5.xlsx</strong> をダウンロードして開きます。</li>
 <li>最初のシート「はじめに」に、学籍番号と氏名を入力します。</li>
-<li>シートを順番に進めます。<span class="marker">黄色のセル</span>が、皆さんが入力する場所です。作ったグラフは、各シートの「グラフ貼り付け場所」に置きます。</li>
+<li>シートを順番に進めます。各シートの手順に従ってピボットテーブルを作り、<span class="marker">黄色のセル</span>に答えを入力します。</li>
 <li>最後に、ファイル名を <strong>課題_5_氏名.xlsx</strong> に変えて保存し、Blackboardに提出します。</li>
 </ol>
 </div>
 </div>
-<!-- 教員メモ：課題_5の「データ」シートは見出しのみ。第1回のアンケート回答（課題_2と同じもの）を2行目から貼り付けてから配布。「4_投票率」には、総務省「国政選挙における年代別投票率について」の衆議院議員総選挙の年代別投票率（第31回1967年〜第51回2026年）を入力済み（2026年9月にWebで取得・確認）。配布前に最新の選挙が追加されていないか確認すること。 -->
+<!-- 教員メモ：「データ」シートには data/survey_clean.xlsx（53人）を入力済み。模範解答は data/課題_5_解答.xlsx（tools/k5.py で学生用と同時に生成）。ピボットテーブルはopenpyxlでは作れないため、解答ファイルには「ピボットテーブルで作るとこうなる」表を赤字の値で置いてある。 -->
+<div style="margin-top: 2.0em;">
+
+</div>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 75%">
+<col style="width: 30%">
+<col style="width: 70%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -545,47 +531,36 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">クラスのアンケート結果（1行＝1人）</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">1_予想</td>
-<td style="text-align: left;">導入の2つのグラフについての答え</td>
+<td style="text-align: left;">1_ピボットの基本</td>
+<td style="text-align: left;">政治への関心・Excel経験の人数を、ピボットテーブルで数える</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">2_軸でだます</td>
-<td style="text-align: left;">架空の支持率で、縦軸の最小値が違う2つの棒グラフを作って比べる</td>
+<td style="text-align: left;">2_クロス集計</td>
+<td style="text-align: left;">学年×政治への関心のクロス表を作り、割合で比べる</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">3_学年構成</td>
-<td style="text-align: left;">COUNTIF で学年ごとの人数と割合を数え、棒グラフと円グラフを作る</td>
+<td style="text-align: left;">3_平均で比べる</td>
+<td style="text-align: left;">学年ごとに、睡眠時間・スマホ時間・通学時間の平均を比べる</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">4_投票率</td>
-<td style="text-align: left;">衆議院選挙の年代別投票率の推移を折れ線グラフにし、読み取る</td>
+<td style="text-align: left;">4_朝食とGPA</td>
+<td style="text-align: left;">朝食をよく食べる人ほど、GPAが高い？（平均と人数）</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">5_チャレンジ</td>
-<td style="text-align: left;">2軸グラフの危うさ、伝わるグラフへの改善（Excelに慣れている人向け）</td>
+<td style="text-align: left;">5_発展</td>
+<td style="text-align: left;">選挙経験と政治への関心、通学時間のグループ化、ピボットグラフ、自分で問いを立てる</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">6_振り返り</td>
-<td style="text-align: left;">誤解を招くグラフを探し、問題点と直し方を説明する</td>
+<td style="text-align: left;">行・列・値の選び方、関数との使い分け</td>
 </tr>
 </tbody>
 </table>
-<p><strong>基本課題</strong>は「1_予想」〜「4_投票率」と「6_振り返り」です。<strong>チャレンジ課題</strong>（「5_チャレンジ」）は、Excelに慣れている人や、基本課題が終わった人が取り組んでください。</p>
+<div style="margin-top: 2.0em;">
+
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>COUNTIF関数で人数を数える
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>「3_学年構成」では、<code>=COUNTIF(データ!$B$2:$B$101,A5)</code> のように入力します。「シート『データ』のB2〜B101の中で、A5（「1年」）と同じ文字が入っているセルの数を数える」という意味です。<code>$</code> を付けると、式を下にコピーしても範囲が動きません（<strong>絶対参照</strong>、次回くわしく学びます）。</p>
-</div>
-</div>
-<div class="kotae callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -594,53 +569,22 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>2_軸でだます</strong>：同じデータでも、縦軸の最小値を28にすると、A党とC党の差がとても大きく見えます（28%より上の部分は A党が4、C党が1なので、<strong>4倍</strong>の高さに見えます）。</p>
-<p><strong>3_学年構成</strong>：人数はクラスのデータで決まります。</p>
+<p>このクラスの53人のデータでの答えです。</p>
 <ul>
-<li>「どの学年がいちばん多いか」「学年どうしの差」→ <strong>棒グラフ</strong>の方が長さで比べやすい。</li>
-<li>「全体の中で何割か」→ <strong>円グラフ</strong>が向いている。ただし、データラベルで割合（%）を表示すると、より正確に伝わります。</li>
-</ul>
-<p><strong>4_投票率</strong>：読み取りの例です。<strong>「いつの・何の」データかを数値とともに書く</strong>ことが大切です。</p>
-<ul>
-<li>1967年から2026年までのすべての選挙で、20歳代の投票率は60歳代より低い（例：2024年は20歳代34.62%、60歳代68.02%）。</li>
-<li>20歳代の投票率は、1967年の66.69%から、2010年代には30%台まで下がった。</li>
-<li>全体の投票率が下がった選挙（例：1996年、2014年）では、20歳代も下がっている。</li>
-</ul>
-<p><strong>5_チャレンジ</strong></p>
-<ul>
-<li>課題A：2軸グラフでは、左右の目盛りを自由に決められるため、<strong>本当は差が大きい2つの値を重ねて「同じ」ように見せたり、無関係な2つのデータが連動しているように見せたり</strong>できてしまいます。使うのは単位が違う2つのデータ（例：人数と%）をどうしても1つのグラフで示したい場合に限り、同じ単位のデータ（今回のように%どうし）は<strong>1つの軸</strong>で表します。左右の軸には、それぞれ単位と何の軸かを明記します。</li>
-<li>課題B：改善に正解は1つではありません。「このグラフで何を伝えたいか」を先に決め、それ以外の要素を目立たなくするのが基本の考え方です。</li>
+<li><strong>1_ピボットの基本</strong>：課題_4でCOUNTIFを使って数えた人数と同じになります（「ある程度関心がある」24人など）。Excel経験が「使ったことがない」は7人です。</li>
+<li><strong>2_クロス集計</strong>：「行集計に対する比率」にすると、2年生の「ある程度関心がある」は61.11%です。「総計に対する比率」にすると、53人全体を100%にした割合になります。</li>
+<li><strong>3_平均で比べる</strong>：睡眠時間は1年6.47時間・2年7.00時間、スマホ時間は1年7.02時間・2年5.61時間、通学時間は1年58.29分・2年49.44分です。差がいちばん大きいのはスマホ時間です。</li>
+<li><strong>4_朝食とGPA</strong>：朝食0日のグループは平均2.30（7人）、7日のグループは2.70（14人）です。平均がいちばん高いのは6日のグループ（3.19）ですが、4人しかいません。2日のグループ（1.36）は1人だけなので、これだけで「週2日の人はGPAが低い」とは言えません。</li>
+<li><strong>5_発展</strong>：選挙経験が「ある」人で「関心がある」（とても＋ある程度）のは68.0%、「ない」人では36.8%です。通学時間を30分ごとにまとめると、90〜119分のグループ（6人）は平均睡眠時間が6.08時間で、ほかのグループより短くなっています。</li>
 </ul>
 </div>
-</div>
-</div>
-<!-- 教員メモ：「若者の投票率は低い＝若者は政治に無関心」と言えるか？ は次回の問いにつなげるため、ここではあえて深入りしない。 -->
-</section>
-<section id="共有誤解を招くグラフを描き直す" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="共有誤解を招くグラフを描き直す"><span class="header-section-number">5.6</span> 共有：誤解を招くグラフを描き直す</h2>
-<div class="mondai callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>演習
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>グループ（3〜4人）で取り組んでください。</p>
-<ol type="1">
-<li>教員が示す「誤解を招くグラフ」の例を1つ選び、<strong>どこが問題か</strong>を上の「だましのテクニック」の表を参考に指摘してください。</li>
-<li>同じデータを、正しく伝わるように描き直すとしたら、どうしますか？ 手書きのスケッチでかまいません。</li>
-<li>グラフの作り手は、なぜそのような見せ方を選んだのだと思いますか？ わざと？ それとも、うっかり？</li>
-</ol>
 </div>
 </div>
 </section>
-<section id="振り返り" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="振り返り"><span class="header-section-number">5.7</span> 振り返り</h2>
+<section id="振り返り" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="振り返り"><span class="header-section-number">5.5</span> 振り返り</h2>
 <div class="my-note callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -652,43 +596,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>「何を伝えたいか」に合わせて、<strong>棒・折れ線・円グラフ</strong>などを使い分ける。</li>
-<li>データがうそでなくても、<strong>軸・期間・立体表現・2軸</strong>などの見せ方で印象は大きく変わる。</li>
-<li>グラフを見たら、<strong>軸の目盛り・期間・出典</strong>を確かめる。自分で作るときは、タイトル・単位・出典を付ける。</li>
+<li><strong>ピボットテーブル</strong>を使うと、変数を「行」「列」「値」にドラッグするだけで、集計表やクロス表が作れる。</li>
+<li>「値フィールドの設定」で、<strong>個数・平均</strong>などの集計方法や、<strong>割合</strong>での表示（何を100%にするか）を選べる。</li>
+<li>平均を比べるときは、<strong>何人の平均なのか</strong>も一緒に確かめる。</li>
 </ul>
-</div>
-</div>
-<p><strong>次回の問い：</strong>「若者は、本当に政治に無関心？」</p>
-<p>今日の折れ線グラフで、20歳代の投票率が低いことを確かめました。でも、「投票率が低い」ことは「政治に無関心」ということなのでしょうか？ 次回は、クラスのアンケートや世論調査のデータを使い、<strong>比率</strong>と<strong>クロス集計</strong>で年代による違いを比べます。</p>
-<!-- 教員メモ：11月2日は休講（紅陵祭）。第6回は11月9日であることを授業内で伝える。 -->
-</section>
-<section id="今週の課題" class="level2" data-number="5.8">
-<h2 data-number="5.8" class="anchored" data-anchor-id="今週の課題"><span class="header-section-number">5.8</span> 今週の課題</h2>
-<div class="mondai callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>演習
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>課題_5_氏名.xlsx</strong> をBlackboardに提出してください（<strong>金曜日24時まで</strong>）。</p>
-<p>授業中に終わらなかったシートは、提出までに仕上げてください。</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>次回は2週間後です
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>11月2日は紅陵祭のため休講です。次回（第6回）は<strong>11月9日</strong>です。</p>
 </div>
 </div>
 
@@ -1144,8 +1055,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./lec04.html" class="pagination-link" aria-label="ばらつきと分布">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">ばらつきと分布</span></span>
+      <a href="./lec04.html" class="pagination-link" aria-label="数えて比べる">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">数えて比べる</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
