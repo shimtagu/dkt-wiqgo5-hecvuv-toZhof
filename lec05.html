@@ -220,7 +220,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#個数合計平均" id="toc-個数合計平均" class="nav-link" data-scroll-target="#個数合計平均"><span class="header-section-number">5.3.1</span> 個数・合計・平均</a></li>
   <li><a href="#割合で表示する" id="toc-割合で表示する" class="nav-link" data-scroll-target="#割合で表示する"><span class="header-section-number">5.3.2</span> 割合で表示する</a></li>
-  <li><a href="#発展グループ化とピボットグラフ" id="toc-発展グループ化とピボットグラフ" class="nav-link" data-scroll-target="#発展グループ化とピボットグラフ"><span class="header-section-number">5.3.3</span> 発展：グループ化とピボットグラフ</a></li>
+  <li><a href="#グループ化とピボットグラフ" id="toc-グループ化とピボットグラフ" class="nav-link" data-scroll-target="#グループ化とピボットグラフ"><span class="header-section-number">5.3.3</span> グループ化とピボットグラフ</a></li>
   </ul></li>
   <li><a href="#課題_5に取り組もう" id="toc-課題_5に取り組もう" class="nav-link" data-scroll-target="#課題_5に取り組もう"><span class="header-section-number">5.4</span> 課題_5に取り組もう</a></li>
   <li><a href="#振り返り" id="toc-振り返り" class="nav-link" data-scroll-target="#振り返り"><span class="header-section-number">5.5</span> 振り返り</a></li>
@@ -271,8 +271,8 @@ ul.task-list li input[type="checkbox"] {
 | 時間 | 内容 |
 |:---:|:---|
 | 10分 | 導入：先週COUNTIFSで作った学年×政治への関心の表を、ピボットテーブルでその場で作って見せる |
-| 30分 | 解説：ピボットテーブルの作り方、行・列・値、個数と平均、割合での表示（一緒に操作する） |
-| 55分 | 演習：課題_5 |
+| 30分 | 解説：ピボットテーブルの作り方、行・列・値、個数と平均、割合での表示（課題_5の「練習」シートで、学生も一緒に操作する） |
+| 55分 | 演習：課題_5（1・2はCOUNTIF／COUNTIFSでも作り、ピボットテーブルと比べる） |
 |  5分 | 共有：朝食とGPA、人数の少ないグループの平均 |
 |  5分 | 振り返り |
 -->
@@ -329,6 +329,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="ピボットテーブルを作る" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="ピボットテーブルを作る"><span class="header-section-number">5.2</span> ピボットテーブルを作る</h2>
+<p>ここからは、課題_5の<span class="marker">「練習」シート</span>を開いて、先生と一緒に操作してみましょう。</p>
 <section id="作り方" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="作り方"><span class="header-section-number">5.2.1</span> 作り方</h3>
 <ol type="1">
@@ -474,8 +475,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="発展グループ化とピボットグラフ" class="level3" data-number="5.3.3">
-<h3 data-number="5.3.3" class="anchored" data-anchor-id="発展グループ化とピボットグラフ"><span class="header-section-number">5.3.3</span> 発展：グループ化とピボットグラフ</h3>
+<section id="グループ化とピボットグラフ" class="level3" data-number="5.3.3">
+<h3 data-number="5.3.3" class="anchored" data-anchor-id="グループ化とピボットグラフ"><span class="header-section-number">5.3.3</span> グループ化とピボットグラフ</h3>
 <ul>
 <li><strong>グループ化</strong>：通学時間のような数値を「行」に入れると、20分、30分、35分…と、値ごとにばらばらに並びます。行ラベルの数字を右クリック →<strong>「グループ化」</strong>で、「30分ごと」のようにまとめられます。</li>
 <li><strong>ピボットグラフ</strong>：ピボットテーブルの中をクリック →<strong>「ピボットテーブル分析」タブ →「ピボットグラフ」</strong>で、集計結果をそのままグラフにできます。ピボットテーブルの切り口を変えると、グラフも一緒に変わります。</li>
@@ -531,27 +532,35 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">クラスのアンケート結果（1行＝1人）</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">1_ピボットの基本</td>
-<td style="text-align: left;">政治への関心・Excel経験の人数を、ピボットテーブルで数える</td>
+<td style="text-align: left;">練習</td>
+<td style="text-align: left;">講義に合わせて、先生と一緒にピボットテーブルを作る</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">2_クロス集計</td>
-<td style="text-align: left;">学年×政治への関心のクロス表を作り、割合で比べる</td>
+<td style="text-align: left;">1_ピボットの基本</td>
+<td style="text-align: left;">政治への関心の人数を、COUNTIFとピボットテーブルで数えて比べる</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">2_クロス集計</td>
+<td style="text-align: left;">学年×政治への関心のクロス表を、COUNTIFSとピボットテーブルで作って比べ、割合にする</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">3_平均で比べる</td>
 <td style="text-align: left;">学年ごとに、睡眠時間・スマホ時間・通学時間の平均を比べる</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">4_朝食とGPA</td>
 <td style="text-align: left;">朝食をよく食べる人ほど、GPAが高い？（平均と人数）</td>
 </tr>
+<tr class="even">
+<td style="text-align: left;">5_応用</td>
+<td style="text-align: left;">選挙経験と政治への関心、通学時間のグループ化、ピボットグラフ</td>
+</tr>
 <tr class="odd">
-<td style="text-align: left;">5_発展</td>
-<td style="text-align: left;">選挙経験と政治への関心、通学時間のグループ化、ピボットグラフ、自分で問いを立てる</td>
+<td style="text-align: left;">6_発展</td>
+<td style="text-align: left;">自分で問いを立て、ピボットテーブルとピボットグラフで調べる（5_応用で練習したピボットグラフを使う）</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">6_振り返り</td>
+<td style="text-align: left;">7_振り返り</td>
 <td style="text-align: left;">行・列・値の選び方、関数との使い分け</td>
 </tr>
 </tbody>
@@ -573,11 +582,13 @@ ul.task-list li input[type="checkbox"] {
 <div class="callout-body-container callout-body">
 <p>このクラスの53人のデータでの答えです。</p>
 <ul>
-<li><strong>1_ピボットの基本</strong>：課題_4でCOUNTIFを使って数えた人数と同じになります（「ある程度関心がある」24人など）。Excel経験が「使ったことがない」は7人です。</li>
-<li><strong>2_クロス集計</strong>：「行集計に対する比率」にすると、2年生の「ある程度関心がある」は61.11%です。「総計に対する比率」にすると、53人全体を100%にした割合になります。</li>
+<li><strong>練習</strong>：Excel経験は「入力程度なら使ったことがある」が28人で最も多くなります。クイズ正解数の平均は1年2.20問、2年1.83問です。選挙経験が「ある」のは、1年40.00%、2年61.11%です。</li>
+<li><strong>1_ピボットの基本</strong>：COUNTIFで数えた人数と、ピボットテーブルの人数は同じになります（「ある程度関心がある」24人など）。</li>
+<li><strong>2_クロス集計</strong>：COUNTIFSの表とピボットテーブルは同じ数になります。「行集計に対する比率」にすると、2年生の「ある程度関心がある」は61.11%です。「総計に対する比率」にすると、53人全体を100%にした割合になります。</li>
 <li><strong>3_平均で比べる</strong>：睡眠時間は1年6.47時間・2年7.00時間、スマホ時間は1年7.02時間・2年5.61時間、通学時間は1年58.29分・2年49.44分です。差がいちばん大きいのはスマホ時間です。</li>
 <li><strong>4_朝食とGPA</strong>：朝食0日のグループは平均2.30（7人）、7日のグループは2.70（14人）です。平均がいちばん高いのは6日のグループ（3.19）ですが、4人しかいません。2日のグループ（1.36）は1人だけなので、これだけで「週2日の人はGPAが低い」とは言えません。</li>
-<li><strong>5_発展</strong>：選挙経験が「ある」人で「関心がある」（とても＋ある程度）のは68.0%、「ない」人では36.8%です。通学時間を30分ごとにまとめると、90〜119分のグループ（6人）は平均睡眠時間が6.08時間で、ほかのグループより短くなっています。</li>
+<li><strong>5_応用</strong>：選挙経験が「ある」人で「関心がある」（とても＋ある程度）のは68.0%、「ない」人では36.8%です。通学時間を30分ごとにまとめると、90〜119分のグループ（6人）は平均睡眠時間が6.08時間で、ほかのグループより短くなっています。この結果をピボットグラフ（棒グラフ）にすると、通学時間が長いほど棒が低くなる様子がひと目で分かります。</li>
+<li><strong>6_発展</strong>：解答例として、政治への関心別にクイズ正解数の平均を見ると、「あまり関心がない」1.45問、「ある程度関心がある」2.21問、「とても関心がある」2.67問（3人）です。</li>
 </ul>
 </div>
 </div>
