@@ -8,7 +8,7 @@
 
 <meta name="description" content="2026年度　後期 時間： 月曜日 2 時限（11:15-13:00） 教室： C 館 1階 PC2 教室">
 
-<title>8&nbsp; 関係を見る：散布図と相関 – データ課題探求</title>
+<title>8&nbsp; 相関と因果 – データ課題探求</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,35 +73,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <meta name="robots" content="noindex, nofollow">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -114,7 +85,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lec08.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">関係を見る：散布図と相関</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lec08.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">相関と因果</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -178,49 +149,49 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec06.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">比べる：比率とクロス集計</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ばらつき</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec07.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">変化を見る：時系列データ</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">相関</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec08.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">関係を見る：散布図と相関</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">相関と因果</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec09.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">相関と因果</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">総合演習 1</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">調査データを読む</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">総合演習 2</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">総合演習2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">総合演習 3</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec12.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">総合演習2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">総合演習 4</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lec13.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">総合演習2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">総合演習 5</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -239,18 +210,24 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#導入まずは予想してみよう" id="toc-導入まずは予想してみよう" class="nav-link active" data-scroll-target="#導入まずは予想してみよう"><span class="header-section-number">8.1</span> 導入：まずは予想してみよう</a></li>
-  <li><a href="#散布図の読み方" id="toc-散布図の読み方" class="nav-link" data-scroll-target="#散布図の読み方"><span class="header-section-number">8.2</span> 散布図の読み方</a></li>
-  <li><a href="#相関係数" id="toc-相関係数" class="nav-link" data-scroll-target="#相関係数"><span class="header-section-number">8.3</span> 相関係数</a></li>
-  <li><a href="#excelでの操作" id="toc-excelでの操作" class="nav-link" data-scroll-target="#excelでの操作"><span class="header-section-number">8.4</span> Excelでの操作</a>
+  <li><a href="#相関と因果" id="toc-相関と因果" class="nav-link active" data-scroll-target="#相関と因果"><span class="header-section-number">8.1</span> 相関と因果</a></li>
+  <li><a href="#相関を因果と見まちがえる3つの落とし穴" id="toc-相関を因果と見まちがえる3つの落とし穴" class="nav-link" data-scroll-target="#相関を因果と見まちがえる3つの落とし穴"><span class="header-section-number">8.2</span> 相関を因果と見まちがえる3つの落とし穴</a>
   <ul class="collapse">
-  <li><a href="#散布図を描く" id="toc-散布図を描く" class="nav-link" data-scroll-target="#散布図を描く"><span class="header-section-number">8.4.1</span> 散布図を描く</a></li>
-  <li><a href="#相関係数を計算する" id="toc-相関係数を計算する" class="nav-link" data-scroll-target="#相関係数を計算する"><span class="header-section-number">8.4.2</span> 相関係数を計算する</a></li>
+  <li><a href="#第3の要因がある" id="toc-第3の要因がある" class="nav-link" data-scroll-target="#第3の要因がある"><span class="header-section-number">8.2.1</span> ① 第3の要因がある</a></li>
+  <li><a href="#原因と結果が逆" id="toc-原因と結果が逆" class="nav-link" data-scroll-target="#原因と結果が逆"><span class="header-section-number">8.2.2</span> ② 原因と結果が逆</a></li>
+  <li><a href="#たまたま偶然" id="toc-たまたま偶然" class="nav-link" data-scroll-target="#たまたま偶然"><span class="header-section-number">8.2.3</span> ③ たまたま（偶然）</a></li>
   </ul></li>
+  <li><a href="#層別グループに分けて比べ直す" id="toc-層別グループに分けて比べ直す" class="nav-link" data-scroll-target="#層別グループに分けて比べ直す"><span class="header-section-number">8.3</span> 層別：グループに分けて比べ直す</a>
+  <ul class="collapse">
+  <li><a href="#層別とは" id="toc-層別とは" class="nav-link" data-scroll-target="#層別とは"><span class="header-section-number">8.3.1</span> 層別とは</a></li>
+  <li><a href="#例選挙経験と政治への関心" id="toc-例選挙経験と政治への関心" class="nav-link" data-scroll-target="#例選挙経験と政治への関心"><span class="header-section-number">8.3.2</span> 例：選挙経験と政治への関心</a></li>
+  <li><a href="#ピボットテーブルに学年を足す" id="toc-ピボットテーブルに学年を足す" class="nav-link" data-scroll-target="#ピボットテーブルに学年を足す"><span class="header-section-number">8.3.3</span> ピボットテーブルに学年を足す</a></li>
+  <li><a href="#結果" id="toc-結果" class="nav-link" data-scroll-target="#結果"><span class="header-section-number">8.3.4</span> 結果</a></li>
+  <li><a href="#層別しても関係が残る場合" id="toc-層別しても関係が残る場合" class="nav-link" data-scroll-target="#層別しても関係が残る場合"><span class="header-section-number">8.3.5</span> 層別しても、関係が残る場合</a></li>
+  </ul></li>
+  <li><a href="#レポートでの書き方" id="toc-レポートでの書き方" class="nav-link" data-scroll-target="#レポートでの書き方"><span class="header-section-number">8.4</span> レポートでの書き方</a></li>
   <li><a href="#課題_8に取り組もう" id="toc-課題_8に取り組もう" class="nav-link" data-scroll-target="#課題_8に取り組もう"><span class="header-section-number">8.5</span> 課題_8に取り組もう</a></li>
-  <li><a href="#共有散布図から何が言える" id="toc-共有散布図から何が言える" class="nav-link" data-scroll-target="#共有散布図から何が言える"><span class="header-section-number">8.6</span> 共有：散布図から何が言える？</a></li>
-  <li><a href="#振り返り" id="toc-振り返り" class="nav-link" data-scroll-target="#振り返り"><span class="header-section-number">8.7</span> 振り返り</a></li>
-  <li><a href="#今週の課題" id="toc-今週の課題" class="nav-link" data-scroll-target="#今週の課題"><span class="header-section-number">8.8</span> 今週の課題</a></li>
+  <li><a href="#振り返り" id="toc-振り返り" class="nav-link" data-scroll-target="#振り返り"><span class="header-section-number">8.6</span> 振り返り</a></li>
   </ul>
 </nav>
     </div>
@@ -259,7 +236,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-lec08" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">関係を見る：散布図と相関</span></span></h1>
+<h1 class="title"><span id="sec-lec08" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">相関と因果</span></span></h1>
 </div>
 
 
@@ -276,6 +253,7 @@ window.Quarto = {
 </header>
 
 
+<p>データから言えること・言えないこと</p>
 <div style="margin-top: 2.0em;">
 
 </div>
@@ -289,176 +267,339 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>豊かな国ほど、人々は長生きなのでしょうか？</strong></p>
+<p><strong>朝ごはんを食べる人ほど、GPAが高い。では、朝ごはんを食べれば、成績は上がるのでしょうか？</strong></p>
 </div>
 </div>
 <!--
 教員用：今日の流れ（105分）
 | 時間 | 内容 |
 |:---:|:---|
-| 10分 | 導入：今日の問いと予想（課題_8の「1_予想」に記入） |
-| 20分 | 解説：散布図の読み方・相関と相関係数、散布図とCORRELの操作 |
-| 45分 | 演習：課題_8 |
-| 20分 | 共有：散布図から何が言える？ |
-| 10分 | 振り返り・次回の予告 |
+| 10分 | 導入：朝食とGPAの相関（0.32）。「朝ごはんを食べれば成績が上がる」と言える？ |
+| 35分 | 解説：相関と因果、3つの落とし穴、層別（課題_8の「練習」シートで、選挙経験×政治への関心のピボットテーブルに学年を足す） |
+| 55分 | 演習：課題_8 |
+|  5分 | 振り返り |
 -->
-<!-- 教員メモ：11月23日（勤労感謝の日）は祝日授業日です。Blackboard等で授業実施を事前に周知してください。 -->
-<section id="導入まずは予想してみよう" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="導入まずは予想してみよう"><span class="header-section-number">8.1</span> 導入：まずは予想してみよう</h2>
-<div class="mondai callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div style="margin-top: 2.0em;">
+
+</div>
+<p>前回、このクラスのデータで、<span class="marker">朝食を食べる日が多い人ほど、前期GPAが高い</span>という弱い正の相関（相関係数 0.32）があることが分かりました。</p>
+<p>では、ここから「朝ごはんを食べれば、成績が上がる」と言ってよいでしょうか？ 少し考えてみてください。</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>演習
+<span class="screen-reader-only">Tip</span>答え
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>直感で答えてください。予想は「課題_8」のシート「1_予想」に記入します。</p>
-<ol type="1">
-<li>世界の国々について、「1人あたりの豊かさ（1人あたりGDP）」と「平均寿命」の間には、どんな関係があると思いますか？<br>
-
-<ol type="a">
-<li>豊かな国ほど長生き　(b) 関係はない　(c) 豊かな国ほど短命</li>
-</ol></li>
-<li>1で (a) を選んだ人へ：豊かになればなるほど、平均寿命は<strong>どこまでも</strong>同じペースで延びていくと思いますか？</li>
-<li>このクラスで、「1日のスマホ利用時間が長い人ほど、睡眠時間は短い」と思いますか？</li>
-</ol>
+<p>このデータだけでは、そうは言えません。たとえば、「生活リズムが規則正しい人は、朝食も食べるし、授業にもきちんと出る」のかもしれません。そうだとすれば、成績を上げているのは朝食ではなく、<span class="marker">生活リズム</span>です。その場合、朝食だけを食べるようにしても、成績は変わらないかもしれません。</p>
 </div>
 </div>
-<p>これまでの回では、1つの変数（年収、通学時間など）の分布や、グループごとの違いを見てきました。今日は、<strong>2つの量的な変数の関係</strong>を見る方法を学びます。</p>
-</section>
-<section id="散布図の読み方" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="散布図の読み方"><span class="header-section-number">8.2</span> 散布図の読み方</h2>
-<p><strong>散布図</strong>は、2つの変数を横軸と縦軸にとり、1つの観測単位（1つの国、1人の学生など）を1つの点で表したグラフです。</p>
-<p>散布図を見るときは、次の順に確認しましょう。</p>
-<ol type="1">
-<li><strong>1つの点は何を表しているか？</strong>（1か国？ 1人？ 1つの都道府県？）</li>
-<li><strong>横軸・縦軸は何か？ 単位は？</strong></li>
-<li><strong>全体の傾向</strong>：右上がり？ 右下がり？ はっきりした傾向はない？</li>
-<li><strong>形</strong>：まっすぐ（直線的）？ 曲がっている？</li>
-<li><strong>外れ値</strong>：全体の傾向から大きく離れた点はないか？ それはどこ（誰）か？</li>
-</ol>
+</div>
+<p>今日は、データから「言えること」と「言えないこと」を見分ける方法を学びます。<span class="marker">総合演習のレポートで、いちばん大切になる考え方</span>です。</p>
+<section id="相関と因果" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="相関と因果"><span class="header-section-number">8.1</span> 相関と因果</h2>
+<p>2つのことの関係には、次の2種類があります。</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">散布図の形</th>
-<th style="text-align: center;">呼び方</th>
-<th style="text-align: left;">意味</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">右上がり</td>
-<td style="text-align: center;">正の相関</td>
-<td style="text-align: left;">一方が大きいほど、もう一方も大きい傾向</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">右下がり</td>
-<td style="text-align: center;">負の相関</td>
-<td style="text-align: left;">一方が大きいほど、もう一方は小さい傾向</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">はっきりしない</td>
-<td style="text-align: center;">相関がない（弱い）</td>
-<td style="text-align: left;">一方の大きさと、もう一方の大きさに、はっきりした関係が見えない</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="相関係数" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="相関係数"><span class="header-section-number">8.3</span> 相関係数</h2>
-<p>2つの変数の<strong>直線的な関係の強さ</strong>を、1つの数字で表したものが<strong>相関係数</strong>です（記号 <span class="math inline">\(r\)</span> で表します）。</p>
-<ul>
-<li>相関係数は <strong>−1から1</strong>の間の値をとります。</li>
-<li><strong>1に近い</strong>ほど強い正の相関、<strong>−1に近い</strong>ほど強い負の相関、<strong>0に近い</strong>ほど直線的な関係が弱いことを表します。</li>
-<li>Excelでは、<code>=CORREL(範囲1,範囲2)</code> で計算できます。</li>
-</ul>
-<table class="caption-top table">
-<caption>一般によく使われる目安（分野によって異なります）</caption>
-<colgroup>
+<col style="width: 15%">
+<col style="width: 45%">
 <col style="width: 40%">
-<col style="width: 60%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">相関係数の大きさ（絶対値）</th>
-<th style="text-align: left;">目安</th>
+<th style="text-align: left;">関係</th>
+<th style="text-align: left;">意味</th>
+<th style="text-align: left;">例</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">0.7以上</td>
-<td style="text-align: left;">強い相関</td>
+<td style="text-align: left;"><strong>相関</strong></td>
+<td style="text-align: left;">一方が大きいほど、もう一方も大きい（小さい）傾向がある</td>
+<td style="text-align: left;">朝食日数が多い人ほど、GPAが高い</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">0.4〜0.7</td>
-<td style="text-align: left;">中程度の相関</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">0.2〜0.4</td>
-<td style="text-align: left;">弱い相関</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">0.2未満</td>
-<td style="text-align: left;">ほとんど相関がない</td>
+<td style="text-align: left;"><strong>因果</strong></td>
+<td style="text-align: left;">一方が<strong>原因</strong>となって、もう一方が変わる</td>
+<td style="text-align: left;">朝食を食べる<strong>から</strong>、GPAが上がる</td>
 </tr>
 </tbody>
 </table>
+<div style="margin-top: 2.0em;">
+
+</div>
+<p><span class="marker">相関があっても、因果があるとは限りません。</span>散布図や相関係数が教えてくれるのは「一緒に動いている」ことだけで、「どちらが原因か」までは教えてくれないからです。</p>
+</section>
+<section id="相関を因果と見まちがえる3つの落とし穴" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="相関を因果と見まちがえる3つの落とし穴"><span class="header-section-number">8.2</span> 相関を因果と見まちがえる3つの落とし穴</h2>
+<p>相関を見つけたら、「原因だ」と言う前に、次の3つを疑ってみましょう。</p>
+<section id="第3の要因がある" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="第3の要因がある"><span class="header-section-number">8.2.1</span> ① 第3の要因がある</h3>
+<p>2つのことの両方に影響する、<span class="marker">別の要因（第3の要因）</span>があると、2つのあいだに直接の関係がなくても、相関が生まれます。</p>
+<ul>
+<li><strong>例：</strong> アイスクリームが売れる日ほど、水の事故が多い。→ アイスが事故を起こすのではなく、<strong>気温</strong>が高い日に、どちらも増えます。</li>
+<li><strong>例：</strong> 消防車がたくさん来た火事ほど、被害が大きい。→ 消防車が被害を出すのではなく、<strong>火事の大きさ</strong>が、どちらも大きくします。</li>
+</ul>
+</section>
+<section id="原因と結果が逆" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="原因と結果が逆"><span class="header-section-number">8.2.2</span> ② 原因と結果が逆</h3>
+<p>「AだからB」ではなく、<span class="marker">「BだからA」</span>かもしれません。</p>
+<ul>
+<li><strong>例：</strong> 病院に行く回数が多い人ほど、体調が悪い。→ 病院に行くから体調が悪くなるのではなく、体調が悪いから病院に行きます。</li>
+<li><strong>例：</strong> 政治に関心がある人ほど、選挙に行ったことがある。→ 関心があるから選挙に行くのか、選挙に行ったから関心が出てきたのか、どちらもありそうです。</li>
+</ul>
+</section>
+<section id="たまたま偶然" class="level3" data-number="8.2.3">
+<h3 data-number="8.2.3" class="anchored" data-anchor-id="たまたま偶然"><span class="header-section-number">8.2.3</span> ③ たまたま（偶然）</h3>
+<p>人数が少ないと、本当は関係がなくても、<span class="marker">偶然、相関があるように見える</span>ことがあります。前回見たように、1人の外れ値で相関係数が大きく変わることもあります。何人のデータか、外れ値がないかを確かめましょう。</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>相関係数だけを見てはいけない
+<span class="screen-reader-only">Important</span>因果を言う前に、3つ確かめる
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>相関係数は便利ですが、<strong>必ず散布図と一緒に見る</strong>ことが大切です。</p>
-<ul>
-<li>相関係数は<strong>直線的な</strong>関係しか測れません。曲がった関係（例：U字型）があっても、相関係数が0に近くなることがあります。</li>
-<li><strong>外れ値</strong>が1つあるだけで、相関係数は大きく変わることがあります。</li>
-<li>相関があっても、<strong>一方が原因でもう一方が結果</strong>とは限りません（次回のテーマです）。</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="excelでの操作" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="excelでの操作"><span class="header-section-number">8.4</span> Excelでの操作</h2>
-<!-- 教員メモ：課題_8の2つのデータシートは見出しだけの状態です。配布前に次を貼り付けてください。
-(1) シート「データ_国別」（1行＝1か国、2行目から）：A列 国名、B列 地域、C列 1人あたりGDP（購買力平価、2021年国際ドル）、D列 平均寿命（歳）、E列 人口。出典：世界銀行 World Development Indicators（https://data.worldbank.org/）の指標 NY.GDP.PCAP.PP.KD、SP.DYN.LE00.IN、SP.POP.TOTL。全指標がそろう同じ年（例：2022年）にそろえ、地域集計（World、High income など）の行と欠測のある国は除いてください。G列の「年：（記入）　取得日：（記入）」を書き換えます。国数は最大249か国（2〜250行目）まで想定しています。Gapminder のデータでも可（その場合はG列の出典を書き換え）。
-(2) シート「データ」：課題_2と同じ受講生アンケートのデータ（回答番号〜クイズ正解数、A〜J列）。散布図・CORRELはD列（スマホ時間）とE列（睡眠時間）、2〜101行目を使います。 -->
-<p>課題では、シート「データ_国別」（1行＝1か国）と、シート「データ」（クラスのアンケート、1行＝1人）を使います。</p>
-<section id="散布図を描く" class="level3" data-number="8.4.1">
-<h3 data-number="8.4.1" class="anchored" data-anchor-id="散布図を描く"><span class="header-section-number">8.4.1</span> 散布図を描く</h3>
 <ol type="1">
-<li>横軸にしたい列と縦軸にしたい列を、見出しを含めて選択します（例：C列とD列。離れた列は <strong>Ctrlキーを押しながら</strong>選びます）。</li>
-<li>「挿入」タブ →「グラフ」グループの <strong>散布図（X, Y）</strong> アイコン →「散布図」（点だけのもの）を選びます。</li>
-<li>横軸と縦軸が逆になっている場合は、グラフを右クリック →「データの選択」→ 系列を「編集」で、「系列Xの値」と「系列Yの値」を選び直します。</li>
-<li>グラフの右上の <strong>＋（グラフ要素）</strong> ボタン →「軸ラベル」にチェックを入れ、軸の名前と単位（例：「平均寿命（歳）」）を入力します。</li>
-<li>グラフタイトルと出典を書き込みます。</li>
+<li>両方に影響する<strong>第3の要因</strong>はないか？</li>
+<li>原因と結果が<strong>逆</strong>ではないか？</li>
+<li>人数は十分か、<strong>たまたま</strong>ではないか？</li>
 </ol>
+</div>
+</div>
 </section>
-<section id="相関係数を計算する" class="level3" data-number="8.4.2">
-<h3 data-number="8.4.2" class="anchored" data-anchor-id="相関係数を計算する"><span class="header-section-number">8.4.2</span> 相関係数を計算する</h3>
-<p>2つの範囲を指定して、<code>=CORREL(範囲1,範囲2)</code> と入力します。例えば、シート「データ」のスマホ時間（D列）と睡眠時間（E列）なら、次のようになります。</p>
-<p><code>=CORREL(データ!D2:D101,データ!E2:E101)</code></p>
+</section>
+<section id="層別グループに分けて比べ直す" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="層別グループに分けて比べ直す"><span class="header-section-number">8.3</span> 層別：グループに分けて比べ直す</h2>
+<section id="層別とは" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="層別とは"><span class="header-section-number">8.3.1</span> 層別とは</h3>
+<p>第3の要因が疑われるときは、<span class="marker">その要因でデータをグループに分けて、グループごとに比べ直します</span>。これを<span class="marker">層別</span>と呼びます。もし、グループに分けても同じ関係が見られれば、その要因のせいではない、と言えます。逆に、グループに分けると関係が消えたり変わったりすれば、その要因が関わっている可能性があります。</p>
+<p>ピボットテーブルを使えば、層別は<span class="marker">項目を1つ足すだけ</span>でできます。</p>
+</section>
+<section id="例選挙経験と政治への関心" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="例選挙経験と政治への関心"><span class="header-section-number">8.3.2</span> 例：選挙経験と政治への関心</h3>
+<p>第5回のピボットテーブルで、次の結果が出ました。選挙に行ったことがある人の方が、政治に関心がある（とても＋ある程度）割合が、ずっと高くなっています。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 30%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">選挙経験</th>
+<th style="text-align: center;">人数</th>
+<th style="text-align: center;">政治に関心がある</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">ある</td>
+<td style="text-align: center;">25人</td>
+<td style="text-align: center;">68.0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">ない</td>
+<td style="text-align: center;">19人</td>
+<td style="text-align: center;">36.8%</td>
+</tr>
+</tbody>
+</table>
+<div style="margin-top: 2.0em;">
+
+</div>
+<p>ところで、2年生は1年生よりも、選挙に行ったことがある人の割合が高く（1年40.0%、2年61.1%）、政治に関心がある人の割合も高くなっていました（第4回）。つまり、<span class="marker">学年が、選挙経験と政治への関心の両方に関わる「第3の要因」</span>になっているかもしれません。そこで、学年ごとに分けて比べ直してみます。</p>
+</section>
+<section id="ピボットテーブルに学年を足す" class="level3" data-number="8.3.3">
+<h3 data-number="8.3.3" class="anchored" data-anchor-id="ピボットテーブルに学年を足す"><span class="header-section-number">8.3.3</span> ピボットテーブルに学年を足す</h3>
+<ol type="1">
+<li>第5回と同じように、ピボットテーブルを作ります。<strong>行</strong>に「選挙経験」、<strong>列</strong>に「政治への関心」、<strong>値</strong>に「政治への関心」（個数）を入れ、「行集計に対する比率」にします。</li>
+<li>「学年」を、<strong>行</strong>のボックスの「選挙経験」の<strong>上</strong>にドラッグします。</li>
+<li>1年と2年それぞれの中で、選挙経験ごとの割合が表示されます。</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>フィルターでも層別できる
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>「学年」を<strong>フィルター</strong>のボックスに入れて、「1年」「2年」を切り替えて見る方法もあります。表がすっきりして見やすくなります。</p>
+</div>
+</div>
+</section>
+<section id="結果" class="level3" data-number="8.3.4">
+<h3 data-number="8.3.4" class="anchored" data-anchor-id="結果"><span class="header-section-number">8.3.4</span> 結果</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 25%">
+<col style="width: 20%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">学年</th>
+<th style="text-align: center;">選挙経験</th>
+<th style="text-align: center;">人数</th>
+<th style="text-align: center;">政治に関心がある</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1年</td>
+<td style="text-align: center;">ある</td>
+<td style="text-align: center;">14人</td>
+<td style="text-align: center;">71.4%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1年</td>
+<td style="text-align: center;">ない</td>
+<td style="text-align: center;">13人</td>
+<td style="text-align: center;">23.1%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2年</td>
+<td style="text-align: center;">ある</td>
+<td style="text-align: center;">11人</td>
+<td style="text-align: center;">63.6%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2年</td>
+<td style="text-align: center;">ない</td>
+<td style="text-align: center;">6人</td>
+<td style="text-align: center;">66.7%</td>
+</tr>
+</tbody>
+</table>
+<div style="margin-top: 2.0em;">
+
+</div>
+<p>1年生では、選挙経験がある人とない人で、大きな差があります。ところが2年生では、<span class="marker">選挙経験があってもなくても、関心がある割合はほとんど同じ</span>です。全体で見えた差は、学年によって違っていたのです。</p>
+<p>ただし、2年生で選挙経験が「ない」人は6人しかいません。1人で約17ポイントも動くので、「2年生では差がない」と言い切ることもできません（落とし穴③）。<span class="marker">分かったことと一緒に、どこまで言えるか（限界）も書く</span>のが、データに基づく考察です。</p>
+<!-- 教員メモ：「まだ選挙権がない・機会がなかった」（9人、うち2年は1人）は表から省いている。ピボットテーブルではこの行も出るので、口頭で触れる。 -->
+</section>
+<section id="層別しても関係が残る場合" class="level3" data-number="8.3.5">
+<h3 data-number="8.3.5" class="anchored" data-anchor-id="層別しても関係が残る場合"><span class="header-section-number">8.3.5</span> 層別しても、関係が残る場合</h3>
+<p>冒頭の朝食とGPAも、学年で層別してみます。朝食日数は、ピボットテーブルの<strong>グループ化</strong>（第5回）で、0〜3日と4〜7日に分けます（開始値 0、単位 4）。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">学年</th>
+<th style="text-align: center;">朝食 0〜3日</th>
+<th style="text-align: center;">朝食 4〜7日</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1年</td>
+<td style="text-align: center;">2.34（13人）</td>
+<td style="text-align: center;">2.78（20人）</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2年</td>
+<td style="text-align: center;">1.49（3人）</td>
+<td style="text-align: center;">2.67（13人）</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">全体</td>
+<td style="text-align: center;">2.18（16人）</td>
+<td style="text-align: center;">2.74（33人）</td>
+</tr>
+</tbody>
+</table>
+<div style="margin-top: 2.0em;">
+
+</div>
+<p>こちらは、1年でも2年でも、朝食を食べる日が多い人の方がGPAが高くなっています。少なくとも「学年の違いのせい」ではなさそうです。</p>
+<p>それでも、「朝ごはんを食べれば、成績が上がる」とはまだ言えません。生活リズムや一人暮らしかどうかなど、<span class="marker">このデータに入っていない要因は、層別で確かめることができない</span>からです。</p>
+<div class="my-note callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>因果を確かめるには
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>本当に因果を確かめるには、たとえば、くじ引きで「朝食を食べるグループ」と「食べないグループ」に分けて、その後の成績を比べる<strong>実験</strong>が必要です。くじ引きで分ければ、生活リズムなどの他の要因は、2つのグループで同じくらいになるからです。ただし、社会や政治のテーマでは実験ができないことが多いので、層別などで「本当にそう言えるか」を慎重に確かめていきます。</p>
+</div>
+</div>
+</section>
+</section>
+<section id="レポートでの書き方" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="レポートでの書き方"><span class="header-section-number">8.4</span> レポートでの書き方</h2>
+<p>データから因果を確かめられていないときは、言い方に気をつけます。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 55%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">言えること（相関）</th>
+<th style="text-align: left;">言いすぎ（因果）</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">朝食を食べる日が多い人<strong>ほど</strong>、GPAが高い<strong>傾向がある</strong></td>
+<td style="text-align: left;">朝食を食べる<strong>と</strong>、GPAが上がる</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">選挙経験がある人は、関心がある割合が高かった。<strong>ただし、2年生では差がなかった</strong></td>
+<td style="text-align: left;">選挙に行けば、政治に関心が出る</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">人口が多い都道府県<strong>ほど</strong>、高齢化率が低い<strong>傾向がある</strong></td>
+<td style="text-align: left;">人口が増えれば、高齢化が止まる</td>
+</tr>
+</tbody>
+</table>
+<div style="margin-top: 2.0em;">
+
+</div>
+<p>そのうえで、「なぜそうなるのか」の考えられる理由（第3の要因、逆の因果）を自分で考えて書くと、レポートの考察が一段深くなります。</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>うまくいかないときは
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li>2つの範囲は、<strong>同じ行数</strong>にそろえます。空欄（無回答）のセルは自動的に計算から除かれます。</li>
-<li>同じ点が重なっている（同じ回答の人が複数いる）と、散布図では1つの点に見えることに注意しましょう。</li>
+<li><strong>学年を足したら、表が見にくくなった</strong> → 「学年」を<strong>フィルター</strong>に移すか、「デザイン」タブ →「レポートのレイアウト」→「表形式で表示」を選びます。</li>
+<li><strong>割合が学年ごとにならない</strong> → 「値フィールドの設定」→「計算の種類」で、「行集計に対する比率」になっているか確かめます。</li>
+<li><strong>グループ化ができない</strong> → 「朝食日数」を<strong>行</strong>に入れてから、行ラベルの数字を右クリックします。数値でない値（空のセルなど）が混ざっていると、グループ化できないことがあります。</li>
 </ul>
-</section>
+</div>
+</div>
 </section>
 <section id="課題_8に取り組もう" class="level2" data-number="8.5">
 <h2 data-number="8.5" class="anchored" data-anchor-id="課題_8に取り組もう"><span class="header-section-number">8.5</span> 課題_8に取り組もう</h2>
-<p>授業の後半は、Excelファイル「課題_8」を使って作業します。<span class="marker">作業したファイルが、そのまま今日の課題の提出物になります。</span></p>
+<p>Excelファイル「課題_8」を使って作業します。<span class="marker">作業したファイルが、そのまま今日の課題の提出物になります。</span></p>
+<div style="margin-top: 2.0em;">
+
+</div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -472,15 +613,19 @@ window.Quarto = {
 <ol type="1">
 <li>Blackboardから <strong>課題_8.xlsx</strong> をダウンロードして開きます。</li>
 <li>最初のシート「はじめに」に、学籍番号と氏名を入力します。</li>
-<li>シートを順番に進めます。<span class="marker">黄色のセル</span>が、皆さんが入力する場所です。</li>
+<li>シートを順番に進めます。<span class="marker">黄色のセル</span>に、式や答えを入力します。</li>
 <li>最後に、ファイル名を <strong>課題_8_氏名.xlsx</strong> に変えて保存し、Blackboardに提出します。</li>
 </ol>
 </div>
 </div>
+<!-- 教員メモ：課題_8.xlsx はまだ作っていない。下のシート構成は案（作成時に合わせて直す）。 -->
+<div style="margin-top: 2.0em;">
+
+</div>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 75%">
+<col style="width: 30%">
+<col style="width: 70%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -494,92 +639,38 @@ window.Quarto = {
 <td style="text-align: left;">学籍番号・氏名の入力、進め方の説明</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">データ_国別</td>
-<td style="text-align: left;">世界の国々の1人あたりGDP・平均寿命・人口（1行＝1か国）と出典</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">データ</td>
 <td style="text-align: left;">クラスのアンケート結果（1行＝1人）</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">1_予想</td>
-<td style="text-align: left;">導入の3問の予想と結果</td>
-</tr>
 <tr class="odd">
-<td style="text-align: left;">2_国別の散布図</td>
-<td style="text-align: left;">1人あたりGDPと平均寿命の散布図を描き、5つのチェックで読み取る</td>
+<td style="text-align: left;">練習</td>
+<td style="text-align: left;">講義に合わせて、選挙経験×政治への関心のピボットテーブルに学年を足す</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">3_スマホと睡眠</td>
-<td style="text-align: left;">クラスのスマホ時間と睡眠時間の散布図と相関係数</td>
+<td style="text-align: left;">1_3つの落とし穴</td>
+<td style="text-align: left;">相関の例を読み、第3の要因・逆の因果・偶然のどれにあたるかを考える</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">4_チャレンジ</td>
-<td style="text-align: left;">外れ値の影響、曲がった関係、対数目盛、都道府県データ（Excelに慣れている人向け）</td>
+<td style="text-align: left;">2_層別</td>
+<td style="text-align: left;">朝食とGPAを、学年で層別して比べ直す</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3_言い方</td>
+<td style="text-align: left;">「言いすぎ」の文を、データから言える文に直す</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4_発展</td>
+<td style="text-align: left;">自分で相関を見つけ、第3の要因を考えて層別で確かめる</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">5_振り返り</td>
-<td style="text-align: left;">散布図から言えること・言えないこと</td>
+<td style="text-align: left;">今日の発見</td>
 </tr>
 </tbody>
 </table>
-<p><strong>基本課題</strong>は「1_予想」〜「3_スマホと睡眠」と「5_振り返り」です。<strong>チャレンジ課題</strong>（「4_チャレンジ」）は、Excelに慣れている人や、基本課題が終わった人が取り組んでください。</p>
-<div class="kotae callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>解答
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>2_国別の散布図</strong></p>
-<ul>
-<li>1つの点は<strong>1か国</strong>です。一般に、1人あたりGDPが高い国ほど平均寿命が長い、<strong>正の相関</strong>が見られます。</li>
-<li>ただし、点はまっすぐではなく、<strong>GDPが低いところでは急に上がり、高いところでは頭打ちになる</strong>曲がった形になりやすいです。貧しい国が少し豊かになると寿命は大きく延びますが、すでに豊かな国がさらに豊かになっても、寿命はそれほど延びません。導入の問2は、この「頭打ち」に気づけるかどうかを問うものでした。</li>
-</ul>
-<p><strong>3_スマホと睡眠</strong></p>
-<ul>
-<li>相関係数が負の値なら「スマホ時間が長い人ほど睡眠時間が短い傾向」、0に近ければ「はっきりした直線的な関係は見られない」と読みます。数値はクラスのデータによって決まります。</li>
-</ul>
-<p><strong>4_チャレンジ</strong></p>
-<ul>
-<li>課題A：No.1〜8では相関係数は<strong>約0.96</strong>（強い正の相関）です。(20, 0) を1つ加えるだけで、<strong>約−0.30</strong>になり、符号まで逆になります。外れ値1つで結論が大きく変わる例です。</li>
-<li>課題B：相関係数は<strong>0</strong>になります。しかし、xとyには y = x × x という<strong>はっきりした関係</strong>があります。相関係数は直線的な関係しか測れないので、<strong>0だから「関係がない」とは言えません</strong>。</li>
-<li>課題C：横軸を対数目盛にすると、「頭打ち」の曲線が<strong>まっすぐに近い</strong>並びになり、相関係数も大きくなりやすいです。対数目盛では、目盛り1つ分が「10倍」を表します。「GDPが1,000ドル増える」ことの意味は、貧しい国と豊かな国とでまったく違う、ということを表現できます。</li>
-</ul>
-</div>
-</div>
-</div>
-<!-- 教員メモ：実際に配布したデータで散布図の形（頭打ちになっているか）、目立つ外れ値の国、GDPとlog GDPの相関係数を授業前に確認し、解答の記述と食い違いがないか確認してください。 -->
 </section>
-<section id="共有散布図から何が言える" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="共有散布図から何が言える"><span class="header-section-number">8.6</span> 共有：散布図から何が言える？</h2>
-<div class="mondai callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>演習
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>グループ（3〜4人）で話し合ってください。</p>
-<ol type="1">
-<li>国別の散布図から、「豊かになれば長生きできる」と言ってよいでしょうか？ 豊かさと寿命の両方に関係していそうな<strong>別の要因</strong>はありますか？</li>
-<li>スマホ時間と睡眠時間の関係について、「スマホを使いすぎるから睡眠が短くなる」以外の説明は考えられますか？</li>
-<li>このクラスのデータの結果を、「日本の大学生全体」に当てはめてよいでしょうか？</li>
-</ol>
-</div>
-</div>
-<!-- 教員メモ：1・2の議論は、次回（相関と因果）への橋渡しです。「医療・衛生・教育の水準」「夜更かしだから長くスマホを使う（逆の因果）」などが出てくれば十分です。3は第10回（サンプル）につながる論点として軽く触れる程度で。 -->
-</section>
-<section id="振り返り" class="level2" data-number="8.7">
-<h2 data-number="8.7" class="anchored" data-anchor-id="振り返り"><span class="header-section-number">8.7</span> 振り返り</h2>
+<section id="振り返り" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="振り返り"><span class="header-section-number">8.6</span> 振り返り</h2>
 <div class="my-note callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -591,29 +682,11 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>2つの量的な変数の関係は、<strong>散布図</strong>で見る。まず「1つの点は何か」「軸は何か」を確認する。</li>
-<li><strong>相関係数</strong>（<code>=CORREL</code>）は、−1〜1の値で<strong>直線的な</strong>関係の強さを表す。</li>
-<li>相関係数は、<strong>外れ値</strong>に弱く、<strong>曲がった関係</strong>を捉えられない。必ず散布図と一緒に見る。</li>
+<li><strong>相関</strong>があっても、<strong>因果</strong>があるとは限らない。</li>
+<li>因果を言う前に、<strong>第3の要因</strong>、<strong>逆の因果</strong>、<strong>偶然</strong>の3つを疑う。</li>
+<li>第3の要因が疑われるときは、その要因でグループに分けて比べ直す（<strong>層別</strong>）。ピボットテーブルに項目を1つ足せばできる。</li>
+<li>レポートでは、「〜ほど〜の傾向がある」と書き、言えることの<strong>限界</strong>も示す。</li>
 </ul>
-</div>
-</div>
-<p><strong>次回の問い：</strong>「朝食を食べる子は成績が良い。だから朝食を食べれば成績が上がる？」</p>
-<p>相関があることと、原因と結果の関係（因果）があることの違いを考えます。</p>
-</section>
-<section id="今週の課題" class="level2" data-number="8.8">
-<h2 data-number="8.8" class="anchored" data-anchor-id="今週の課題"><span class="header-section-number">8.8</span> 今週の課題</h2>
-<div class="mondai callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>演習
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>課題_8_氏名.xlsx</strong> をBlackboardに提出してください（<strong>金曜日24時まで</strong>）。</p>
-<p>授業中に終わらなかったシートは、提出までに仕上げてください。</p>
 </div>
 </div>
 
@@ -1069,13 +1142,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./lec07.html" class="pagination-link" aria-label="変化を見る：時系列データ">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">変化を見る：時系列データ</span></span>
+      <a href="./lec07.html" class="pagination-link" aria-label="相関">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">相関</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./lec09.html" class="pagination-link" aria-label="相関と因果">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">相関と因果</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./lec09.html" class="pagination-link" aria-label="総合演習 1">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">総合演習 1</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
