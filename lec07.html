@@ -321,7 +321,7 @@ div.csl-indent {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>「影響を与えていそうな方」を横軸に、「影響を受けていそうな方」を縦軸にするのが一般的です。スマホ時間と朝食日数なら、スマホ時間を横軸にします。ただし、これは見やすさのための約束で、本当にどちらが原因かは、散布図だけでは分かりません（次回、詳しく考えます）。</p>
+<p>「影響を与えていそうな方」を横軸に、「影響を受けていそうな方」を縦軸にするのが一般的です。スマホ時間と朝食日数なら、スマホ時間を横軸にします。ただし、これは見やすさのための約束で、本当にどちらが原因かは、散布図だけでは分かりません。</p>
 </div>
 </div>
 </section>
@@ -343,17 +343,17 @@ div.csl-indent {
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><strong>右上がり</strong>（正の相関）</td>
+<td style="text-align: left;"><strong>右上がり</strong> <br> （正の相関）</td>
 <td style="text-align: left;">一方が大きいほど、もう一方も大きい</td>
 <td style="text-align: left;">身長と体重</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>右下がり</strong>（負の相関）</td>
+<td style="text-align: left;"><strong>右下がり</strong> <br> （負の相関）</td>
 <td style="text-align: left;">一方が大きいほど、もう一方は小さい</td>
 <td style="text-align: left;">気温と暖房費</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><strong>ばらばら</strong>（相関なし）</td>
+<td style="text-align: left;"><strong>ばらばら</strong> <br> （相関なし）</td>
 <td style="text-align: left;">決まった傾向がない</td>
 <td style="text-align: left;">身長とテストの点数</td>
 </tr>
@@ -361,6 +361,16 @@ div.csl-indent {
 </table>
 <div style="margin-top: 2.0em;">
 
+</div>
+<div id="fig-scatter-shapes" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-scatter-shapes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/07/scatter-shapes.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scatter-shapes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+図&nbsp;7.1: 散布図の3つの形の例
+</figcaption>
+</figure>
 </div>
 <p>「〜ほど〜」という関係を、<span class="marker">相関</span>と呼びます。</p>
 </section>
@@ -393,7 +403,7 @@ div.csl-indent {
 </tr>
 <tr class="even">
 <td style="text-align: center;">0.4 〜 0.7</td>
-<td style="text-align: left;">中程度の相関がある</td>
+<td style="text-align: left;">やや強い相関がある</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">0.2 〜 0.4</td>
@@ -408,7 +418,18 @@ div.csl-indent {
 <div style="margin-top: 2.0em;">
 
 </div>
+<div id="fig-correlation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-correlation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/07/correlation.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-correlation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+図&nbsp;7.2: 相関係数の値と、相関の強さの目安
+</figcaption>
+</figure>
+</div>
 <p>この目安は、分野によって少し違います。数字だけで判断せず、散布図と一緒に見ましょう。</p>
+<p>参考：<a href="https://dalab.jp/mag/methods/correlation_analysis/">データの特徴を把握できる相関係数と相関分析を徹底解説！（DATA ANALYTICS LABO）</a></p>
 </section>
 <section id="excelのcorrel関数" class="level3" data-number="7.2.2">
 <h3 data-number="7.2.2" class="anchored" data-anchor-id="excelのcorrel関数"><span class="header-section-number">7.2.2</span> ExcelのCORREL関数</h3>
@@ -468,7 +489,7 @@ div.csl-indent {
 <div style="margin-top: 2.0em;">
 
 </div>
-<p>このクラスでは、「スマホ時間が長い人ほど、朝食を食べる日が少ない」という<strong>弱い〜中程度の負の相関</strong>がありました。一方で、「スマホ時間が長い人ほど、睡眠時間が短い」という関係は、ほとんど見られませんでした。予想と同じだったでしょうか？</p>
+<p>このクラスでは、「スマホ時間が長い人ほど、朝食を食べる日が少ない」という<strong>弱い負の相関</strong>がありました。一方で、「スマホ時間が長い人ほど、睡眠時間が短い」という関係は、ほとんど見られませんでした。予想と同じだったでしょうか？</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -537,9 +558,10 @@ div.csl-indent {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>シート「データ」をそのまま変えるのではなく、2つの列を別の場所にコピーし、外れ値の人の行を削除してからCORRELで計算します。元のデータは残しておきましょう。</p>
+<p>シート「データ」をそのまま変えるのではなく、2つの列を別の場所にコピーします。コピーした表で外れ値の人の2つのセルを選び、右クリック →<strong>「削除」→「上方向にシフト」</strong>で除いてから、CORRELで計算します。元のデータは残しておきましょう。</p>
 </div>
 </div>
+<p>参考：<a href="https://agenda-note.com/privacy/id=3248&amp;pno=1">データの罠に陥らない「3つのコツ」（AGENDA Note）</a></p>
 </section>
 <section id="都道府県のデータで見る" class="level2" data-number="7.4">
 <h2 data-number="7.4" class="anchored" data-anchor-id="都道府県のデータで見る"><span class="header-section-number">7.4</span> 都道府県のデータで見る</h2>
@@ -564,7 +586,7 @@ div.csl-indent {
 <td style="text-align: center;">−0.68</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">人口（東京都を除く46道府県）</td>
+<td style="text-align: left;">人口 <br> （東京都を除く46道府県）</td>
 <td style="text-align: left;">65歳以上の割合</td>
 <td style="text-align: center;">−0.61</td>
 </tr>
@@ -573,8 +595,8 @@ div.csl-indent {
 <div style="margin-top: 2.0em;">
 
 </div>
-<p>人口が多い都道府県ほど、高齢化率が低いという、中程度の負の相関があります。散布図を描くと、東京都が1つだけ右端に大きく離れていることが分かります。東京都を除くと、相関は少し弱くなりますが、それでも関係は残っています。</p>
-<p>では、「人口が多いと、若い人が増える」のでしょうか？ それとも、別の理由があるのでしょうか？ この「相関があるとき、何が言えるのか」は、次回のテーマです。</p>
+<p>人口が多い都道府県ほど、高齢化率が低いという、やや強い負の相関があります。散布図を描くと、東京都が1つだけ右端に大きく離れていることが分かります。東京都を除くと、相関は少し弱くなりますが、それでも関係は残っています。</p>
+<p>では、「人口が多いと、若い人が増える」のでしょうか？ それとも、別の理由があるのでしょうか？ 相関があるからといって、一方が他方の原因だとは限りません。データから何が言えるのか、自分でも考えてみましょう。</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -618,7 +640,7 @@ div.csl-indent {
 </ol>
 </div>
 </div>
-<!-- 教員メモ：課題_7.xlsx はまだ作っていない。下のシート構成は案（作成時に合わせて直す）。クラスのデータは data/survey_clean.xlsx（53人）、都道府県データは tools/k3_pref.json（令和2年国勢調査、課題_3の10_ヒートマップと同じ）を使う予定。 -->
+<!-- 教員メモ：「データ」シートには data/survey_clean.xlsx（53人）を入力済みで、「練習」だけで使う。1〜5 は新しいデータを使う。「お店データ」は架空のデータ（駅前のお店の36日分。8月15日は花火大会の外れ値）、「都道府県」は令和2年国勢調査（tools/k3_pref.json、課題_3の10_ヒートマップと同じ）。模範解答は data/課題_7_解答.xlsx（tools/k7.py で学生用と同時に生成。赤字が解答で、式はExcelで開くと計算される。散布図の見本も入っている）。 -->
 <div style="margin-top: 2.0em;">
 
 </div>
@@ -640,42 +662,72 @@ div.csl-indent {
 </tr>
 <tr class="even">
 <td style="text-align: left;">データ</td>
-<td style="text-align: left;">クラスのアンケート結果（1行＝1人）</td>
+<td style="text-align: left;">クラスのアンケート結果（「練習」で使う）</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">練習</td>
+<td style="text-align: left;">講義の説明に合わせて、スマホ時間と朝食日数の散布図と相関係数、外れ値を除いたときの変化を確かめる</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">お店データ</td>
+<td style="text-align: left;">ある駅前のお店の36日分の記録（最高気温・アイス・ホット飲料・電気代・来店客数、架空のデータ）</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">都道府県</td>
-<td style="text-align: left;">令和2年国勢調査の都道府県別データ</td>
+<td style="text-align: left;">都道府県別の人口・平均年齢・年齢別の割合（令和2年国勢調査）</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">練習</td>
-<td style="text-align: left;">講義に合わせて、スマホ時間と朝食日数の散布図と相関係数を先生と一緒に求める</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">1_散布図</td>
-<td style="text-align: left;">いくつかの組み合わせで散布図を描き、形を読み取る</td>
+<td style="text-align: left;">気温とアイス・ホット飲料・電気代の散布図を描き、形を読み取る</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">2_相関係数</td>
-<td style="text-align: left;">CORRELで相関係数を求め、強さを判断する</td>
+<td style="text-align: left;">CORRELで相関係数を求め、関係の強さを判断する。電気代の相関係数が0に近いのはなぜ？</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">3_外れ値</td>
-<td style="text-align: left;">外れ値を除いて計算し直し、相関係数の変化を確かめる</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">4_都道府県</td>
-<td style="text-align: left;">都道府県のデータで散布図と相関係数を求める</td>
+<td style="text-align: left;">気温と来店客数の相関は本当？ 外れ値を除いて計算し直す</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">5_発展</td>
-<td style="text-align: left;">自分で2つの変数を選び、関係を調べる</td>
+<td style="text-align: left;">4_都道府県</td>
+<td style="text-align: left;">人口が多い都道府県ほど、高齢化率は低い？（東京都を除くと？）</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">5_発展</td>
+<td style="text-align: left;">都道府県の相関の表、外れ値が相関を弱める例、自分で問いを立てて調べる</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">6_振り返り</td>
-<td style="text-align: left;">今日の発見</td>
+<td style="text-align: left;">散布図も一緒に見る理由、外れ値を見つけたときの対応</td>
 </tr>
 </tbody>
 </table>
+<div style="margin-top: 2.0em;">
+
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>解答
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>練習</strong>：スマホ時間と朝食日数の相関係数は −0.39 です。通学時間と睡眠時間は −0.17 ですが、睡眠3時間の1人を除くと −0.06 になります。</li>
+<li><strong>1_散布図</strong>：気温とアイスは右上がり、気温とホット飲料は右下がりです。気温と電気代は、寒い日と暑い日に高く、20℃前後で低いU字型です（暖房と冷房）。</li>
+<li><strong>2_相関係数</strong>：気温とアイスは 0.88（強い正の相関）、ホット飲料は −0.90（強い負の相関）、電気代は 0.01（ほとんど相関がない）、来店客数は 0.30（弱い正の相関）です。電気代は、はっきりした関係があるのに、直線的でないため相関係数は0に近くなります。</li>
+<li><strong>3_外れ値</strong>：離れた点は8月15日（花火大会、760人）です。この1日を除くと、気温と来店客数の相関係数は 0.30 から 0.04 になり、ほとんど相関がなくなります。外れ値は消さずに、含めた場合と除いた場合の両方を示します。</li>
+<li><strong>4_都道府県</strong>：人口と65歳以上の割合は −0.68、東京都を除くと −0.61 です。平均年齢と15歳未満の割合は −0.66、平均年齢と65歳以上の割合は 0.98 ですが、後者は当たり前の関係で、新しい発見とは言えません。</li>
+<li><strong>5_発展</strong>：いちばん弱いのは人口と15歳未満の割合（−0.06）です。気温とアイスの相関係数は、花火大会の日を除くと 0.88 から 0.93 に強くなります。外れ値は、相関係数をどちらの方向にも動かします。</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="振り返り" class="level2" data-number="7.6">
 <h2 data-number="7.6" class="anchored" data-anchor-id="振り返り"><span class="header-section-number">7.6</span> 振り返り</h2>
