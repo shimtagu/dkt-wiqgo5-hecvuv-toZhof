@@ -205,8 +205,25 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#分析ファイルを作る" id="toc-分析ファイルを作る" class="nav-link active" data-scroll-target="#分析ファイルを作る"><span class="header-section-number">9.1</span> 分析ファイルを作る</a>
+  <ul class="collapse">
+  <li><a href="#データの見方" id="toc-データの見方" class="nav-link" data-scroll-target="#データの見方"><span class="header-section-number">9.1.1</span> データの見方</a></li>
+  <li><a href="#分析の前にデータを確かめる" id="toc-分析の前にデータを確かめる" class="nav-link" data-scroll-target="#分析の前にデータを確かめる"><span class="header-section-number">9.1.2</span> 分析の前に、データを確かめる</a></li>
+  </ul></li>
+  <li><a href="#問いの形に合った分析をする" id="toc-問いの形に合った分析をする" class="nav-link" data-scroll-target="#問いの形に合った分析をする"><span class="header-section-number">9.2</span> 問いの形に合った分析をする</a></li>
+  <li><a href="#レポートにまとめる" id="toc-レポートにまとめる" class="nav-link" data-scroll-target="#レポートにまとめる"><span class="header-section-number">9.3</span> レポートにまとめる</a>
+  <ul class="collapse">
+  <li><a href="#つの分析を行う" id="toc-つの分析を行う" class="nav-link" data-scroll-target="#つの分析を行う"><span class="header-section-number">9.3.1</span> 5つの分析を行う</a></li>
+  </ul></li>
+  <li><a href="#課題_9に取り組もう" id="toc-課題_9に取り組もう" class="nav-link" data-scroll-target="#課題_9に取り組もう"><span class="header-section-number">9.4</span> 課題_9に取り組もう</a></li>
+  <li><a href="#振り返り" id="toc-振り返り" class="nav-link" data-scroll-target="#振り返り"><span class="header-section-number">9.5</span> 振り返り</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -230,8 +247,592 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>クラスのアンケートで、自分の問いを確かめる</p>
+<div style="margin-top: 2.0em;">
+
+</div>
+<div class="my-note callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>今日の問い
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>自分で立てた問いに、クラスのアンケートのデータで答えを出してみよう。</strong></p>
+</div>
+</div>
+<!--
+教員用：今日の流れ（105分）
+| 時間 | 内容 |
+|:---:|:---|
+| 15分 | 導入：Formsの「応答」→「Excelで開く」でダウンロードする様子を見せ、生データと見出し.xlsxを配る。分析ファイルを作る（生データをコピー → 見出し行を貼る） |
+| 15分 | 解説：データを確かめる（数値の列、「答えたくない」）、問いの形に合った分析の方法 |
+| 10分 | 解説：Wordのレポートの書き方と採点基準 |
+| 60分 | 演習：課題_9（Excelで分析 → Wordにまとめる） |
+|  5分 | 振り返り |
+-->
+<div style="margin-top: 2.0em;">
+
+</div>
+<p>第8回では、一人1つずつアンケートの設問を考え、それをまとめてクラス全員で回答しました。今日は、その回答データを使って、<span class="marker">自分の問いを確かめ、分かったことをレポートにまとめます。</span></p>
+<p>なお、全員分の設問をアンケートに載せることはできないため、第8回の授業に出席した人の設問を優先しました。自分が考えた設問がない人は、データの中から改めて自分で問を考えてください。</p>
+<p>今日から5回の総合演習では、毎回データを分析してレポートを書きます。これまでの授業で学んだ道具（並べ替え・フィルター、COUNTIF、ピボットテーブル、グラフ、平均・中央値・標準偏差、相関、層別）を、自分で選んで使うのがポイントです。</p>
+<section id="分析ファイルを作る" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="分析ファイルを作る"><span class="header-section-number">9.1</span> 分析ファイルを作る</h2>
+<p>Formsで集めた回答は、Excelでダウンロードできます（Formsの<strong>「応答」</strong>タブ →<strong>「Excelで開く」</strong>）。講義の説明を聞きながら、手順を確かめましょう。</p>
+<p>Blackboardから、次の2つのファイルをダウンロードします。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">ファイル</th>
+<th style="text-align: left;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>生データ</strong></td>
+<td style="text-align: left;">Formsからダウンロードした回答そのもの。見出しは長い設問文のまま</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>見出し.xlsx</strong></td>
+<td style="text-align: left;">短い変数名の見出し行（シート「見出し」）と、変数名と設問の対応表（シート「変数一覧」）</td>
+</tr>
+</tbody>
+</table>
+<div style="margin-top: 2.0em;">
+
+</div>
+<p>生データは直接変えずに、次の手順で、分析用のファイルを作ります。</p>
+<ol type="1">
+<li>Excelで新しいブックを作り、<strong>課題_9_氏名.xlsx</strong> という名前で保存します。</li>
+<li>生データのシートを全部選んでコピーし（左上の角をクリック →Ctrl＋C）、新しいブックのシート「データ」に貼り付けます。</li>
+<li>見出し.xlsx の1行目をコピーし、「データ」シートの1行目に上書きで貼り付けます。<span class="marker">列がずれていないか</span>、何列か確かめましょう。</li>
+<li><strong>数値の列を「数値」に変換します。</strong> Formsからダウンロードしたデータでは、通学時間などの数字が「文字」として入っていて、そのままでは平均や相関が計算できません。数値の列（下の一覧で「数値」の列）を選び、左上に出る「!」マーク →<strong>「数値に変換」</strong>をクリックします。</li>
+<li>集計やグラフは、「データ」シートとは別のシートに作ります。</li>
+</ol>
+<p><span class="marker">生データは手元に残しておきます。</span>変数名の意味が分からなくなったら、生データの見出し（設問文）や、下の一覧で確かめられます。</p>
+<!-- 教員メモ：ダウンロードしたファイルに名前・メールの列があれば、配る前に消す。見出し.xlsx は、配る生データと同じ列の並びで作ってある。配る前に、ピボットテーブルで学年×学科×性別の人数を確かめ、1〜2人しかいない組み合わせがあれば注意する。通信トラブルに備え、授業前日にも一度ダウンロードしておくとよい。 -->
+<section id="データの見方" class="level3" data-number="9.1.1">
+<h3 data-number="9.1.1" class="anchored" data-anchor-id="データの見方"><span class="header-section-number">9.1.1</span> データの見方</h3>
+<p>データは、<span class="marker">1行＝1人、1列＝1つの設問</span>の形になっています。見出しは、長い設問文の代わりに、短い変数名にしてあります。どの変数がどの設問かは、下の一覧で確かめましょう。</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>変数の一覧（クリックで開く）
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 22%">
+<col style="width: 52%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">列</th>
+<th style="text-align: left;">変数名</th>
+<th style="text-align: left;">設問</th>
+<th style="text-align: left;">答えの形</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">学年</td>
+<td style="text-align: left;">あなたの学年</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">学科</td>
+<td style="text-align: left;">所属学科</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">性別</td>
+<td style="text-align: left;">性別</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">住まい</td>
+<td style="text-align: left;">現在の住まい</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">通学時間</td>
+<td style="text-align: left;">通学時間（片道、分）</td>
+<td style="text-align: left;">数値</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">バイト時間</td>
+<td style="text-align: left;">1週間あたりのアルバイト時間（時間）</td>
+<td style="text-align: left;">数値</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">自由なお金</td>
+<td style="text-align: left;">1か月に自由に使えるお金</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">登校日数</td>
+<td style="text-align: left;">1週間あたり大学に来た日数（日）</td>
+<td style="text-align: left;">数値</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">9</td>
+<td style="text-align: left;">出席の積極性</td>
+<td style="text-align: left;">授業にどの程度積極的に出席しているか</td>
+<td style="text-align: left;">段階評価</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">進路決定</td>
+<td style="text-align: left;">将来の職業・進路が決まっているか</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">11</td>
+<td style="text-align: left;">授業の友達</td>
+<td style="text-align: left;">一緒に授業を受ける友達の数（人）</td>
+<td style="text-align: left;">数値</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">12</td>
+<td style="text-align: left;">インスタント食品</td>
+<td style="text-align: left;">インスタント食品を食べる回数（週）</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">13</td>
+<td style="text-align: left;">都道府県</td>
+<td style="text-align: left;">住んでいる都道府県</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">14</td>
+<td style="text-align: left;">娯楽時間</td>
+<td style="text-align: left;">1日に娯楽に使う時間</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">15</td>
+<td style="text-align: left;">睡眠時間</td>
+<td style="text-align: left;">平日の平均睡眠時間（時間）</td>
+<td style="text-align: left;">数値</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">16</td>
+<td style="text-align: left;">勉強時間</td>
+<td style="text-align: left;">1日の勉強時間（授業以外、時間）</td>
+<td style="text-align: left;">数値</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">17</td>
+<td style="text-align: left;">ゲーム時間</td>
+<td style="text-align: left;">1日のゲーム時間（時間）</td>
+<td style="text-align: left;">数値</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">18</td>
+<td style="text-align: left;">ながら課題</td>
+<td style="text-align: left;">課題中にSNS・動画・音楽を流すか</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">19</td>
+<td style="text-align: left;">起床から出発</td>
+<td style="text-align: left;">家を出る何分前に起きるか（分）</td>
+<td style="text-align: left;">数値</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">20</td>
+<td style="text-align: left;">使ったお金</td>
+<td style="text-align: left;">この1か月に自分のために使ったお金</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">21</td>
+<td style="text-align: left;">外食日数</td>
+<td style="text-align: left;">この1か月の外食日数（日）</td>
+<td style="text-align: left;">数値</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">22</td>
+<td style="text-align: left;">支払い方法</td>
+<td style="text-align: left;">最もよく使う支払い方法</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">23</td>
+<td style="text-align: left;">サブスク数</td>
+<td style="text-align: left;">加入している有料サブスクの数</td>
+<td style="text-align: left;">数値</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">24</td>
+<td style="text-align: left;">映画館</td>
+<td style="text-align: left;">この1か月に映画館で見た回数</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">25</td>
+<td style="text-align: left;">交通費</td>
+<td style="text-align: left;">通学の交通費（片道）</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">26</td>
+<td style="text-align: left;">旅行先</td>
+<td style="text-align: left;">一番行ってみたい国内の地域</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">27</td>
+<td style="text-align: left;">朝風呂</td>
+<td style="text-align: left;">朝にお風呂に入る頻度</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">28</td>
+<td style="text-align: left;">入浴日数</td>
+<td style="text-align: left;">1週間にお風呂に入る日数</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">29</td>
+<td style="text-align: left;">通学中の音楽</td>
+<td style="text-align: left;">通学中に音楽を聴く日数（週）</td>
+<td style="text-align: left;">数値</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">30</td>
+<td style="text-align: left;">モバイルバッテリー</td>
+<td style="text-align: left;">モバイルバッテリーを持ち歩くか</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">31</td>
+<td style="text-align: left;">アイス</td>
+<td style="text-align: left;">一番好きなアイスの味</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">32</td>
+<td style="text-align: left;">音楽ジャンル</td>
+<td style="text-align: left;">一番よく聴く音楽のジャンル</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">33</td>
+<td style="text-align: left;">好きな数字</td>
+<td style="text-align: left;">好きな数字（1〜99）</td>
+<td style="text-align: left;">数値</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">34</td>
+<td style="text-align: left;">初デートの支払い</td>
+<td style="text-align: left;">初デートの理想の支払い方法</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">35</td>
+<td style="text-align: left;">東京の過ごしやすさ</td>
+<td style="text-align: left;">東京での生活は過ごしやすいか</td>
+<td style="text-align: left;">段階評価</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">36</td>
+<td style="text-align: left;">生活満足度</td>
+<td style="text-align: left;">今の生活全体への満足度</td>
+<td style="text-align: left;">段階評価</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">37</td>
+<td style="text-align: left;">バイトの種類</td>
+<td style="text-align: left;">主なアルバイトの種類</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">38</td>
+<td style="text-align: left;">きょうだい</td>
+<td style="text-align: left;">きょうだいの中で何番目か</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">39</td>
+<td style="text-align: left;">GPA</td>
+<td style="text-align: left;">前期のGPA（答えたくない人は 0）</td>
+<td style="text-align: left;">数値</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">40</td>
+<td style="text-align: left;">欠席コマ数</td>
+<td style="text-align: left;">この1週間に欠席した授業のコマ数</td>
+<td style="text-align: left;">数値</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">41</td>
+<td style="text-align: left;">SNS時間</td>
+<td style="text-align: left;">1日のSNS利用時間</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">42</td>
+<td style="text-align: left;">提出遅れ</td>
+<td style="text-align: left;">今学期、課題の提出が遅れた回数</td>
+<td style="text-align: left;">数値</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">43</td>
+<td style="text-align: left;">地元が東京</td>
+<td style="text-align: left;">出身（地元）が東京都か</td>
+<td style="text-align: left;">選択肢</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="分析の前にデータを確かめる" class="level3" data-number="9.1.2">
+<h3 data-number="9.1.2" class="anchored" data-anchor-id="分析の前にデータを確かめる"><span class="header-section-number">9.1.2</span> 分析の前に、データを確かめる</h3>
+<p>実際のアンケートのデータには、第2回で見たような「乱れ」が入っていることがあります。分析を始める前に、自分が使う列について、次のことを確かめましょう。</p>
+<ul>
+<li><strong>数値の列</strong>：並べ替えやフィルターで、あり得ない値（例：睡眠時間が「0」や「20」）がないか確かめます。見つけても、<span class="marker">すぐに消さず</span>、どう扱ったかをレポートに書きます（第7回の外れ値）。</li>
+<li><strong>「答えたくない」「わからない」</strong>：集計に入れるかどうかを決めます。ピボットテーブルでは、項目の▼からチェックを外せば除けます。GPAの「0」は「答えたくない」という意味なので、平均や相関を出す前に除きます。</li>
+<li><strong>空欄</strong>：答えていない人がいる列は、何人分のデータで分析したかを数えておきます。</li>
+</ul>
+</section>
+</section>
+<section id="問いの形に合った分析をする" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="問いの形に合った分析をする"><span class="header-section-number">9.2</span> 問いの形に合った分析をする</h2>
+<p>自分の問いが「何と何を比べる問いか」によって、使う道具が決まります。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">比べるもの</th>
+<th style="text-align: left;">例</th>
+<th style="text-align: left;">使う道具</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">選択肢 × 選択肢</td>
+<td style="text-align: left;">性別によって、好きなアイスの味は違う？</td>
+<td style="text-align: left;">ピボットテーブルのクロス集計（行の合計に対する比率）、帯グラフ</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">数値 × 選択肢</td>
+<td style="text-align: left;">住まいによって、通学時間は違う？</td>
+<td style="text-align: left;">グループごとの平均・中央値（ピボットテーブル）、箱ひげ図</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">数値 × 数値</td>
+<td style="text-align: left;">ゲーム時間が長い人ほど、勉強時間は短い？</td>
+<td style="text-align: left;">散布図、相関係数（CORREL）</td>
+</tr>
+</tbody>
+</table>
+<div style="margin-top: 2.0em;">
+
+</div>
+<p>分析は、次の順番で進めるとまとまりやすくなります。</p>
+<ol type="1">
+<li><strong>1つずつ見る</strong>：まず、自分の設問の答えがどう分布しているかを見ます（人数・割合、平均・中央値、ヒストグラム）。</li>
+<li><strong>比べる</strong>：上の表から道具を選んで、比べたい項目との関係を見ます。</li>
+<li><strong>第3の要因で層別する</strong>：関係が見つかったら、第3の要因（学年、住まいなど）でグループに分けて、比べ直します（第8回）。</li>
+<li><strong>言えること・言えないことを分ける</strong>：相関があっても、因果があるとは限りません。</li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>人数が少ないことに注意
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>このクラスのデータは、およそ40人分です。グループに分けると、1つのグループが数人になることもあります。<span class="marker">割合や平均だけでなく、必ず人数も書きましょう。</span>「1年生の80%」が5人中4人なのか、20人中16人なのかで、結果の重みはまったく違います。</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>自分の設問がうまく使えないときは
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>回答がかたよっていて比べられない、などのときは、<span class="marker">他の人の設問を使って問いを立て直してもかまいません。</span>改めてデータを確認して、柔軟に対応（分析）してください。</p>
+</div>
+</div>
+</section>
+<section id="レポートにまとめる" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="レポートにまとめる"><span class="header-section-number">9.3</span> レポートにまとめる</h2>
+<p>分析はExcelで行い、できた表やグラフを<span class="marker">Wordのレポート</span>に貼り付けてまとめます。Blackboardから <strong>課題_9_レポート.docx</strong> をダウンロードして、ひな形に沿って書きましょう。</p>
+<section id="つの分析を行う" class="level3" data-number="9.3.1">
+<h3 data-number="9.3.1" class="anchored" data-anchor-id="つの分析を行う"><span class="header-section-number">9.3.1</span> 5つの分析を行う</h3>
+<p>レポートでは、<span class="marker">分析を5つ</span>行います。1つの分析は、次の4つのひとまとまりです。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 82%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">項目</th>
+<th style="text-align: left;">書くこと</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">問い</td>
+<td style="text-align: left;">何と何を比べるか（例：住まい × 通学時間）。使った変数と、何人分のデータか。除いたデータがあれば、その理由</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">表・グラフ</td>
+<td style="text-align: left;">Excelで作った表やグラフを貼り付ける</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">結果</td>
+<td style="text-align: left;">表やグラフから読み取れる事実。数字（割合・平均・相関係数など）と人数を入れる</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">考察</td>
+<td style="text-align: left;">予想と比べてどうだったか。第3の要因は考えられるか。このデータから言えること・言えないこと</td>
+</tr>
+</tbody>
+</table>
+<div style="margin-top: 2.0em;">
+
+</div>
+<p>5つの分析は、ばらばらにせず、<span class="marker">自分の問いを中心につなげましょう。</span>たとえば、①自分の設問の分布を見る → ②〜④いろいろな項目と比べる → ⑤第3の要因で層別する、という流れです。5つのうち、少なくとも1つは層別を行いましょう。</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>表やグラフをWordに貼るときは
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Excelでコピーしたあと、Wordで<strong>右クリック →「貼り付けのオプション」→「図」</strong>を選びます。そのまま貼ると、Excelとのつながりが残って、表示が崩れたりファイルが重くなったりすることがあります。</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>採点基準（各分析3点 × 5 ＝ 15点）
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 80%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">観点</th>
+<th style="text-align: left;">1点の条件</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">表・グラフ</td>
+<td style="text-align: left;">問いに合った表やグラフになっている（クロス集計、平均の比較、散布図など）</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">結果</td>
+<td style="text-align: left;">読み取れる事実を、数字と人数を使って正しく書いている</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">考察</td>
+<td style="text-align: left;">予想との比較、第3の要因、このデータから言えないこと、のいずれかについて考えている</td>
+</tr>
+</tbody>
+</table>
+<p>Excelの操作の難しさではなく、<span class="marker">問いの立て方と、データに基づく考察</span>を重視して評価します。</p>
+</div>
+</div>
+</section>
+</section>
+<section id="課題_9に取り組もう" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="課題_9に取り組もう"><span class="header-section-number">9.4</span> 課題_9に取り組もう</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>課題_9の進め方
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>生データと見出し.xlsx から、分析ファイル <strong>課題_9_氏名.xlsx</strong> を作ります（「分析ファイルを作る」の手順）。</li>
+<li>分析ファイルで、集計やグラフを作ります。</li>
+<li><strong>課題_9_レポート.docx</strong> に、自分の問い・予想・5つの分析・まとめを書き、ファイル名を <strong>課題_9_氏名.docx</strong> に変えて保存します。</li>
+<li><span class="marker">WordのレポートとExcelの分析ファイルの2つ</span>を、Blackboardに提出します。</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="振り返り" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="振り返り"><span class="header-section-number">9.5</span> 振り返り</h2>
+<div class="my-note callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>今日のまとめ
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>分析の前に、使う列のデータを確かめる（あり得ない値、「答えたくない」、空欄）。</li>
+<li>問いの形（選択肢・数値の組み合わせ）に合わせて、クロス集計・平均の比較・相関を選ぶ。</li>
+<li>関係が見つかったら、第3の要因で層別して比べ直す。割合や平均には、必ず人数を添える。</li>
+<li>レポートでは5つの分析を行い、それぞれ「問い・表やグラフ・結果・考察」をまとめる。事実（結果）と解釈（考察）は分けて書く。</li>
+</ul>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
